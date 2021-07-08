@@ -300,7 +300,7 @@ Planned vs Opportunity – 10%
 ## Issue ID 12
 
 * Title: The fields for First name and Last name are not marked as mandatory
-* Description: On "Personal profile" page,  in "Personal Profile" section, the fields for First name and Last name are not marked as mandatory.
+* Description: On "Personal profile" page,  in "Personal Profile" section, the fields for First Name and Last name are not marked as mandatory, but the profil cannot be updated without them.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
    * 1. Go to URL http://164.138.216.247:8082;
