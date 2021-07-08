@@ -2,7 +2,7 @@
 
 (Summarize the bug encountered concisely)
 
-## Prerquites:
+## Prerequisites:
 
 (Configuration needed for the test; Additional data that needs to be entered beforehand; Presets of any kind)
 
@@ -30,14 +30,14 @@
 
 (Depending on the impact on the functionality or further testing.
 Possible severity options can be - Critical, Major, Medium, Low)
-<!-- 
+
 Critical: This defect indicates complete shut-down of the process, nothing can proceed further
 	
 Major: It is a highly severe defect and collapses the system. However, certain parts of the system remain functional
 	
 Medium: It causes some undesirable behavior, but the system is still functional
 	
-Low: It won't cause any major break-down of the system -->
+Low: It won't cause any major break-down of the system 
 
 ## Additional info:
 
