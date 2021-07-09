@@ -145,11 +145,10 @@ Planned vs Opportunity – 10%
 |37|Grammatical error in the footer section "Have a Questions?"|
 |38|Message for submitting more than the allowable characters in the "Drop Few Words about Yourself" field contains a typo|
 |39| Тhe "connect" button does not change its name when a request is sent|
-|40|Approving а profile request does not return a valid response|
-|41|"New friend requsts" button contains a typo|
-|42|Approving request do not contains a picture of the user|
-|43|The button "Refresh Rank-All-Posts" does not show any results|
-|44|"View users" button hides part of the header menu|
+|40|"New friend requsts" button contains a typo|
+|41|Approving request do not contains a picture of the user|
+|42|The button "Refresh Rank-All-Posts" does not show any results|
+|43|"View users" button hides part of the header menu|
 
 
 **Charter Issues**
@@ -726,20 +725,6 @@ Planned vs Opportunity – 10%
 
 ## Issue ID 40
 
-* Title: Approving а profile request does not return a valid response
-* Description: When approving a profile request, returns a response that contains the text "There are no requests".
-* Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
-* Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082/login;
-   * 2. Log in with valid credentials;
-   * 3. Click on "Personal Profile" link in the header menu;
-   * 4. Click on "New Friend Requsts" button;  
-   * 5. Click on "Approve Request" button
-* Expected result: The response to contain the text "The request has been approved".
-* Actual result: The response contains the text "Opsss... There are no request".
-
-## Issue ID 41
-
 * Title: "New friend requsts" button contains a typo
 * Description: When approving a profile request, there is a grammatical error in the button assigned to it.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
@@ -751,7 +736,7 @@ Planned vs Opportunity – 10%
 * Expected result: The button to be called "New friend requests".
 * Actual result: The button is called "New friend requsts".
 
-## Issue ID 42
+## Issue ID 41
 
 * Title: Approving request do not contains a picture of the user
 * Description: When approving a profile request, a photo of the profile that sent the request does not appear in the dedicated section.
@@ -764,7 +749,7 @@ Planned vs Opportunity – 10%
 * Expected result: The user's profile picture appears.
 * Actual result: The user's profile picture does not appears.
 
-## Issue ID 43
+## Issue ID 42
 
 * Title: The "Refresh Rank-All-Posts" button does not show any results and hides part of the header menu
 * Description: Logged in as an administrator, when you are on "GO TO admin zone" on the top of the page "Refresh rank-all-posts" button appears, which hides part of the header menu and does not show any results.
@@ -777,7 +762,7 @@ Planned vs Opportunity – 10%
 * Expected result: To refrest all posts by rank.
 * Actual result: Does not show any results.
 
-## Issue ID 44
+## Issue ID 43
 
 * Title: "View users" button hides part of the header menu
 * Description: "View users" button is located on part of the header menu and hides part of it.
