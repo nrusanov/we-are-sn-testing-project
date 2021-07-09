@@ -304,7 +304,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page,  in "Personal Profile" section, the fields for First Name and Last name are not marked as mandatory, but the profil cannot be updated without them.  An error occurs: "first/last name must have at least 3 symbols!".
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -319,7 +319,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page, in "Personal Profile" section, Birthday date could be in the future.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -335,7 +335,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page, in "Personal Profile" section, in the city dropdown menu, the list of cities is not complete and is not sorted by any criteria.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -350,7 +350,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page, in "Personal Profile" section, the field for the country is fixed to Bulgaria and cannot be changed with another country.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -364,7 +364,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page, in "Personal Profile" section, "Drop Few Words about Yourself" field allows more than the allowable number of characters to be written (250).
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -379,7 +379,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page, in "Personal info & Safety", when attach a photo from the button, the photo is not loaded into the section.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -394,7 +394,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal profile" page, in "Personal info & Safety" section, there is no button to delete the profile picture.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -409,7 +409,7 @@ Planned vs Opportunity – 10%
 * Description: When trying to upload а profile photo with size bigger than allowed (1MB), the softwate does not show an explicit error message.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -425,7 +425,7 @@ Planned vs Opportunity – 10%
 * Description:  When trying to edit First Name of the user in "Edit Professional information" section with more than allowed characters, the softwate does not show an explicit error message.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -441,7 +441,7 @@ Planned vs Opportunity – 10%
 * Description:  When trying to edit Last Name of the user in "Edit Professional information" section with more than allowed characters, the softwate does not show an explicit error message.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -457,7 +457,7 @@ Planned vs Opportunity – 10%
 * Description: On "Latest posts" page, the results are not arranged in chronological order.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Scroll down to the user posts
@@ -470,7 +470,7 @@ Planned vs Opportunity – 10%
 * Description: On "Latest posts" page, clicking on "Browse" button in "Browse public posts" section does not show the results for latest posts in chronological order.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Click on "Browse" button under "Browse public post" section
@@ -483,7 +483,7 @@ Planned vs Opportunity – 10%
 * Description: On "Latest posts" page, "Browse public posts" section has a dropdown menu containing only one option - "All public posts".
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Click on the dropdown menu in "Browse public post" section
@@ -496,7 +496,7 @@ Planned vs Opportunity – 10%
 * Description: When you choose one of the users posts, click on "Explore this post" button, there are four buttons - life, sport, tech and travel that are not working.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Choose one of the users posts;
@@ -512,7 +512,7 @@ Planned vs Opportunity – 10%
 * Description: When creating a post, the post time is incorrect. Shows three hours ago.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Add New post" link in the header menu;
    * 4. Navigate to the "Create new post" section;
@@ -528,7 +528,7 @@ Planned vs Opportunity – 10%
 * Description: When posting a comment, the post time is incorrect. Shows three hours ago.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Choose one of the users posts;
@@ -546,7 +546,7 @@ Planned vs Opportunity – 10%
 * Description: When posting a comment under a post, it does not arrange them in chronological order
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Choose one of the users posts;
@@ -566,7 +566,7 @@ Planned vs Opportunity – 10%
 * Description: On "Create new post" page, the button to create a new post does not mean that the post will be published, but rather saved.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Add New post" link in the header menu;
    * 4. Scroll down to the "Save" button in "Create new post" section
@@ -579,7 +579,7 @@ Planned vs Opportunity – 10%
 * Description: On "Create new post" page,	there is no field for the post title in the section for creating a new post. There is only for the description.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Add New post" link in the header menu;
    * 4. Scroll down to the "Create new post" section
@@ -592,7 +592,7 @@ Planned vs Opportunity – 10%
 * Description: When user try to edit their comment, the old text is not visible and the user should start writing it from scratch.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Scroll down to the "Recent Posts" section; 
@@ -610,7 +610,7 @@ Planned vs Opportunity – 10%
 * Description: When user try to edit their post, the old text is not visible and the user should start writing it from scratch.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Scroll down to the "Recent Posts" section; 
@@ -626,7 +626,7 @@ Planned vs Opportunity – 10%
 * Description: On "Personal Profile" page, in "Update your Services here" section user does not see the content in the fields while editing it and should start writing it from scratch.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Scroll down to the "Recent Posts" section; 
@@ -642,7 +642,7 @@ Planned vs Opportunity – 10%
 * Description: When creating a new post, it can be published without any content in it.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Add New post" link in the header menu;
    * 4. Scroll down to the "Create new post" section;
@@ -657,7 +657,7 @@ Planned vs Opportunity – 10%
 * Description: When creating a new comment, it can be published without any content in it.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Latest Posts" link in the header menu;
    * 4. Choose one of the users posts;
@@ -673,7 +673,7 @@ Planned vs Opportunity – 10%
 * Description: When editing a profile, there is no option to delete an already attached photo, оnly to change one.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Scroll down to the "Recent Posts" section; 
@@ -699,7 +699,7 @@ Planned vs Opportunity – 10%
 * Description: There is a typo in "Personal review must have be max 250 symbols!" when trying to submit more than the allowable number of symbols in the "Drop Few Words about Yourself" field.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "edit Profile" button;
@@ -716,7 +716,7 @@ Planned vs Opportunity – 10%
 * Description: When you click on "connect" button to send a friend request, the button does not change its name to "Requested", but remains "connect".
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Navigate to the "Search" button and click on ti;
    * 4. Choose on of the users profiles and click on "See Profile" button;
@@ -730,7 +730,7 @@ Planned vs Opportunity – 10%
 * Description: When approving a profile request, returns a response that contains the text "There are no requests".
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "New Friend Requsts" button;  
@@ -744,7 +744,7 @@ Planned vs Opportunity – 10%
 * Description: When approving a profile request, there is a grammatical error in the button assigned to it.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Navigate to the "New Friend Requsts" button;  
@@ -757,7 +757,7 @@ Planned vs Opportunity – 10%
 * Description: When approving a profile request, a photo of the profile that sent the request does not appear in the dedicated section.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials;
    * 3. Click on "Personal Profile" link in the header menu;
    * 4. Click on "New Friend Requsts" button;  
@@ -770,7 +770,7 @@ Planned vs Opportunity – 10%
 * Description: Logged in as an administrator, when you are on "GO TO admin zone" on the top of the page "Refresh rank-all-posts" button appears, which hides part of the header menu and does not show any results.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials as an admin;
    * 3. Click on "GO TO admin zone" link in the header menu;
    * 4. Click on "Refresh Rank-All-Posts" button
@@ -783,7 +783,7 @@ Planned vs Opportunity – 10%
 * Description: "View users" button is located on part of the header menu and hides part of it.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
+   * 1. Go to URL http://164.138.216.247:8082/login;
    * 2. Log in with valid credentials as an admin;
    * 3. Click on "GO TO admin zone" link in the header menu
 * Expected result: The "View users" button should be below the header of the page.
