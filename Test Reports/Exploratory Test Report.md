@@ -211,8 +211,9 @@ Planned vs Opportunity – 10%
    * 1. Go to URL http://164.138.216.247:8082/register;
    * 2. Choose a professional category from the dropdown menu;
    * 3. Click on "Register" button;
-* Expected result: Successful registration.
-* Actual result: Registration cannot be made because the mandatory fields are not filled in.
+* Expected result: The fields for Username, Email, Password and Confirm Password are marked with "*" as mandatory for filling in.
+* Actual result: The fields for Username, Email, Password and Confirm Password are not marked with "\*" as mandatory for filling in.
+
 
 ## Issue ID 05
 
@@ -267,8 +268,8 @@ Planned vs Opportunity – 10%
    * 1. Go to URL http://164.138.216.247:8082;
    * 2. Navigate to the header menu;
    * 3. Choose one of the links except "Add New post" and click on it
-* Expected result: The active button should light up in orange on the link.
-* Actual result:The active button does not light up in orange on the link, but lights up on "Add New post".
+* Expected result: The active button should light up in orange on the choosen link.
+* Actual result:The active button does not light up in orange on the choosen link, but lights up on "Add New post".
 
 ## Issue ID 10
 
@@ -300,7 +301,7 @@ Planned vs Opportunity – 10%
 ## Issue ID 12
 
 * Title: The fields for First name and Last name are not marked as mandatory
-* Description: On "Personal profile" page,  in "Personal Profile" section, the fields for First Name and Last name are not marked as mandatory, but the profil cannot be updated without them.
+* Description: On "Personal profile" page,  in "Personal Profile" section, the fields for First Name and Last name are not marked as mandatory, but the profil cannot be updated without them.  An error occurs: "first/last name must have at least 3 symbols!".
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
    * 1. Go to URL http://164.138.216.247:8082;
@@ -309,8 +310,8 @@ Planned vs Opportunity – 10%
    * 4. Click on "edit Profile" button;
    * 5. Scroll down to the "Personal Profile" section;
    * 6. Click on "Update My Profile" button
-* Expected result: To be able to update the profile without filling in the fields for First name and Last name.
-* Actual result: An error occurs: "first/last name must have at least 3 symbols!".
+* Expected result: The fields for First Name and Last Name are marked with "*" as mandatory for filling in.
+* Actual result: The fields for First Name and Last Name are not marked with "*" as mandatory for filling in.
 
 ## Issue ID 13
 
@@ -360,7 +361,7 @@ Planned vs Opportunity – 10%
 ## Issue ID 16
 
 * Title: "Drop Few Words about Yourself" field accept more than the allowable number of symbols
-* Description: On "Personal profile" page, in "Personal Profile" section, "Drop Few Words about Yourself" field allows more than the allowable number of characters to be written(256).
+* Description: On "Personal profile" page, in "Personal Profile" section, "Drop Few Words about Yourself" field allows more than the allowable number of characters to be written (250).
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
    * 1. Go to URL http://164.138.216.247:8082;
@@ -553,9 +554,9 @@ Planned vs Opportunity – 10%
    * 6. Scroll down to the "Leave a comment" section;
    * 7. Fill in the "Leave a comment" section;
    * 8. Click on "Post comment" button;
-   * 7. Fill in the "Leave a comment" section again;
-   * 8. Click on "Post comment" button;
-   * 9. Click on "Show Comments" button over the "Leave a comment" section
+   * 9. Fill in the "Leave a comment" section again;
+   * 10. Click on "Post comment" button;
+   * 11. Click on "Show Comments" button over the "Leave a comment" section
 * Expected result: The comments should be in chronological order.
 * Actual result: The comments are not in chronological order.
 
