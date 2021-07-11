@@ -78,6 +78,7 @@ For the setup, there are steps below for the exploration of the system what need
 |Id|Area|Description|
 |-|---|---|
 |01|Connections|It would be more user friendly after sign in, somewhere on the site to show a notification that there is a request from an account for approval|
+|02|Connections|It would be better for the system to return respons that the friend request has been approved|
 |02|Posts|It would be better if default value of Post visibility is empty|
 |03|Post, Comments|It would be better if the text are for creation of post and comment is called "Description"|
 |04|Post, Comments|It would be more user friendly if there is a "Cancel" button right next to the "Save Post and "Post Comment" buttons|
@@ -94,7 +95,7 @@ For the setup, there are steps below for the exploration of the system what need
 |15|Register page|It would be more user friendly, when registering to have the option to see what is written in the fields "Password" and "Confirm password"|
 |16|Register page|It would be more user friendly if the "Register" button is in a more prominent color, so as not to merge with the background|
 |17|Latest posts|It would be more user friendly to see a message that there are no matches when you search for a post with a filter for the user's profession and there are no matches|
-
+|Connections|
 
 **Task statistics**
 
