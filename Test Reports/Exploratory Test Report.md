@@ -67,9 +67,9 @@ For the setup, there are steps below for the exploration of the system what need
 
 |Email address|Username|Password|
 |---|---|---|
-|Neptunus.qa21@gmail.com|NeptunusTeam|neptunus21|
-|Neptunus.qa21@gmail.com|NeptunusTeamTwo|neptunus21|
-|Neptunus.qa21@gmail.com|adminNeptunus|neptunus21|
+|Neptunus.qa21@gmail.com|TeamNeptunus|Neptunus_21
+|Neptunus.qa21@gmail.com|TeamNeptunusTwoNeptunus_21
+|Neptunus.qa21@gmail.com|adminNeptunusNeptunus_21
 
 ## **Output from the Exploratory Test process**
 
