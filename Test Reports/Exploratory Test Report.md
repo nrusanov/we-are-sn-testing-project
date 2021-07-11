@@ -38,7 +38,7 @@ For the setup, there are steps below for the exploration of the system what need
  - A good screenshots app that you are familiar with. 
  - All necessary items like pen, pencil or note books if needed to note down important sittings.
  - A good location where no one can disturb.
- - Make sure you have a software to record bugs –notepad, word, excel etc.
+ - Make sure you have a software to record bugs – notepad, word, excel etc.
 
 
 **Preparation sample**
@@ -47,7 +47,7 @@ For the setup, there are steps below for the exploration of the system what need
 |---|---|
 |01|Go to http://164.138.216.247:8082/|
 |02|Choose the email addresses and names to be used during the test|
-|03|Ensure your screen grab software is working well|
+|03|Ensure your screen app software is working well|
 |04|Open and prepare the Bug report template on word/notepad|
 |05|Ensure you have high speed internet|
 |06|Ensure you are well-prepared with pens, papers etc. before starting|
@@ -67,9 +67,10 @@ For the setup, there are steps below for the exploration of the system what need
 
 |Email address|Username|Password|
 |---|---|---|
+|hmxpwzdq@abv.bg|TestUser|ngjeP#Ve
 |Neptunus.qa21@gmail.com|TeamNeptunus|Neptunus_21
-|Neptunus.qa21@gmail.com|TeamNeptunusTwoNeptunus_21
-|Neptunus.qa21@gmail.com|adminNeptunusNeptunus_21
+|Neptunus.qa21@gmail.com|TeamNeptunusTwo|Neptunus_21
+|Neptunus.qa21@gmail.com|adminNeptunus|Neptunus_21
 
 ## **Output from the Exploratory Test process**
 
@@ -78,14 +79,14 @@ For the setup, there are steps below for the exploration of the system what need
 |Id|Area|Description|
 |-|---|---|
 |01|Connections|It would be more user friendly after sign in, somewhere on the site to show a notification that there is a request from an account for approval|
-|02|Connections|It would be better for the system to return respons that the friend request has been approved|
+|02|Connections|It would be better for the system to return response that the friend request has been approved|
 |02|Posts|It would be better if default value of Post visibility is empty|
-|03|Post, Comments|It would be better if the text are for creation of post and comment is called "Description"|
+|03|Post, Comments|It would be better if the text for creation of post and comment is called "Description"|
 |04|Post, Comments|It would be more user friendly if there is a "Cancel" button right next to the "Save Post and "Post Comment" buttons|
 |05|Post, Comments|It would be more user friendly when deleting a post or comment, a pop-up appears with a confirmation button|
 |06|Public feed|It would be more user friendly if the search shows the total number of search results and the total number of pages with users|
 |07|Public feed|It would be more user friendly if when viewing user profiles, the date of registration and the city are in a more prominent color, so as not to merge with the background|
-|08|Public feed|It would be more user friendl if when viewing user profiles there are "Previous" and "Next" buttons under them|
+|08|Public feed|It would be more user friendly if when viewing user profiles there are "Previous" and "Next" buttons under them|
 |09|Home page|It would be more user friendly when searching for a user, clicking on the field for professions to suggest what the options are|
 |10|Personal profile|It would be better if you could see who my friends are, and not just show how many they are|
 |11|Personal profile|It would be more user friendly if the "edit profile" button has a blue background like the other buttons and the first letter is capitalized|
@@ -95,7 +96,6 @@ For the setup, there are steps below for the exploration of the system what need
 |15|Register page|It would be more user friendly, when registering to have the option to see what is written in the fields "Password" and "Confirm password"|
 |16|Register page|It would be more user friendly if the "Register" button is in a more prominent color, so as not to merge with the background|
 |17|Latest posts|It would be more user friendly to see a message that there are no matches when you search for a post with a filter for the user's profession and there are no matches|
-|Connections|
 
 **Task statistics**
 
@@ -116,7 +116,7 @@ Planned vs Opportunity – 10%
 |07|The icons for Twitter, Facebook and Instagram don't work properly|
 |08|The link "How it works?" does not redirect to the correct page|
 |09|The active button always lights up on "Add New posts"|
-|10|Clicking on the "load more" button shows duplicate profiles from previous pages|
+|10|User cannot cancel a friend request sent to him/her|
 |11|Clicking on the search button displays results without entering search criteria|
 |12|The fields for First name and Last name are not marked as mandatory|
 |13|Birthday date could be in the future|
@@ -273,16 +273,16 @@ Planned vs Opportunity – 10%
 
 ## Issue ID 10
 
-* Title: Clicking on the "load more" button shows duplicate profiles from previous pages
-* Description: Оn "Home" page, when you click the search button, 10 profiles are displayed on each page, below which there is a "Load more" button. When you click the button, duplicate profiles may appear on subsequent pages.
+* Title: User cannot cancel a friend request sent to him/her
+* Description: When a registered user receives a friend request he/she cannot cancel it, but only accept or leave it pending.
 * Environment: Windows 10 , Google Chrome 91.0.4472.124, Edge 91.0.864.64
 * Steps to reproduce: 
-   * 1. Go to URL http://164.138.216.247:8082;
-   * 2. Click on "Search" button;
-   * 3. Scroll down to the "Load more" button, located under the last profile;
-   * 4. Click on "Load more" button
-* Expected result: Show different profiles from previous pages.
-* Actual result: Some of the profiles are repeated.
+   * 1. Go to URL: http://164.138.216.247:8082/login;
+   * 2. Log in with valid credentials;
+   * 3. Click on button 'Personal profile';
+   * 4. Click on button 'New Friend Requsts' on the left from user's profile picture;
+* Expected result: User should be able to cancel sent friend request sent to him/her.
+* Actual result: There is no button for cancellation.
 
 ## Issue ID 11
 
