@@ -1,7 +1,7 @@
 # **User Personal Profile**
 
 
-## Test case 01
+## Test case 12
 
 * **Title:** "Edit" button should redirect to the edit page 
 * **Description:** Verify that clicking on the "еdit Profile" button should load a edit page to change the users personal profile information.
@@ -17,7 +17,7 @@
    * 4. Click on the "edit Profile" button, which is located to the right of the profile picture;
 * **Expected result:** To load an edit page with user data in it.
 
-## Test case 02
+## Test case 13
 
 * **Title:** Edit page should display by default all the added record in the fields.
 * **Description:** Verify that all fields filled in at registration, namely username, password, email and professional category must be loaded by default on the edit page
@@ -33,7 +33,7 @@
    * 4. Click on the "edit Profile" button, which is located to the right of the profile picture;
 * **Expected result:** To be displayed all completed registration fields on the edit page, namely username, password, email and professional category.
 
-## Test case 03
+## Test case 14
 
 * **Title:** Registered user should be able to update the profile with all required fields in the "Personal information" section
 * **Description:** Verify that the user is able to update their profile entering valid data in all the required fields in the "Personal information" section.
@@ -54,7 +54,7 @@
    * 9. Click on "Update My Profile" button
 * **Expected result:** The profile to be updated with the entered data.
 
-## Test case 04
+## Test case 15
 
 * **Title:** Registered user cannot update the profile with some required fields (leaving the field for ''Last name" blank) (negative)
 * **Description:** Verify that the user is not able to update their profile entering the valid data only in some required fields - leaving the field for ''Last name" blank
@@ -75,7 +75,7 @@
    * 9. Click on "Update My Profile" button
 * **Expected result:** Updating failed. An error message appears stating that the all required fields must be filled out.
 
-## Test case 05
+## Test case 16
 
 * **Title:** Registered user cannot update the profile with some required fields (leaving the field for ''First name" blank) (negative)
 * **Description:** Verify that the user is not able to update their profile entering the valid data only in some required fields - leaving the field for "First name" blank
@@ -96,7 +96,7 @@
    * 9. Click on "Update My Profile" button
 * **Expected result:** Updating failed. An error message appears stating that the all required fields must be filled out.
 
-## Test case 06
+## Test case 17
 
 * **Title:** Registered user cannot update the profile with some required fields (leaving the field for ''birtday" empty) (negative)
 * **Description:** Verify that the user is not able to update their profile entering the valid data only in some required fields - leaving the field for "birthday" empty.
@@ -117,7 +117,7 @@
    * 9. Click on "Update My Profile" button
 * **Expected result:** Updating failed. An error message appears stating that the all required fields must be filled out.
 
-## Test case 07
+## Test case 18
 
 * **Title:** Registered user should be able to edit the profile with all required fields and all not required fields in the "Personal information" section
 * **Description:** Verify that the user is able to edit their profile entering valid data in all the required fields and all not required fields in the "Personal information" section.
@@ -142,7 +142,7 @@
    * 13. Click on "Update My Profile" button
 * **Expected result:** The profile to be updated with the entered data.
 
-## Test case 08
+## Test case 19
 
 * **Title:** Registered user should be able to edit the professional category in the "Professional information" section
 * **Description:** Verify that the user is able to edit their profile choosing an another option from the required dropdown menu "What is your professional category" in the "Professional information" section.
@@ -161,7 +161,7 @@
    * 7. Click on "Update" button;
 * **Expected result:** The profile to be updated with the entered data.
 
-## Test case 09
+## Test case 20
 
 * **Title:** Registered user cannot edit his Username (negative)
 * **Description:** Verify that the user is not able to edit his Username.
@@ -178,7 +178,7 @@
    * 5. Navigate to "User Name" field, which is located in "Personal Profile" section
 * **Expected result:** The "User Name" field cannot be edited.
 
-## Test case 10
+## Test case 21
 
 * **Title:** Registered user cannot update "First Name" field with more than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update "First Name" field in their profile with more than the allowable characters (255).	
@@ -196,7 +196,7 @@
    * 6. Click on "Update My Profile" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the "First Name" field cannot contain more than the 255 characters.
 
-## Test case 11
+## Test case 22
 
 * **Title:** Registered user cannot update "Last Name" field with more than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update "First Name" field in their profile with more than the allowable characters (255).
@@ -214,7 +214,7 @@
    * 6. Click on "Update My Profile" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the "Last Name" field cannot contain more than the 255 characters.
 
-## Test case 12
+## Test case 23
 
 * **Title:** Registered user cannot update "First Name" field with less than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update "First Name" field in their profile with less than the allowable characters (3).	
@@ -232,7 +232,7 @@
    * 6. Click on "Update My Profile" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the "First Name" field cannot contain less than the 3 characters.
 
-## Test case 13
+## Test case 24
 
 * **Title:** Registered user cannot update "Last Name" field with more less the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update "First Name" field in their profile with less than the allowable characters (3).
@@ -250,7 +250,7 @@
    * 6. Click on "Update My Profile" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the "Last Name" field cannot contain less than the 3characters.
 
-## Test case 14
+## Test case 25
 
 * **Title:** Registered user cannot update "Drop Few Words about Yourself" field with more than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update "Drop Few Words about Yourself" field in their profile with more than the allowable characters (250).	
@@ -268,7 +268,7 @@
    * 6. Click on "Update My Profile" button
 * **Expected result:** Editing failed. A pop-up error message appears stating that the "Drop Few Words about Yourself" field cannot contain more than the 255 characters.
 
-## Test case 15
+## Test case 26
 
 * **Title:** Registered user cannot update "Drop Few Words about Yourself" field with less than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update the "Drop Few Words about Yourself" field in their profile with less than the allowable characters (3).	
@@ -286,7 +286,7 @@
    * 6. Click on "Update My Profile" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the "Drop Few Words about Yourself" field cannot contain less than the 3 characters.
 
-## Test case 16
+## Test case 27
 
 * **Title:** Registered user cannot update "Email" field with more than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to update the "Email" field in their profile with more than the allowable characters (255).	
@@ -305,7 +305,7 @@
 * **Expected result:** Updating failed. A pop-up error message appears stating that the "Email" field cannot contain more than the 255 characters.
 
 
-## Test case 17
+## Test case 28
 
 * **Title:** Registered user cannot update the "Email" field without containing the "@" symbol (negative)	
 * **Description:** Verify that а user is not able to update the "Email" field in their profile without it containing the "@" symbol.	
@@ -324,7 +324,7 @@
 * **Expected result:** Updating failed. A pop-up error message appears stating that the entered text in the "Email" field is not valid.
 
 
-## Test case 18
+## Test case 29
 
 * **Title:** Registered user cannot update the birthday date with a future one (negative)
 * **Description:** Verify that а user is not able to update the birthday date in "birthday" dropdown menu in their profile with a futere one
@@ -342,7 +342,7 @@
    * 6. Click on "Update My Profile" button 
 * **Expected result:** The date of birth cannot be updated with a future date.
 
-## Test case 19
+## Test case 30
 
 * **Title:** Registered user should be able to fill all the fields for services and to set weekly availability 
 * **Description:** Verify that the user is able to fill all the field for services with a valid data and to set a valid weekly availability in their profile in the "What services can you offer?" section.
@@ -363,7 +363,7 @@
 * **Expected result:** The profile to be updated with the entered data about the services and the weekly availability that the user can offer.
 
 
-## Test case 20
+## Test case 31
 
 * **Title:** Registered user should be able to fill only one of the fields for services and to set weekly availability 
 * **Description:** Registered user should be able to fill only one of the fields for services with a valid data and to set a valid weekly availability in the "What services can you offer?" section.
@@ -384,7 +384,7 @@
 * **Expected result:** The profile to be updated with the entered data about the service and the weekly availability that the user can offer.
 
 
-## Test case 21
+## Test case 32
 
 * **Title:** Registered user cannot set a service with more than the allowable characters (negative)	
 * **Description:**  Verify that а user is not able to set a service in the fields specified for this in their profile with more than the allowable characters (255).	
@@ -404,7 +404,8 @@
    * 8. Click on "Update" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the fields for services cannot contain more than the 255 characters.
 
-## Test case 22
+## Test case 33
+
 * **Title:** Registered user cannot set a service with less than the allowable characters (negative)	
 * **Description:** Verify that а user is not able to set a service in the fields specified for this in their profile with less than the allowable characters (1).	
 * **Narrative:** As a Registered user I want to be able to edit my profile.
@@ -423,7 +424,8 @@
    * 8. Click on "Update" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the fields for services cannot contain less than the 1 character.
 
-## Test case 23
+## Test case 34
+
 * **Title:** Registered user cannot set weekly availability over than 168 hours (negative)
 * **Description:** Verify that а user is not able to set weekly availability over than 168 hours in their profile 
 * **Narrative:** As a Registered user I want to be able to edit my profile.
@@ -442,7 +444,7 @@
    * 8. Click on "Update" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the weekly availability cannot be more than 168 hours.
 
-## Test case 24
+## Test case 35
 
 * **Title:** Registered user cannot set a negative value for weekly availability (negative)
 * **Description:** Verify that а user is not able to set a negative value for weekly availability in their profile 
@@ -462,7 +464,7 @@
    * 8. Click on "Update" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the weekly availability cannot be a negative value per hour.
 
-## Test case 25
+## Test case 36
 
 * **Title:** Registered user cannot set a value for weekly availability without entering services (negative)
 * **Description:** Verify that а user is not able to set a value for weekly availability in their profile without entering any services.
@@ -482,6 +484,8 @@
    * 8. Click on "Update" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the weekly availability cannot be set without entering any services.
 
+## Test case 37
+
 * **Title:** Registered user cannot set services without entering a value for weekly availability (negative)
 * **Description:** Verify that а user is not able to set services without entering a value for weekly availability in their profile.
 * **Narrative:** As a Registered user I want to be able to edit my profile.
@@ -500,7 +504,7 @@
    * 8. Click on "Update" button
 * **Expected result:** Updating failed. A pop-up error message appears stating that the services cannot be set withoout entering a valid weekly availability.
 
-## Test case 27
+## Test case 38
 
 * **Title:** Registered user should be able to set a profile picture and choose its visibility 
 * **Description:** Verify that the user is able to set a profile picture and choose one of the visibility options - public or private.
@@ -520,7 +524,8 @@
    * 7. Click on "Update" button
 * **Expected result:** To be displayed a profile picture in the user profile.
 
-## Test case 28
+## Test case 39
+
 * **Title:** Registered user should be able to delete a profile picture
 * **Description:** Verify that the user is able to delete an already attached picture in their profile.
 * **Narrative:** As a Registered user I want to be able to edit my profile.
