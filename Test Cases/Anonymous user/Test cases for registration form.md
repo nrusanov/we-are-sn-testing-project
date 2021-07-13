@@ -1,4 +1,4 @@
-# **Unregistered user**
+# **Registration form**
 
 
 ## Test case 01
@@ -111,7 +111,7 @@
 * **Narrative:** As Unregistered user I want to be able to register in the site.
 * **Priority:** High
 * **Pre-condition:** Application is running, user must have a valid email
-* **Test data:** Username: TeamNeptunus_21, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://164.138.216.247:8082/register;
@@ -131,7 +131,7 @@
 * **Narrative:** As Unregistered user I want to be able to register in the site.
 * **Priority:** High
 * **Pre-condition:** Application is running
-* **Test data:** Username: TeamNeptunus_21, Password: Neptunus_21, Email: invalid
+* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: invalid
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://164.138.216.247:8082/register;
@@ -240,7 +240,7 @@
 * **Narrative:** As Unregistered user I want to be able to register in the site.
 * **Priority:** High
 * **Pre-condition:** Application is running, user must have a valid email
-* **Test data:** Username: TeamNeptunus_21, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://164.138.216.247:8082/register;
@@ -422,12 +422,14 @@
    * 2. Fill in the field for "Username" with valid username (between 2-30 characters, 1 lower case letter and 1 upper case letter);
    * 3. Go to the "Your Email" field with the keyboard tab button;
    * 4. Fill in the field for "Your Email" with valid email ( <256 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol);
-   * 5. Fill in the field for "Password" with valid password (between 6-255 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol);  
-   * 6. Fill in the field for "Password" with valid password; 
-   * 7. Fill in the field for "Confirm Password" with the same valid password (between 6-255 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol); 
-   * 8. Fill in the field for "Confirm Password" with the same valid password; 
-   * 9. Choose one of the categories from "What is your professional category?*" dropdown menu;
-   * 10. Go to the "Register" button and click on it
+   * 5. Go to the "Password"  field with the keyboard tab button;
+   * 6. Fill in the field for "Password" with valid password (between 6-255 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol);  
+   * 7. Go to the "Confirm Password"  field with the keyboard tab button;
+   * 8. Fill in the field for "Confirm Password" with the same valid password (between 6-255 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol); 
+   * 9. Fill in the field for "Confirm Password" with the same valid password; 
+   * 10. Choose one of the categories from "What is your professional category?*" dropdown menu;
+   * 11. Go to the "Register" button with the keyboard tab button;
+   * 12. Click on the "Register" button
 * **Expected result:** Successful registration.
 
 ## Test case 24
