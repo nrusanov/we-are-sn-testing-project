@@ -111,7 +111,7 @@
 * **Narrative:** As Unregistered user I want to be able to register in the site.
 * **Priority:** High
 * **Pre-condition:** Application is running, user must have a valid email
-* **Test data:** Username: TeamNeptunus_21, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://164.138.216.247:8082/register;
@@ -131,7 +131,7 @@
 * **Narrative:** As Unregistered user I want to be able to register in the site.
 * **Priority:** High
 * **Pre-condition:** Application is running
-* **Test data:** Username: TeamNeptunus_21, Password: Neptunus_21, Email: invalid
+* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: invalid
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://164.138.216.247:8082/register;
@@ -240,7 +240,7 @@
 * **Narrative:** As Unregistered user I want to be able to register in the site.
 * **Priority:** High
 * **Pre-condition:** Application is running, user must have a valid email
-* **Test data:** Username: TeamNeptunus_21, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://164.138.216.247:8082/register;
