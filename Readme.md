@@ -17,8 +17,11 @@
 ### 3. Exploratory test report:
  - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Reports/Exploratory%20Test%20Report.md)
 
-### 4. Test Cases execution report:
+### 4. Test Cases:
+- [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases)
+
+### 5. Test Cases execution report:
  - [Access here](https://telerikacademy-my.sharepoint.com/:f:/p/nikolay_rusanov_a28_learn/EkNyCtXR4lZBtxrYGfH1OYsBHHn5guyPf5N7fUMn_Jdtag?e=bCNNlo)
 
-### 5. Logged bugs:
+### 6. Logged bugs:
  - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/issues)
