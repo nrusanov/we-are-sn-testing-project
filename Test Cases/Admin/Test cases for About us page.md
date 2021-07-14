@@ -1,6 +1,6 @@
 # **"About us" page**
 
-## Test case 01
+## Test case 12
 
 * **Title:** Admin should be able to access "About us" page
 * **Description:** Verify that an admin is able to acces "About us" page from the header menu, which contains information about the site and the creators of the site.
