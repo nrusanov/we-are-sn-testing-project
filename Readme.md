@@ -21,13 +21,19 @@
 
 **Аnonymous user**
 - [Test cases for registration form](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Anonymous%20user/Test%20cases%20for%20registration%20form.md)
+- [Test cases for "About us" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Anonymous%20user/Test%20cases%20for%20About%20us%20page.md)
+- [Test cases for "Latest Posts" page](
 
 **Registered user**    
 - [Test cases for log in](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20log%20in.md)
 - [Test cases for editing user profile](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20Editing%20user%20profile.md)
+- [Test cases for "About us" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20About%20us%20page.md)
+- [Test cases for log out](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20log%20out.md)
 
 **Admin**
 - [Test cases for log in](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20log%20in.md)
+- [Test cases for "About us" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20About%20us%20page.md)
+- [Test cases for log out](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20log%20out.md)
 
 ### 5. Test Cases execution report:
  - [Access here](https://telerikacademy-my.sharepoint.com/:f:/p/nikolay_rusanov_a28_learn/EkNyCtXR4lZBtxrYGfH1OYsBHHn5guyPf5N7fUMn_Jdtag?e=bCNNlo)
