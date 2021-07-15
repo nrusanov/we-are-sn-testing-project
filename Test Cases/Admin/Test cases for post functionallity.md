@@ -1,6 +1,6 @@
 # **Post functionality**
 
-## Test case 01
+## Test case 51
 
 * **Title:** Admin should be able to create a new post
 * **Description:** Verify that an admin is able to create a new post containing a discription and a picture.
@@ -21,7 +21,7 @@
    * 9. Click on "Save post" button
 * **Expected result:** A new post is created, containing a description and a picture.
 
-## Test case 02
+## Test case 52
 
 * **Title:** Admin should be able to create a new post without picture
 * **Description:** Verify that an admin is able to create a new post containing only discription.
@@ -41,7 +41,7 @@
    * 8. Click on "Save post" button
 * **Expected result:** A new post is created, containing only description.
 
-## Test case 03
+## Test case 53
 
 * **Title:** Admin cannot create a new post with more than the allowable characters (negative)
 * **Description:** Verify that an admin is not able to create a new post containing more than the allowable characters (1000) in the "Message" field.
@@ -62,6 +62,8 @@
    * 9. Click on "Save post" button
 * **Expected result:** Post is not created.  A pop-up error message appears stating that the "Message" field cannot contain more than the 1000 characters.
 
+## Test case 54
+
 * **Title:** Admin cannot create a new post with less than the allowable characters (negative)
 * **Description:** Verify that an admin is not able to create a new post containing less than the allowable character (1) in the "Message" field.
 * **Narrative:** As an Admin I would like to get a proper error when I try to create a new post with less than 1 character.
@@ -81,7 +83,7 @@
    * 9. Click on "Save post" button
 * **Expected result:** Post is not created.  A pop-up error message appears stating that the "Message" field cannot contain less than the 1 character.
 
-## Test case 05
+## Test case 55
 
 * **Title:** Admin cannot create a blank post (negative)
 * **Description:** Verify that an admin is not able to create a blank post.
@@ -101,7 +103,7 @@
    * 8. Click on "Save post" button
 * **Expected result:** Post is not created.  A pop-up error message appears stating that the post cannot be published without discription. 
 
-## Test case 06
+## Test case 56
 
 * **Title:** Admin should be able to edit his own post
 * **Description:** Verify that an admin is able to edit his own post.
@@ -121,7 +123,7 @@
    * 8. Click on "Save post" button
 * **Expected result:** Тhe post is edited containing a new description.
 
-## Test case 07
+## Test case 57
 
 * **Title:** Admin should be able to delete his own post
 * **Description:** Verify that an admin is able to delete his own post.
@@ -141,7 +143,7 @@
    * 8. Click on "Submit" button
 * **Expected result:** The post is successfully deleted.
 
-## Test case 08
+## Test case 58
 
 * **Title:** Admin should be able to like his own post
 * **Description:** Verify that an admin is able to like his own post.
@@ -160,7 +162,7 @@
    * 7. Find the post and click on the "Like" button;
 * **Expected result:** The post is liked.
 
-## Test case 09
+## Test case 59
 
 * **Title:** Admin should be able to dislike his own post
 * **Description:** Verify that an admin is able to dislike his own post.
@@ -179,7 +181,7 @@
    * 7. Find the liked post and click on the "Dislike" button;
 * **Expected result:** The post is disliked.
 
-## Test case 10
+## Test case 60
 
 * **Title:** Admin should be able to edit other users posts
 * **Description:** Verify that an admin is able to edit other users posts.
@@ -200,7 +202,7 @@
    * 8. Click on "Save post" button
 * **Expected result:** Тhe other user post is edited containing a new description.
 
-## Test case 11
+## Test case 61
 
 * **Title:** Admin should be able to delete other users posts
 * **Description:** Verify that an admin is able to delete other users posts.
