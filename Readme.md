@@ -32,7 +32,7 @@
 - [Test cases for log in](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20log%20in.md)
 - [Test cases for editing personal profile](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20Editing%20user%20profile.md)
 - [Test cases for "About us" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20About%20us%20page.md)
-- [Test cases for "Latest Posts" page](
+- [Test cases for "Latest Posts" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20Latest%20post%20page.md)
 - [Test cases for log out](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Registered%20user/Test%20cases%20for%20log%20out.md)
 
 **Admin**
@@ -41,7 +41,7 @@
 - [Test cases for editing users profiles](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20Editing%20users%20profiles.md)
 - [Test cases for post functionality](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20post%20functionallity.md)
 - [Test cases for comment functionality](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20comment%20functionallity.md)
-- [Test cases for "Latest posts" page]
+- [Test cases for "Latest posts" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20Latest%20post%20page.md)
 - [Test cases for "About us" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20About%20us%20page.md)
 - [Test cases for log out](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20log%20out.md)
 

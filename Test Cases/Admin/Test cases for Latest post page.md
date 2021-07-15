@@ -1,6 +1,6 @@
 # **"Latest post" page**
 
-## Test case 85
+## Test case 83
 
 * **Title:** Admin should be able to see all public posts
 * **Narrative:** As an admin I want to be able to see all public posts
@@ -15,7 +15,7 @@
    * 4. Click on "Latest posts" link, which is located in the header menu;
 * **Expected result:** To be displayed all public posts of users on the site.
 
-## Test case 86
+## Test case 84
 
 * **Title:** Admin should be able to see all public posts in a chronological order
 * **Narrative:** As an admin I want to be able to see all public posts in a chronological order.
@@ -30,7 +30,7 @@
    * 4. Click on "Latest posts" link, which is located in the header menu;
 * **Expected result:** To be displayed all public posts of users on the site in a chronological order.
 
-## Test case 87
+## Test case 85
 
 * **Title:** Admin should be able to filter all public posts by professional category
 * **Narrative:**  As an admin I want to be able to filter all public posts by professional category.
@@ -47,7 +47,7 @@
    * 6. Click on "Browse" button
 * **Expected result:** To be displayed all public posts of registered users with the respective category.
 
-## Test case 88
+## Test case 86
 
 * **Title:** Admin should be able to see all filtered public posts by professional category in a chronological order
 * **Narrative:**  As an admin I want to be able to see all filtered public posts by professional category in a chronological order.
@@ -64,7 +64,7 @@
    * 6. Click on "Browse" button
 * **Expected result:** To be displayed all filtered public posts in a chronological order of registered users with the respective category.
 
-## Test case 89
+## Test case 87
 
 * **Title:** Admin should be able to explore a user post on a registered user
 * **Narrative:** As an admin I want to be able to explore a user post and see the comments in it.
@@ -81,7 +81,7 @@
    * 6. Scroll down to the "Show Comments" button and click on it
 * **Expected result:** To be displayed all content of the post, as well as comments, if any.
 
-## Test case 90
+## Test case 88
 
 * **Title:** Admin should be able to see all public posts of the selected user
 * **Narrative:** As an admin I want to be able to see all public posts of the selected user.
@@ -98,7 +98,7 @@
    * 6. Navigate to the "All posts of this user" button, which is located to the right below the header.
 * **Expected result:** To be displayed all public posts of the selected user.
 
-## Test case 91
+## Test case 89
 
 * **Title:** Admin should be able to see all private posts of the users 
 * **Narrative:** As an admin I want to be able to see all private posts of the users.
