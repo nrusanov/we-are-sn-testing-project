@@ -244,7 +244,6 @@
 ## Test case 63
 
 * **Title:** Admin should be able to dislike other users public posts
-* **Description:** Verify that an admin is able to dislike other users public posts.
 * **Narrative:** As an Admin I want to be able to dislike other users public posts.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few public posts.
@@ -262,7 +261,6 @@
 ## Test case 64
 
 * **Title:** Admin should be able to edit other users private posts
-* **Description:** Verify that an admin is able to edit other users private posts.
 * **Narrative:** As an Admin I want to be able to edit other users private posts.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
@@ -280,7 +278,6 @@
 ## Test case 65
 
 * **Title:** Admin should be able to delete other users private posts
-* **Description:** Verify that an admin is able to delete other users private posts.
 * **Narrative:** As an Admin I want to be able to delete other users private posts.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
@@ -298,7 +295,6 @@
 ## Test case 66
 
 * **Title:** Admin should be able to like other users private posts
-* **Description:** Verify that an admin is able to like other users private posts.
 * **Narrative:** As an Admin I want to be able to like other users private posts.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
@@ -308,28 +304,12 @@
    * 1. Navigate to URL: http://localhost:8081
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
-   * 4. Click on "Personal Profile" link, which is located in the header menu;
+   * 4. Click on "Latest Posts" link" link, which is located in the header menu;
    * 5. Scroll down to the users posts and choose one private of them;
    * 6. Click on the "Like" button;
 * **Expected result:** The post is liked.
 
-## Test case 67
 
-* **Title:** Admin should be able to dislike other users private posts
-* **Description:** Verify that an admin is able to dislike other users private posts.
-* **Narrative:** As an Admin I want to be able to dislike other users private posts.
-* **Priority:** High
-* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
-* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
-* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
-* **Steps to reproduce:** 
-   * 1. Navigate to URL: http://localhost:8081
-   * 2. Click on "Sign in" link, which is located in the header menu;
-   * 3. Log in with a valid credentials;
-   * 4. Click on "Personal Profile" link, which is located in the header menu;
-   * 5. Scroll down to the users posts and choose one private of them;
-   * 6. Find the liked post and click on the "Dislike" button;
-* **Expected result:** The post is disliked.
 
 
 
