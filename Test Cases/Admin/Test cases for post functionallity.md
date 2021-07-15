@@ -183,11 +183,11 @@
 
 ## Test case 60
 
-* **Title:** Admin should be able to edit other users posts
-* **Description:** Verify that an admin is able to edit other users posts.
-* **Narrative:** As an Admin I want to be able to edit other users posts.
+* **Title:** Admin should be able to edit other users public posts
+* **Description:** Verify that an admin is able to edit other users public posts.
+* **Narrative:** As an Admin I want to be able to edit other users public posts.
 * **Priority:** High
-* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few posts.
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few public posts.
 * **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
@@ -195,20 +195,20 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest Posts" link, which is located in the header menu;
-   * 5. Scroll down to the users posts and choose one of them;
+   * 5. Scroll down to the users posts and choose one public of them;
    * 6. Click on "Explore this post" button;
    * 7. Click on "Edit post" button, which is located to the right of the post;
    * 7. Fill in the "Message" field with a valid text (between 1-1000 characters, 1 lower case letter, 1 upper case letter, 1 numeric character, 1 special symbol, 1 Latin and 1 Cyrillic letter);
    * 8. Click on "Save post" button
-* **Expected result:** Тhe other user post is edited containing a new description.
+* **Expected result:** Тhe other user public post is edited containing a new description.
 
 ## Test case 61
 
-* **Title:** Admin should be able to delete other users posts
-* **Description:** Verify that an admin is able to delete other users posts.
-* **Narrative:** As an Admin I want to be able to delete other users posts.
+* **Title:** Admin should be able to delete other users public posts
+* **Description:** Verify that an admin is able to delete other users public posts.
+* **Narrative:** As an Admin I want to be able to delete other users public posts.
 * **Priority:** High
-* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few posts.
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few public posts.
 * **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
@@ -216,12 +216,120 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest Posts" link, which is located in the header menu;
-   * 5. Scroll down to the users posts and choose one of them;
+   * 5. Scroll down to the users posts and choose one public of them;
    * 6. Click on "Explore this post" button;
    * 7. Click on "Delete post" button;
    * 8. Choose "Delete post" from the dropdown menu;
    * 9. Click on "Submit" button
-* **Expected result:** The post of the other user is successfully deleted.
+* **Expected result:** The public post of the other user is successfully deleted.
+
+## Test case 62
+
+* **Title:** Admin should be able to like other users public posts
+* **Description:** Verify that an admin is able to like other users public posts.
+* **Narrative:** As an Admin I want to be able to like other users public posts.
+* **Priority:** High
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few public posts.
+* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
+* **Steps to reproduce:** 
+   * 1. Navigate to URL: http://localhost:8081
+   * 2. Click on "Sign in" link, which is located in the header menu;
+   * 3. Log in with a valid credentials;
+   * 4. Click on "Personal Profile" link, which is located in the header menu;
+   * 5. Scroll down to the users posts and choose one public of them;
+   * 6. Click on the "Like" button;
+* **Expected result:** The post is liked.
+
+## Test case 63
+
+* **Title:** Admin should be able to dislike other users public posts
+* **Description:** Verify that an admin is able to dislike other users public posts.
+* **Narrative:** As an Admin I want to be able to dislike other users public posts.
+* **Priority:** High
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few public posts.
+* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
+* **Steps to reproduce:** 
+   * 1. Navigate to URL: http://localhost:8081
+   * 2. Click on "Sign in" link, which is located in the header menu;
+   * 3. Log in with a valid credentials;
+   * 4. Click on "Personal Profile" link, which is located in the header menu;
+   * 5. Scroll down to the users posts and choose one public of them;
+   * 6. Find the liked post and click on the "Dislike" button;
+* **Expected result:** The post is disliked.
+
+## Test case 64
+
+* **Title:** Admin should be able to edit other users private posts
+* **Description:** Verify that an admin is able to edit other users private posts.
+* **Narrative:** As an Admin I want to be able to edit other users private posts.
+* **Priority:** High
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
+* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
+* **Steps to reproduce:** 
+   * 1. Navigate to URL: http://localhost:8081
+   * 2. Click on "Sign in" link, which is located in the header menu;
+   * 3. Log in with a valid credentials;
+   * 4. Click on "Latest Posts" link, which is located in the header menu;
+   * 5. Scroll down to the users posts and choose one private of them;
+   * 6. Click on "Explore this post" button;
+* **Expected result:** Тhe other user private post is edited containing a new description.
+
+## Test case 65
+
+* **Title:** Admin should be able to delete other users private posts
+* **Description:** Verify that an admin is able to delete other users private posts.
+* **Narrative:** As an Admin I want to be able to delete other users private posts.
+* **Priority:** High
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
+* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
+* **Steps to reproduce:** 
+  * 1. Navigate to URL: http://localhost:8081
+   * 2. Click on "Sign in" link, which is located in the header menu;
+   * 3. Log in with a valid credentials;
+   * 4. Click on "Latest Posts" link, which is located in the header menu;
+   * 5. Scroll down to the users posts and choose one private of them;
+   * 6. Click on "Explore this post" button;
+* **Expected result:** The private post of the other user is successfully deleted.
+
+## Test case 66
+
+* **Title:** Admin should be able to like other users private posts
+* **Description:** Verify that an admin is able to like other users private posts.
+* **Narrative:** As an Admin I want to be able to like other users private posts.
+* **Priority:** High
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
+* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
+* **Steps to reproduce:** 
+   * 1. Navigate to URL: http://localhost:8081
+   * 2. Click on "Sign in" link, which is located in the header menu;
+   * 3. Log in with a valid credentials;
+   * 4. Click on "Personal Profile" link, which is located in the header menu;
+   * 5. Scroll down to the users posts and choose one private of them;
+   * 6. Click on the "Like" button;
+* **Expected result:** The post is liked.
+
+## Test case 67
+
+* **Title:** Admin should be able to dislike other users private posts
+* **Description:** Verify that an admin is able to dislike other users private posts.
+* **Narrative:** As an Admin I want to be able to dislike other users private posts.
+* **Priority:** High
+* **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created a few private posts.
+* **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
+* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
+* **Steps to reproduce:** 
+   * 1. Navigate to URL: http://localhost:8081
+   * 2. Click on "Sign in" link, which is located in the header menu;
+   * 3. Log in with a valid credentials;
+   * 4. Click on "Personal Profile" link, which is located in the header menu;
+   * 5. Scroll down to the users posts and choose one private of them;
+   * 6. Find the liked post and click on the "Dislike" button;
+* **Expected result:** The post is disliked.
 
 
 
