@@ -2,10 +2,10 @@
 
 ## Test case 41
 
-* **Title:** Registered user should be able to see all public posts
-* **Narrative:** As a registered user I want to be able to see all public posts
+* **Title:** Registered user should be able to see all public and private posts
+* **Narrative:** As a registered user I want to be able to see all public and private posts
 * **Priority:** High
-* **Pre-condition:** The docker must be set up. The user is registered and logged in. Must have a few posts created.
+* **Pre-condition:** The docker must be set up. The user is registered and logged in. Must have a few public and private posts created.
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
@@ -13,14 +13,14 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest posts" link, which is located in the header menu;
-* **Expected result:** To be displayed all public posts of users on the site.
+* **Expected result:** To be displayed all public and private posts of users on the site.
 
 ## Test case 42
 
-* **Title:** Registered user should be able to see all public posts in a chronological order
-* **Narrative:** As a registered user I want to be able to see all public posts in a chronological order.
+* **Title:** Registered user should be able to see all public and private posts in a chronological order
+* **Narrative:** As a registered user I want to be able to see all public and private posts in a chronological order.
 * **Priority:** Medium
-* **Pre-condition:** The docker must be set up. The user is registered and logged in. Must have a few posts created.
+* **Pre-condition:** The docker must be set up. The user is registered and logged in. Must have a few public and private posts created.
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
@@ -28,7 +28,7 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest posts" link, which is located in the header menu;
-* **Expected result:** To be displayed all public posts of users on the site in a chronological order.
+* **Expected result:** To be displayed all public and private posts of users on the site in a chronological order.
 
 ## Test case 43
 
@@ -66,8 +66,8 @@
 
 ## Test case 45
 
-* **Title:** Registered user should be able to explore a user post on a registered user
-* **Narrative:** As a registered user I want to be able to explore a user post and see the comments in it.
+* **Title:** Registered user should be able to explore a user public post 
+* **Narrative:** As a registered user I want to be able to explore a user public post and see the comments in it.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The user is registered and logged in. Must have at least one posts.
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
@@ -77,7 +77,7 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest posts" link, which is located in the header menu;
-   * 5. Choose one of the users posts and click on "Explore this post" button;
+   * 5. Choose one of the users public posts and click on "Explore this post" button;
    * 6. Scroll down to the "Show Comments" button and click on it
 * **Expected result:** To be displayed all content of the post, as well as comments, if any.
 
@@ -94,7 +94,7 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest posts" link, which is located in the header menu;
-   * 5. Choose one of the users posts and click on "Explore this post" button;
+   * 5. Choose one of the users public posts and click on "Explore this post" button;
    * 6. Navigate to the "All posts of this user" button, which is located to the right below the header.
 * **Expected result:** To be displayed all public posts of the selected user.
 

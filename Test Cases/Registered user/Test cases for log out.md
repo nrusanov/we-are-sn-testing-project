@@ -5,7 +5,7 @@
 * **Title:** Registered user should be able to log out
 * **Narrative:** As a Registered user I want to be able to log out.
 * **Priority:** High
-* **Pre-condition:**The docker must be set up. The user must be registered and logged in.
+* **Pre-condition:** The docker must be set up. The user must be registered and logged in.
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 

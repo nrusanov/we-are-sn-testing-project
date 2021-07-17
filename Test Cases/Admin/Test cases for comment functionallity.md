@@ -154,8 +154,8 @@
 
 ## Test case 75
 
-* **Title:** Admin should be able to post a comment on the other users posts
-* **Narrative:** As an Admin I want to be able to post a comment on the other users posts.
+* **Title:** Admin should be able to post a comment on the other users public posts
+* **Narrative:** As an Admin I want to be able to post a comment on the other users public posts.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin must be registered and logged in. The other users must have created а few posts and a few comments in it.
 * **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
@@ -165,7 +165,7 @@
    * 2. Click on "Sign in" link, which is located in the header menu;
    * 3. Log in with a valid credentials;
    * 4. Click on "Latest Posts" link, which is located in the header menu;
-   * 5. Scroll down to the users posts and choose one of them;
+   * 5. Scroll down to the users posts and choose one public of them;
    * 6. Click on "Explore this post" button
 * **Expected result:** A new comment containing a description is posted below the other user post.
 

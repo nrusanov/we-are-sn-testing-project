@@ -3,7 +3,7 @@
 ## Test case 51
 
 * **Title:** Admin should be able to create a new post
-* **Description:** Verify that an admin is able to create a new post containing a discription and a picture.
+* **Description:** Verify that an admin is able to create a new post containing a discription and an atached file.
 * **Narrative:** As an Admin I want to be able to create a post.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin must be registered and logged in.
@@ -17,13 +17,13 @@
    * 5. Scroll down to the "Create new post" section;
    * 6. Choose a post visibility;
    * 7. Fill in the "Message" field with a valid text (between 1-1000 characters, 1 lower case letter, 1 upper case letter, 1 numeric character, 1 special symbol, 1 Latin and 1 Cyrillic letter);
-   * 8. Click on  "Choose file" button and upload a picture;
+   * 8. Click on  "Choose file" button and upload a file;
    * 9. Click on "Save post" button
-* **Expected result:** A new post is created, containing a description and a picture.
+* **Expected result:** A new post is created, containing a description and a file;
 
 ## Test case 52
 
-* **Title:** Admin should be able to create a new post without picture
+* **Title:** Admin should be able to create a new post without attached file
 * **Description:** Verify that an admin is able to create a new post containing only discription.
 * **Narrative:** As an Admin I want to be able to create a new post.
 * **Priority:** High

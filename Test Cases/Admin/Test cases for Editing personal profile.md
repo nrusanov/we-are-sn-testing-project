@@ -569,17 +569,14 @@
 ## Test case 42
 
 * **Title:** Admin should be able to enable his own profile
-* **Narrative:** As an admin I want to be able to enable my alredy disabled profile.
+* **Narrative:** As an admin I want to be able to enable my alreаdy disabled profile, as soon as I deactivate it, without logging оut.
 * **Priority:** High
 * **Pre-condition:** The docker must be set up. The admin is registered and logged in. Тhe admin profile must be disabled.
 * **Test data:** Username: adminTeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL: http://localhost:8081
-   * 2. Click on "Sign in" link, which is located in the header menu;
-   * 3. Log in with a valid credentials;
-   * 4. Click on "Search" button;
-   * 5. Choose the users profile, which you have already deactivated and click on "See profile" button;
-   * 6. Click on "enable" button, which is located to the left of the profile picture
+   * 2. Click on "Personal profile" link, which is located in the header menu;
+   * 3. Click on "enable" button, which is located to the left of the profile picture
 * **Expected result:** The profile to be activated.
 
