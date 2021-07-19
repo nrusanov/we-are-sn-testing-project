@@ -1,6 +1,6 @@
 # **Log out**
 
-## Test case 01
+## Test case 122
 
 * **Title:** Registered user should be able to log out
 * **Narrative:** As a Registered user I want to be able to log out.

@@ -1,6 +1,6 @@
 # **Log out**
 
-## Test case 01
+## Test case 126
 
 * **Title:** Admin should be able to log out
 * **Narrative:** As an Admin I want to be able to log out.
