@@ -81,8 +81,6 @@ the product quality.
 
 ##### 3.2. **FUNCTIONALITIES NOT TO BE TESTED** 
 
-**Unit testing** - Unit testing is already performed by the development team and is considered done; 
---- 
 Due to limited time for testing and since no such requirement is present in software documentation, the 
 software won't be tested against browsers different from the ones in point 5 as per this test plan. 
 
@@ -106,6 +104,7 @@ Occasional meetings are also possible regarding changes in deadlines and test sc
     - Postman;   
     - GitLab;   
 
+- **Unit testing** - Unit testing is already performed by the development team and is considered done; 
 - **System and Integration Testing** - System and Integration testing are part of the testing team engagement. 
 The following types of testing will be performed:  
      - Functional testing - Functional testing will be performed using the functional requirements and will evaluate 
