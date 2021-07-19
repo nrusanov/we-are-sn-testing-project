@@ -47,7 +47,7 @@
 - [Test cases for post functionality](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20post%20functionallity.md)
 - [Test cases for comment functionality](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20comment%20functionallity.md)
 - [Test cases for connection functionality](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20Connections.md)
-- [Test cases for posts ranking functionality] (https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20Admin%20funtionalities.md)
+- [Test cases for posts ranking functionality](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20Admin%20funtionalities.md)
 - [Test cases for "Latest posts" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20Latest%20post%20page.md)
 - [Test cases for "About us" page](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20About%20us%20page.md)
 - [Test cases for log out](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/blob/master/Test%20Cases/Admin/Test%20cases%20for%20log%20out.md)
