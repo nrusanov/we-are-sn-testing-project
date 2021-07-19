@@ -81,6 +81,8 @@ the product quality.
 
 ##### 3.2. **FUNCTIONALITIES NOT TO BE TESTED** 
 
+**Unit testing** - Unit testing is already performed by the development team and is considered done; 
+--- 
 Due to limited time for testing and since no such requirement is present in software documentation, the 
 software won't be tested against browsers different from the ones in point 5 as per this test plan. 
 
@@ -104,22 +106,21 @@ Occasional meetings are also possible regarding changes in deadlines and test sc
     - Postman;   
     - GitLab;   
 
-- **Unit testing** - Unit testing is already performed by the development team and is considered done;  
 - **System and Integration Testing** - System and Integration testing are part of the testing team engagement. 
 The following types of testing will be performed:  
-     - Functional testing - Functional testing is performed using the functional specification provided by 
-the client and verifies the system against the functional requirements;
+     - Functional testing - Functional testing will be performed using the functional requirements and will evaluate 
+     the system against the functional requirements;
      - Exploratory testing - will be executed covering the Public part and Private part. 
 The Exploratory testing session will be between 60 and 90 minutes. The testing process will be documented 
 and the occurred issues will be reported;
-     - Smoke testing - The purpose of the smoke testing is to ensure that the critical functionalities 
+     - Smoke testing - will be performed to ensure that the critical functionalities 
 of the application are working fine;
-     - Usability testing - The goal of usability testing is to reveal areas of confusion and uncover 
-opportunities to improve the overall user experience;
-     - Regression testing - The purpose of regression testing is to ensure that the code changes adversely 
-not affect the existing functionality;
-- **Acceptance testing**- The purpose of this test is to evaluate the system's compliance with the business 
-requirements and verify if it has met the required criteria for delivery to end users.
+     - Usability testing - will be performed mainly in exploratory testing stage and aims is to reveal areas 
+     of confusion and uncover opportunities to improve the overall user experience;
+     - Regression testing - will be performed in case of code changes in order to verify changes doesn't 
+     affect the existing functionality;
+- **Acceptance testing**- will be performed at the final stage of testing with aim to evaluate the system's 
+compliance with the business requirements to verify if it has met the required criteria for delivery to end users.
 
 ---
 
@@ -191,7 +192,7 @@ This include:
 - All high priority test cases are executed and passed​;
 - All medium priority test cases are executed and 80% passed;
 - There are no critical or blocking issues that are left outstanding;
-- The testing deadline has been reached
+- The testing deadline - 30.07.2021 has been reached
 
 ---  
 
