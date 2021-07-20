@@ -1,0 +1,9 @@
+2021-06-04 11:22:14,602 INFO  [main] Initializing WebDriver
+2021-06-04 11:22:24,221 INFO  [main] Initializing WebDriver
+2021-06-04 11:22:24,230 INFO  [main] Initializing WebDriver
+2021-06-04 11:22:25,702 INFO  [main] Clicking on element forum.homePage.logInButton
+2021-06-04 11:22:26,806 INFO  [main] Initializing WebDriver
+2021-06-04 11:22:26,900 INFO  [main] Clicking on element forum.loginPage.signInButton
+2021-06-04 11:22:30,783 INFO  [main] Clicking on element forum.homePage.newTopicButton
+2021-06-04 11:22:32,057 INFO  [main] Clicking on element forum.homePage.createTopicButton
+2021-06-04 11:22:36,856 INFO  [main] Quitting WebDriver

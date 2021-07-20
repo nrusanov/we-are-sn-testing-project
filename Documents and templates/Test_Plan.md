@@ -104,6 +104,7 @@ Occasional meetings are also possible regarding changes in deadlines and test sc
     - Postman;   
     - GitLab;   
 
+
 - **Unit testing** - Unit testing is already performed by the development team and is considered done;  
 - **System and Integration Testing** - System and Integration testing are part of the testing team engagement. 
 The following types of testing will be performed:  
