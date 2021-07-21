@@ -1,0 +1,3016 @@
+{
+	"info": {
+		"_postman_id": "42a78bc0-d57f-4d91-9b61-fa87276053a0",
+		"name": "WEare Social Network API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.collectionVariables.set(\"tempLastUserIdBeforeReg\", jsonData[0].userId);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var users = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<users.length;i++){\r",
+									"        if (users[i].userId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    }\r",
+									"    pm.expect(counter).to.be.gt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"index\": 0,\r\n  \"next\": true,\r\n  \"searchParam1\": \"\",\r\n  \"searchParam2\": \"\",\r\n  \"size\": 10\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.text().split(' ');\r",
+									"pm.collectionVariables.set(\"firstUserId\", response[6]);\r",
+									"pm.collectionVariables.set(\"firstUsername\", response[3]);\r",
+									"\r",
+									"pm.test(\"Response contains Message for successful registration\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"User with name \");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains Message for successful registration part two\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"and id \");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains Message for successful registration part three\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\" was created\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": {\r\n    \"id\": \"{{categoryID}}\",\r\n    \"name\": \"{{category}}\"\r\n  },\r\n  \"confirmPassword\": \"{{firstConfirmPassword}}\",\r\n  \"email\": \"{{firstEmail}}\",\r\n  \"password\": \"{{firstPassword}}\",\r\n  \"username\": \"{{$randomWord}}{{$randomAbbreviation}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users After First User Registration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"User ID should be equal to the last registered user ID before the current plus one\", function () {\r",
+									"    pm.expect(jsonData[0].userId).to.equal(pm.collectionVariables.get (\"tempLastUserIdBeforeReg\") + 1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The user name is correct\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedUsername = pm.collectionVariables.get(\"firstUsername\")\r",
+									"    pm.expect(jsonData[0].username).to.eql(expectedUsername);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The user expertise id should be '100'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedId = parseInt(pm.collectionVariables.get(\"categoryID\"));\r",
+									"    pm.expect(jsonData[0].expertiseProfile.category.id).to.eql(expectedId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The user expertise name should be 'All'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedExpertiseName = pm.collectionVariables.get(\"category\")\r",
+									"    pm.expect(jsonData[0].expertiseProfile.category.name).to.eql(expectedExpertiseName);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"index\": 0,\r\n  \"next\": true,\r\n  \"searchParam1\": \"\",\r\n  \"searchParam2\": \"\",\r\n  \"size\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Second User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var response = pm.response.text().split(' ');\r",
+									"pm.collectionVariables.set(\"secondUserId\", response[6]);\r",
+									"pm.collectionVariables.set(\"secondUsername\", response[3]);\r",
+									"\r",
+									"pm.test(\"Response contains Message for successful registration\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"User with name\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains Message for successful registration part two\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"and id \");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response contains Message for successful registration part three\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\" was created\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": {\r\n    \"id\": \"{{categoryID}}\",\r\n    \"name\": \"{{category}}\"\r\n  },\r\n  \"confirmPassword\": \"{{secondConfirmPassword}}\",\r\n  \"email\": \"{{secondEmail}}\",\r\n  \"password\": \"{{secondPassword}}\",\r\n  \"username\": \"{{$randomWord}}{{$randomAbbreviation}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users After Second User Registration Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"User ID should be equal to the last registered user ID before the current plus one\", function () {\r",
+									"    pm.expect(jsonData[0].userId).to.equal (parseInt(pm.collectionVariables.get (\"firstUserId\")) + 1);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The user name is correct\", function () {\r",
+									"    var expectedUsername = pm.collectionVariables.get(\"secondUsername\")\r",
+									"    pm.expect(jsonData[0].username).to.eql(expectedUsername);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The user expertise id should be '100'\", function () {\r",
+									"    var expectedId = parseInt(pm.collectionVariables.get(\"categoryID\"));\r",
+									"    pm.expect(jsonData[0].expertiseProfile.category.id).to.eql(expectedId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"The user expertise name should be 'All'\", function () {\r",
+									"    var expectedExpertiseName = pm.collectionVariables.get(\"category\")\r",
+									"    pm.expect(jsonData[0].expertiseProfile.category.name).to.eql(expectedExpertiseName);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"index\": 0,\r\n  \"next\": true,\r\n  \"searchParam1\": \"\",\r\n  \"searchParam2\": \"\",\r\n  \"size\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate First User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{firstUsername}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{firstPassword}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update First User Expetise",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"User ID remains unchanged\", function () {\r",
+									"    var expectedFirstUserID = parseInt(pm.collectionVariables.get(\"firstUserId\"));\r",
+									"    pm.expect(jsonData.id).to.eql(expectedFirstUserID);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"First skill is updated correctly\", function () {\r",
+									"    var expectedFirstSkill = pm.collectionVariables.get(\"firstUserSkillOne\");\r",
+									"    pm.expect(jsonData.skills[0].skill).to.eql(expectedFirstSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Second skill is updated correctly\", function () {\r",
+									"    var expectedSecondSkill = pm.collectionVariables.get(\"firstUserSkillTwo\");\r",
+									"    pm.expect(jsonData.skills[1].skill).to.eql(expectedSecondSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Third skill is updated correctly\", function () {\r",
+									"    var expectedThirdSkill = pm.collectionVariables.get(\"firstUserSkillThree\");\r",
+									"    pm.expect(jsonData.skills[2].skill).to.eql(expectedThirdSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Fourth skill is updated correctly\", function () {\r",
+									"    var expectedFourthSkill = pm.collectionVariables.get(\"firstUserSkillFour\");\r",
+									"    pm.expect(jsonData.skills[3].skill).to.eql(expectedFourthSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Fifth skill is updated correctly\", function () {\r",
+									"    var expectedFifthSkill = pm.collectionVariables.get(\"firstUserSkillFive\");\r",
+									"    pm.expect(jsonData.skills[4].skill).to.eql(expectedFifthSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Availability is '50.0'\", function () {\r",
+									"    pm.expect(jsonData.availability).to.eql(50);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Category ID is '100'\", function () {\r",
+									"    pm.expect(jsonData.category.id).to.eql(100);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Catefgory name is 'All'\", function () {\r",
+									"    pm.expect(jsonData.category.name).to.eql(\"All\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"firstUserSkillOne\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"firstUserSkillTwo\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"firstUserSkillThree\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"firstUserSkillFour\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"firstUserSkillFive\", pm.variables.replaceIn ('{{$randomJobTitle}}'));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"availability\": {{availability}},\r\n  \"category\": {\r\n    \"id\": {{categoryID}},\r\n    \"name\": \"{{category}}\"\r\n  },\r\n  \"id\": 0,\r\n  \"skill1\": \"{{firstUserSkillOne}}\",\r\n  \"skill2\": \"{{firstUserSkillTwo}}\",\r\n  \"skill3\": \"{{firstUserSkillThree}}\",\r\n  \"skill4\": \"{{firstUserSkillFour}}\",\r\n  \"skill5\": \"{{firstUserSkillFive}}\",\r\n  \"skills\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/auth/{{firstUserId}}/expertise",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"auth",
+								"{{firstUserId}}",
+								"expertise"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Personal Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"First name is correct\", function () {\r",
+									"    var expectedFirstName = pm.collectionVariables.get(\"firstName\")\r",
+									"    pm.expect(jsonData.firstName).to.eql(expectedFirstName);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Last name is correct\", function () {\r",
+									"    var expectedLastName = pm.collectionVariables.get(\"lastName\")\r",
+									"    pm.expect(jsonData.lastName).to.eql(expectedLastName);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"City is correct\", function () {\r",
+									"    pm.expect(jsonData.location.city.city).to.eql(\"Varna\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Gender is correct - 'male'\", function () {\r",
+									"    pm.expect(jsonData.sex).to.eql(\"MALE\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Date of birth is correct\", function () {\r",
+									"    pm.expect(jsonData.birthYear).to.eql(\"1986-07-20\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Description is correct\", function () {\r",
+									"    pm.expect(jsonData.personalReview).to.eql(\"Description\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Value of picture privacy is 'true'\", function () {\r",
+									"    pm.expect(jsonData.picturePrivacy).to.eql(true);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"firstName\", pm.variables.replaceIn(\"{{$randomFirstName}}\"));\r",
+									"pm.collectionVariables.set(\"lastName\", pm.variables.replaceIn(\"{{$randomLastName}}\"));\r",
+									"pm.collectionVariables.set(\"city\", pm.variables.replaceIn(\"{{$randomCity}}\"));\r",
+									"pm.collectionVariables.set(\"userPicture\", pm.variables.replaceIn(\"{{$randomPeopleImage}}\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"birthYear\": \"1986-07-20\",\r\n  \"firstName\": \"{{firstName}}\",\r\n  \"id\": {{firstUserId}},\r\n  \"lastName\": \"{{lastName}}\",\r\n  \"location\": {\r\n    \"city\": {\r\n      \"city\": \"Varna\",\r\n      \"country\": {},\r\n      \"id\": 3\r\n    },\r\n    \"id\": 0\r\n  },\r\n  \"personalReview\": \"Description\",\r\n  \"picture\": \"{{userPicture}}\",\r\n  \"picturePrivacy\": true,\r\n  \"sex\": \"MALE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/auth/{{firstUserId}}/personal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"auth",
+								"{{firstUserId}}",
+								"personal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/auth/{{firstUserId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"auth",
+								"{{firstUserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate Second User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{secondUsername}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{secondPassword}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Second User Expetise",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"User ID remains unchanged\", function () {\r",
+									"    var expectedSecondUserID = parseInt(pm.collectionVariables.get(\"secondUserId\"));\r",
+									"    pm.expect(jsonData.id).to.eql(expectedSecondUserID);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"First skill is updated correctly\", function () {\r",
+									"    var expectedFirstSkill = pm.collectionVariables.get(\"secondUserSkillOne\");\r",
+									"    pm.expect(jsonData.skills[0].skill).to.eql(expectedFirstSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Second skill is updated correctly\", function () {\r",
+									"    var expectedSecondSkill = pm.collectionVariables.get(\"secondUserSkillTwo\");\r",
+									"    pm.expect(jsonData.skills[1].skill).to.eql(expectedSecondSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Third skill is updated correctly\", function () {\r",
+									"    var expectedThirdSkill = pm.collectionVariables.get(\"secondtUserSkillThree\");\r",
+									"    pm.expect(jsonData.skills[2].skill).to.eql(expectedThirdSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Fourth skill is updated correctly\", function () {\r",
+									"    var expectedFourthSkill = pm.collectionVariables.get(\"secondUserSkillFour\");\r",
+									"    pm.expect(jsonData.skills[3].skill).to.eql(expectedFourthSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Fifth skill is updated correctly\", function () {\r",
+									"    var expectedFifthSkill = pm.collectionVariables.get(\"secondUserSkillFive\");\r",
+									"    pm.expect(jsonData.skills[4].skill).to.eql(expectedFifthSkill);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Availability is '50.0'\", function () {\r",
+									"    pm.expect(jsonData.availability).to.eql(50);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Category ID is '100'\", function () {\r",
+									"    pm.expect(jsonData.category.id).to.eql(100);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Catefgory name is 'All'\", function () {\r",
+									"    pm.expect(jsonData.category.name).to.eql(\"All\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"secondtUserSkillOne\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"secondUserSkillTwo\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"secondUserSkillThree\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"secondUserSkillFour\", pm.variables.replaceIn ('{{$randomJobTitle}}'));\r",
+									"pm.collectionVariables.set(\"secondtUserSkillFive\", pm.variables.replaceIn ('{{$randomJobTitle}}'));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"availability\": {{availability}},\r\n  \"category\": {\r\n    \"id\": {{categoryID}},\r\n    \"name\": \"{{category}}\"\r\n  },\r\n  \"id\": 0,\r\n  \"skill1\": \"{{firstUserSkillOne}}\",\r\n  \"skill2\": \"{{firstUserSkillTwo}}\",\r\n  \"skill3\": \"{{firstUserSkillThree}}\",\r\n  \"skill4\": \"{{firstUserSkillFour}}\",\r\n  \"skill5\": \"{{firstUserSkillFive}}\",\r\n  \"skills\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/auth/{{secondUserId}}/expertise",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"auth",
+								"{{secondUserId}}",
+								"expertise"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Authenticate User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{firstUsername}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{firstPassword}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts Before Post Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Verify that the list is empty\", function () {\r",
+									"    pm.expect(jsonData).to.be.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.collectionVariables.set(\"postsCountBefore\", jsonData.length);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All My Posts Before Post Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"\r",
+									"pm.collectionVariables.set(\"myPostsCountBefore\", jsonData.length);\r",
+									"\r",
+									"pm.test(\"Verify that the list is empty\", function () {\r",
+									"    pm.expect(jsonData).to.be.empty;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"index\": 0,\r\n  \"next\": true,\r\n  \"searchParam1\": \"\",\r\n  \"searchParam2\": \"{{firstUserName}}\",\r\n  \"size\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/{{firstUserId}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"{{firstUserId}}",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"postId\", jsonData.postId);\r",
+									"\r",
+									"pm.test(\"Post created ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedId = pm.collectionVariables.get(\"postId\")\r",
+									"    pm.expect(jsonData.postId).to.eql(expectedId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Veiify created post is not null or undefined\", function () {\r",
+									"        pm.expect(jsonData).is.not.oneOf([null, undefined]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify post content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"postContent\")\r",
+									"    pm.expect(jsonData.content).to.eql(expectedContent);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify post picture\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedPicture = pm.collectionVariables.get(\"postPicture\")\r",
+									"    pm.expect(jsonData.picture).to.eql(expectedPicture);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"postContent\", pm.variables.replaceIn(\"{{$randomLoremParagraph}}\"));\r",
+									"pm.collectionVariables.set(\"postPicture\", pm.variables.replaceIn(\"{{$randomFashionImage}}\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"{{postContent}}\",\r\n  \"picture\": \"{{postPicture}}\",\r\n  \"public\": \"{{postStatus}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/auth/creator",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"auth",
+								"creator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts After Post Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var posts = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<posts.length;i++){\r",
+									"        if (posts[i].postId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify posts count is greater than posts count before Post creation\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody); \r",
+									"    let postsCountBefore = pm.collectionVariables.get(\"postsCountBefore\");\r",
+									"    pm.expect(jsonData.length).to.be.greaterThan(postsCountBefore);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All My Posts After Post Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var posts = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<posts.length;i++){\r",
+									"        if (posts[i].postId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Verify posts count is greater than posts count before Post creation\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody); \r",
+									"    var myPostsCountBefore = pm.collectionVariables.get(\"myPostsCountBefore\");\r",
+									"    pm.expect(jsonData.length).to.be.greaterThan(myPostsCountBefore);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"index\": 0,\r\n  \"next\": true,\r\n  \"searchParam1\": \"\",\r\n  \"searchParam2\": \"{{firstUserName}}\",\r\n  \"size\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/{{firstUserId}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"{{firstUserId}}",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"updatedPostContent\", pm.variables.replaceIn(\"{{$randomLoremParagraph}}\"));\r",
+									"pm.collectionVariables.set(\"updatedPostPicture\", pm.variables.replaceIn(\"{{$randomNatureImage}}\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"{{updatedPostContent}}\",\r\n  \"picture\": \"{{updatedPostPicture}}\",\r\n  \"public\": \"{{postStatus}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/auth/editor?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"auth",
+								"editor"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All My Posts After Post Edition",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var posts = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<posts.length;i++){\r",
+									"        if (posts[i].postId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated post ID has not changed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var oldId = pm.collectionVariables.get(\"postId\")\r",
+									"    pm.expect(jsonData[0].postId).to.eql(oldId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated post content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"updatedPostContent\")\r",
+									"    pm.expect(jsonData[0].content).to.eql(expectedContent);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated post picture\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedPicture = pm.collectionVariables.get(\"updatedPostPicture\")\r",
+									"    pm.expect(jsonData[0].picture).to.eql(expectedPicture);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"index\": 0,\r\n  \"next\": true,\r\n  \"searchParam1\": \"\",\r\n  \"searchParam2\": \"{{firstUserName}}\",\r\n  \"size\": 999\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/{{firstUserId}}/posts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								"{{firstUserId}}",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that post is liked by the user\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.likes[0]).to.have.property('username');\r",
+									"    pm.expect(jsonData.likes[0]).to.have.property('userId');\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/auth/likesUp?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"auth",
+								"likesUp"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/auth/manager?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"auth",
+								"manager"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Authenticate User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{firstUsername}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{firstPassword}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"postId\", jsonData.postId);\r",
+									"\r",
+									"pm.test(\"Post created ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedId = pm.collectionVariables.get(\"postId\")\r",
+									"    pm.expect(jsonData.postId).to.eql(expectedId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Veiify created post is not null or undefined\", function () {\r",
+									"        pm.expect(jsonData).is.not.oneOf([null, undefined]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify post content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"postContent\")\r",
+									"    pm.expect(jsonData.content).to.eql(expectedContent);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify post picture\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedPicture = pm.collectionVariables.get(\"postPicture\")\r",
+									"    pm.expect(jsonData.picture).to.eql(expectedPicture);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"postContent\", pm.variables.replaceIn(\"{{$randomLoremText}}\"));\r",
+									"pm.collectionVariables.set(\"postPicture\", pm.variables.replaceIn(\"{{$randomAbstractImage}}\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"{{postContent}}\",\r\n  \"picture\": \"{{postPicture}}\",\r\n  \"public\": \"{{postStatus}}\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/auth/creator",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"auth",
+								"creator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comments Before Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"commentsCountBefore\", jsonData.length);\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var comments = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<comments.length;i++){\r",
+									"        if (comments[i].commentId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comment of Post Before Comment Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"myCommentsCountBefore\", jsonData.length);\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var comments = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<comments.length;i++){\r",
+									"        if (comments[i].commentId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/Comments?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"Comments"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"commentId\", jsonData.commentId);\r",
+									"\r",
+									"pm.test(\"Comment created ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedId = pm.collectionVariables.get(\"commentId\")\r",
+									"    pm.expect(jsonData.commentId).to.eql(expectedId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Id greater than 0 generated for the comment\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.commentId).not.to.lt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Veify created comment is not null or undefined\", function () {\r",
+									"        pm.expect(jsonData).is.not.oneOf([null, undefined]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify comment content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"commentContent\")\r",
+									"    pm.expect(jsonData.content).to.eql(expectedContent);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"{{commentContent}}\",\r\n  \"postId\": \"{{postId}}\",\r\n  \"userId\": \"{{firstUserId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/auth/creator",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"auth",
+								"creator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comments After Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var comments = pm.response.json();\r",
+									"    var counter = 0;\r",
+									"    for (i=0; i<comments.length;i++){\r",
+									"        if (comments[i].commentId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify comments count is greater than comments count before Comment creation\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody); \r",
+									"    var commentsCountBefore = pm.collectionVariables.get(\"commentsCountBefore\");\r",
+									"   pm.expect(jsonData.length).to.be.greaterThan(commentsCountBefore);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comment of Post After Comment Creation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var comments = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<comments.length;i++){\r",
+									"        if (comments[i].commentId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify all comments count is greater than 0\", function () {  \r",
+									"    var allComments = pm.response.json();\r",
+									"    var numberOfAllComments =  allComments.length; \r",
+									"    pm.expect(numberOfAllComments).to.gt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify post comments count is greater than comments count before Comment creation\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody); \r",
+									"    let myCommentsCountBefore = pm.collectionVariables.get(\"myCommentsCountBefore\");\r",
+									"    pm.expect(jsonData.length).to.be.greaterThan(myCommentsCountBefore);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/Comments?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"Comments"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Created Comment By ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify comment ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var oldId = pm.collectionVariables.get(\"commentId\")\r",
+									"    pm.expect(jsonData.commentId).to.eql(oldId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify comment content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"commentContent\")\r",
+									"    pm.expect(jsonData.content).to.eql(expectedContent);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/single?commentId={{commentId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"single"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "{{commentId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/auth/editor?commentId={{commentId}}&content={{updatedCommentContent}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"auth",
+								"editor"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "{{commentId}}"
+								},
+								{
+									"key": "content",
+									"value": "{{updatedCommentContent}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Updated Comment By ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated comment ID has not changed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var oldId = pm.collectionVariables.get(\"commentId\")\r",
+									"    pm.expect(jsonData.commentId).to.eql(oldId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated comment content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"updatedCommentContent\")\r",
+									"    pm.expect(jsonData.content).to.eql(expectedContent);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/single?commentId={{commentId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"single"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "{{commentId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that post is liked by the user\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedContent = pm.collectionVariables.get(\"updatedCommentContent\")\r",
+									"    pm.expect(jsonData.content).to.be.eql(expectedContent);\r",
+									"    pm.expect(jsonData.likes[0]).to.have.property('username');\r",
+									"    pm.expect(jsonData.likes[0]).to.have.property('userId');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/auth/likesUp?commentId={{commentId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"auth",
+								"likesUp"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "{{commentId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that comment is deleted\",() => {\r",
+									"    var еxpectedCommentContent=pm.collectionVariables.get(\"updatedCommentContent\")\r",
+									"  pm.expect(pm.response.text()).to.not.include(еxpectedCommentContent);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/auth/manager?commentId={{commentId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"auth",
+								"manager"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "{{commentId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/auth/manager?postId={{postId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								"auth",
+								"manager"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "{{postId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Skills",
+			"item": [
+				{
+					"name": "Authenticate User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User Skills Before Creating a New Skill",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"skillsCountBefore\", jsonData.length);\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var skills = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<skills.length;i++){\r",
+									"        if (skills[i].skillId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Skill",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"HTTP Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = JSON.parse(responseBody); \r",
+									"pm.collectionVariables.set(\"skillId\", jsonData.skillId);\r",
+									"\r",
+									"pm.test(\"Skill created ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedId = pm.collectionVariables.get(\"skillId\")\r",
+									"    pm.expect(jsonData.skillId).to.eql(expectedId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Id greater than 0 generated for the skill\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.skillId).not.to.lt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Veiify created skill is not null or undefined\", function () {\r",
+									"        pm.expect(jsonData).is.not.oneOf([null, undefined]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify skill content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.skill).to.include(\"My skill is:\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": {\r\n    \"id\": \"{{categoryID}}\",\r\n    \"name\": \"{{category}}\"\r\n  },\r\n  \"skill\": \"My skill is: {{$randomJobTitle}}\",\r\n  \"skillId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User Skills After Creating a New Skill",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify that the list is not empty\", function () {\r",
+									"    var skills = pm.response.json();\r",
+									"    let counter = 0;\r",
+									"    for (i=0; i<skills.length;i++){\r",
+									"        if (skills[i].skillId) {\r",
+									"            counter++;\r",
+									"        }\r",
+									"    pm.expect(counter).to.gt(0);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify skills count is greater than skills count before Skill creation\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody); \r",
+									"    var skillsCountBefore = pm.collectionVariables.get(\"skillsCountBefore\");\r",
+									"    pm.expect(jsonData.length).to.be.greaterThan(skillsCountBefore)\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Created Skill By ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify skill ID\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var oldId = pm.collectionVariables.get(\"skillId\")\r",
+									"    pm.expect(jsonData.skillId).to.eql(oldId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify skill content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.skill).to.include(\"My skill is:\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill/getOne?skillId={{skillId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "skillId",
+									"value": "{{skillId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User Skill",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"updatedSkill\", pm.variables.replaceIn(\"{{$randomJobTitle}}\"));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill/edit?skill={{updatedSkill}}&skillId={{skillId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "skill",
+									"value": "{{updatedSkill}}"
+								},
+								{
+									"key": "skillId",
+									"value": "{{skillId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Edited Skill By ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(pm.response.json()))\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated skill ID has not changed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var oldId = pm.collectionVariables.get(\"skillId\")\r",
+									"    pm.expect(jsonData.skillId).to.eql(oldId);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify updated skill content\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    var expectedSkill = pm.collectionVariables.get(\"updatedSkill\")\r",
+									"    pm.expect(jsonData.skill).to.eql(expectedSkill);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill/getOne?skillId={{skillId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill",
+								"getOne"
+							],
+							"query": [
+								{
+									"key": "skillId",
+									"value": "{{skillId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Skill",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response Status code is 204\"), function(){\r",
+									"    var jsonData=pm.response.json;\r",
+									"    pm.expect(jsonData.code).to.eql(204)\r",
+									"}\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill/delete?skillId={{skillId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "skillId",
+									"value": "{{skillId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Connections",
+			"item": [
+				{
+					"name": "Authenticate First User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{firstUsername}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{firstPassword}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify connect request is sent\", function () {\r",
+									"    var expectedfirstUsername = pm.collectionVariables.get(\"firstUsername\")\r",
+									"     var expectedSecondUsername = pm.collectionVariables.get(\"secondUsername\")\r",
+									"    pm.expect(pm.response.text()).to.include(expectedfirstUsername);\r",
+									"    pm.expect(pm.response.text()).to.include(expectedSecondUsername);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"{{secondUserId}}\",\r\n  \"username\": \"{{secondUsername}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/auth/request",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"auth",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate Second User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{secondUsername}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{secondPassword}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authenticate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Requests",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json(); \r",
+									"pm.collectionVariables.set(\"requestId\", jsonData[0].id);\r",
+									"\r",
+									"pm.test(\"Verify response is array\", () => {\r",
+									"    pm.expect(Array.isArray(jsonData));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify response is not empty\", () => {\r",
+									"    pm.expect(jsonData.length).to.be.gt(0);;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify friend request ID is greater than zero\", () => {\r",
+									"    pm.expect(jsonData[0].id).to.be.gt(0);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify friend request is not approved\", () => {\r",
+									"    pm.expect(jsonData[0].approved).to.eql(false);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/auth/users/{{secondUserId}}/request/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"auth",
+								"users",
+								"{{secondUserId}}",
+								"request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve User Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Verify user request is approved\", function () {\r",
+									"    var expectedfirstUsername = pm.collectionVariables.get(\"firstUsername\")\r",
+									"     var expectedSecondUsername = pm.collectionVariables.get(\"secondUsername\")\r",
+									"    pm.expect(pm.response.text()).to.include(expectedfirstUsername);\r",
+									"    pm.expect(pm.response.text()).to.include(expectedSecondUsername);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/auth/users/{{secondUserId}}/request/approve?requestId={{requestId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"auth",
+								"users",
+								"{{secondUserId}}",
+								"request",
+								"approve"
+							],
+							"query": [
+								{
+									"key": "requestId",
+									"value": "{{requestId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "firstUsername",
+			"value": ""
+		},
+		{
+			"key": "firstPassword",
+			"value": "Neptunus_21"
+		},
+		{
+			"key": "firstConfirmPassword",
+			"value": "Neptunus_21"
+		},
+		{
+			"key": "firstEmail",
+			"value": "Neptunus.qa21@gmail.com"
+		},
+		{
+			"key": "category",
+			"value": "All"
+		},
+		{
+			"key": "categoryID",
+			"value": "100"
+		},
+		{
+			"key": "firstUserId",
+			"value": ""
+		},
+		{
+			"key": "postContent",
+			"value": ""
+		},
+		{
+			"key": "postStatus",
+			"value": "true"
+		},
+		{
+			"key": "postId",
+			"value": ""
+		},
+		{
+			"key": "postsCountBefore",
+			"value": ""
+		},
+		{
+			"key": "updatedPostContent",
+			"value": ""
+		},
+		{
+			"key": "myPostsCountBefore",
+			"value": ""
+		},
+		{
+			"key": "commentsCountBefore",
+			"value": ""
+		},
+		{
+			"key": "commentContent",
+			"value": "This is a test comment"
+		},
+		{
+			"key": "commentId",
+			"value": ""
+		},
+		{
+			"key": "myCommentsCountBefore",
+			"value": ""
+		},
+		{
+			"key": "updatedCommentContent",
+			"value": "This is the updated test comment"
+		},
+		{
+			"key": "skillsCountBefore",
+			"value": ""
+		},
+		{
+			"key": "skill",
+			"value": ""
+		},
+		{
+			"key": "updatedSkill",
+			"value": ""
+		},
+		{
+			"key": "skillId",
+			"value": ""
+		},
+		{
+			"key": "secondUsername",
+			"value": ""
+		},
+		{
+			"key": "secondPassword",
+			"value": "Neptunus_21"
+		},
+		{
+			"key": "secondConfirmPassword",
+			"value": "Neptunus_21"
+		},
+		{
+			"key": "secondEmail",
+			"value": "Neptunus.qa21@gmail.com"
+		},
+		{
+			"key": "secondUserId",
+			"value": ""
+		},
+		{
+			"key": "requestStatus",
+			"value": "false"
+		},
+		{
+			"key": "requestId",
+			"value": ""
+		},
+		{
+			"key": "postPicture",
+			"value": ""
+		},
+		{
+			"key": "updatedPostPicture",
+			"value": ""
+		},
+		{
+			"key": "availability",
+			"value": "50"
+		},
+		{
+			"key": "tempLastUserIdBeforeReg",
+			"value": ""
+		},
+		{
+			"key": "firstName",
+			"value": ""
+		},
+		{
+			"key": "lastName",
+			"value": ""
+		},
+		{
+			"key": "city",
+			"value": ""
+		},
+		{
+			"key": "userPicture",
+			"value": ""
+		},
+		{
+			"key": "postDetails",
+			"value": ""
+		},
+		{
+			"key": "firstUserSkillOne",
+			"value": ""
+		},
+		{
+			"key": "firstUserSkillTwo",
+			"value": ""
+		},
+		{
+			"key": "firstUserSkillThree",
+			"value": ""
+		},
+		{
+			"key": "firstUserSkillFour",
+			"value": ""
+		},
+		{
+			"key": "firstUserSkillFive",
+			"value": ""
+		},
+		{
+			"key": "secondtUserSkillOne",
+			"value": ""
+		},
+		{
+			"key": "secondUserSkillTwo",
+			"value": ""
+		},
+		{
+			"key": "secondUserSkillThree",
+			"value": ""
+		},
+		{
+			"key": "secondUserSkillFour",
+			"value": ""
+		},
+		{
+			"key": "secondtUserSkillFive",
+			"value": ""
+		}
+	]
+}

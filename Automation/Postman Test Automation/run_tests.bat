@@ -1,0 +1,1 @@
+newman run WEareSocialNetworkAPI.postman_collection.json -e WEareSocialNetworkAPI.postman_environment.json -r htmlextra
