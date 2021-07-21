@@ -22,11 +22,11 @@
 
 ### 5. Test Cases:
 
- - [Аnonymous user](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Anonymous%20user)**
+ - [Аnonymous user](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Anonymous%20user)
 
- - [Registered user](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Registered%20user)**    
+ - [Registered user](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Registered%20user)
 
- - [Admin](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Admin)**
+ - [Admin](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Admin)
 
 
 
