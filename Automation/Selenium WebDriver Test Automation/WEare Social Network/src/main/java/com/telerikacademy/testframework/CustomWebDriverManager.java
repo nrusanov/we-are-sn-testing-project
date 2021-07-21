@@ -1,8 +1,12 @@
 package com.telerikacademy.testframework;
 
+import io.github.bonigarcia.wdm.config.DriverManagerType;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import io.github.bonigarcia.wdm.FirefoxDriverManager;
+
 
 
 public class CustomWebDriverManager {
@@ -11,11 +15,13 @@ public class CustomWebDriverManager {
 		private WebDriver driver = setupBrowser();
 
 		private WebDriver setupBrowser(){
-			FirefoxDriverManager.getInstance().setup();
-			WebDriver firefoxDriver = new FirefoxDriver();
-			firefoxDriver.manage().window().maximize();
-			driver = firefoxDriver;
-			return firefoxDriver;
+			ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			WebDriver chromeDriver = new ChromeDriver(chromeOptions);
+			chromeDriver.manage().window().maximize();
+
+			driver = chromeDriver;
+			return chromeDriver;
 		}
 
 		public void quitDriver() {
