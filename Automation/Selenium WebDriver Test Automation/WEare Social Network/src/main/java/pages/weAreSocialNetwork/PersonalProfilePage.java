@@ -10,7 +10,7 @@ public class PersonalProfilePage extends BasePage {
 
     public void navigateToPersonalProfilePage(String username, String password) {
         actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.PersonalProfile", 30);
-        actions.clickElement("LatestPostsPage.browsePublicPostsButton");
+        actions.clickElement("homePage.navigationBar.PersonalProfile");
     }
 
     public void assertPersonalProfilePageNavigated() {
