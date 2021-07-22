@@ -1,8 +1,9 @@
 package pages.weAreSocialNetwork;
 
+import constants.Constants;
 import org.openqa.selenium.WebDriver;
 
-public class RegisterPage extends BasePage {
+public class RegisterPage extends BasePage implements Constants {
 
     public RegisterPage(WebDriver driver) { super(driver, "baseUrl");
     }
@@ -15,19 +16,19 @@ public class RegisterPage extends BasePage {
 
     public void registerRegularUser() {
         actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", 30);
-        actions.typeValueInField("users.username1", "registerPage.usernameField");
-        actions.typeValueInField("users.email1", "registerPage.emailField");
-        actions.typeValueInField("users.password1", "registerPage.passwordField");
-        actions.typeValueInField("users.confirmPassword1","registerPage.confirmPasswordField");
+        actions.typeValueInField(USERNAME_FIRST_USER, "registerPage.usernameField");
+        actions.typeValueInField(EMAIL_FIRST_USER, "registerPage.emailField");
+        actions.typeValueInField(PASSWORD_FIRST_USER, "registerPage.passwordField");
+        actions.typeValueInField(CONFIRM_PASSWORD_FIRST_USER,"registerPage.confirmPasswordField");
         actions.clickElement("registerPage.registerButton");
     }
 
     public void registerAdmin() {
         actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", 30);
-        actions.typeValueInField("admin.username", "registerPage.usernameField");
-        actions.typeValueInField("admin.email", "registerPage.emailField");
-        actions.typeValueInField("admin.password", "registerPage.passwordField");
-        actions.typeValueInField("admin.confirmPassword","registerPage.confirmPasswordField");
+        actions.typeValueInField(ADMIN_USERNAME, "registerPage.usernameField");
+        actions.typeValueInField(ADMIN_EMAIL, "registerPage.emailField");
+        actions.typeValueInField(ADMIN_PASSWORD, "registerPage.passwordField");
+        actions.typeValueInField(ADMIN_CONFIRM_PASSWORD,"registerPage.confirmPasswordField");
         actions.clickElement("registerPage.registerButton");
     }
 

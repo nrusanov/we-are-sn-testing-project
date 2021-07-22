@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserActions {
@@ -50,9 +51,24 @@ public class UserActions {
         element.sendKeys(value);
     }
 
-    public void switchToIFrame(String iframe) {
-        WebElement iFrame = driver.findElement(By.xpath(Utils.getUIMappingByKey(iframe)));
-        getDriver().switchTo().frame(iFrame);
+    public void select(String value, String select, Object... arguments) {
+        String locator = Utils.getUIMappingByKey(select);
+        Utils.LOG.info("Selecting " + value + " from dropdown " + select);
+        Select element = new Select(driver.findElement(By.xpath(locator)));
+        element.selectByValue(value);
+    }
+
+    public void clearField(String field, Object... fieldArguments){
+        String locator = Utils.getUIMappingByKey(field);
+        WebElement element = driver.findElement(By.xpath(locator));
+        element.clear();
+    }
+
+    public void uploadImage(String fileLocation, String key, Object... arguments) {
+        Utils.LOG.info("Uploading image");
+        String locator = Utils.getUIMappingByKey(key);
+        WebElement element = driver.findElement(By.xpath(locator));
+        element.sendKeys(fileLocation);
     }
 
     //############# WAITS #########
@@ -64,20 +80,20 @@ public class UserActions {
 
     public void waitForElementVisibleUntilTimeout(String locator, int seconds, Object... locatorArguments) {
         WebDriverWait wait = new WebDriverWait(driver, seconds);
-        waitForElementPresent(locator, seconds);
-        String xpath = Utils.getUIMappingByKey(locator);
+        waitForElementPresent(locator, locatorArguments);
+        String xpath = getLocatorValueByKey(locator, locatorArguments);
         try {
-            WebElement element = driver.findElement(By.xpath(xpath));
-            wait.until(ExpectedConditions.visibilityOf(element));
+            wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpath)));
         } catch (Exception exception) {
             Assert.fail("Element with locator: '" + xpath + "' was not found.");
         }
     }
 
-    public void waitForElementPresent(String locator, int seconds) {
-        WebDriverWait wait = new WebDriverWait(driver, seconds);
+    public void waitForElementPresent(String locator, Object... arguments) {
+        Integer defaultTimeout = Integer.parseInt(Utils.getConfigPropertyByKey("config.defaultTimeoutSeconds"));
+        WebDriverWait wait = new WebDriverWait(driver, defaultTimeout);
         try {
-            isElementPresent(locator);
+            isElementPresent(locator, arguments);
         } catch (Exception exception) {
             Assert.fail("Element with locator: '" + locator + "' was not found.");
         }
@@ -135,14 +151,8 @@ public class UserActions {
         Assert.assertNotNull(driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))));
     }
 
-    public void assertAttributeValue(String locator, String expectedValue) {
-        String actualResult = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
-        Assert.assertEquals(expectedValue, actualResult);
-    }
-
     public void assertElementAttribute(String locator, String attributeName, String attributeValue) {
         WebElement element = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
-        Assert.assertNotNull("Element was not found.", element);
         Assert.assertEquals("Attribute " + attributeName + " was not as expected.", attributeValue, element.getAttribute(attributeName));
     }
 

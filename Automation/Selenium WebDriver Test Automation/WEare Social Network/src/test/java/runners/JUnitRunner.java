@@ -16,6 +16,7 @@ import org.jbehave.core.steps.InstanceStepsFactory;
 import org.jbehave.core.steps.PrintStreamStepMonitor;
 import org.junit.runner.RunWith;
 import reporter.JbehaveStoryReporter;
+//import stepDefinitions.BaseStepDefinition;
 
 import java.util.Arrays;
 import java.util.List;
@@ -48,10 +49,10 @@ public class JUnitRunner extends JUnitStories {
                         .withRelativeDirectory("logs"));
     }
 
-    @Override
-    public InjectableStepsFactory stepsFactory() {
-        return new InstanceStepsFactory(configuration(), new StepDefinitions());
-    }
+//    @Override
+//    public InjectableStepsFactory stepsFactory() {
+//        return new InstanceStepsFactory(configuration(), new BaseStepDefinition());
+//    }
 
     @Override
     protected List<String> storyPaths() {
