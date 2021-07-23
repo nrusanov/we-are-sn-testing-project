@@ -1,6 +1,7 @@
 package pages.weAreSocialNetwork;
 
 import constants.Constants;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 
 public class RegisterPage extends BasePage implements Constants {
@@ -10,13 +11,15 @@ public class RegisterPage extends BasePage implements Constants {
 
 
     public void navigateToRegisterPage() {
-        actions.waitForElementPresentUntilTimeout("homePage.navigationBar.registerButton", 30);
+        actions.waitForElementPresentUntilTimeout("homePage.navigationBar.registerButton", TIMEOUT_SECONDS);
         actions.clickElement("homePage.navigationBar.registerButton");
     }
 
+
+
     public void registerRegularUser() {
-        actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", 30);
-        actions.typeValueInField(USERNAME_FIRST_USER, "registerPage.usernameField");
+        actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
+        actions.typeValueInField(FIRST_USER_USERNAME, "registerPage.usernameField");
         actions.typeValueInField(EMAIL_FIRST_USER, "registerPage.emailField");
         actions.typeValueInField(PASSWORD_FIRST_USER, "registerPage.passwordField");
         actions.typeValueInField(CONFIRM_PASSWORD_FIRST_USER,"registerPage.confirmPasswordField");
@@ -24,7 +27,7 @@ public class RegisterPage extends BasePage implements Constants {
     }
 
     public void registerAdmin() {
-        actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", 30);
+        actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
         actions.typeValueInField(ADMIN_USERNAME, "registerPage.usernameField");
         actions.typeValueInField(ADMIN_EMAIL, "registerPage.emailField");
         actions.typeValueInField(ADMIN_PASSWORD, "registerPage.passwordField");
@@ -33,12 +36,12 @@ public class RegisterPage extends BasePage implements Constants {
     }
 
     public void assertRegisterPageNavigated() {
-        actions.waitForElementVisibleUntilTimeout("registerPage.joinMessage", 30);
+        actions.waitForElementVisibleUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
         actions.assertElementPresent("registerPage.joinMessage");
     }
 
     public void assertSuccessfulRegistration() {
-        actions.waitForElementVisibleUntilTimeout("registerPage.successfulRegistrationMessage", 30);
+        actions.waitForElementVisibleUntilTimeout("registerPage.successfulRegistrationMessage", TIMEOUT_SECONDS);
         actions.assertElementPresent("registerPage.successfulRegistrationMessage");
     }
 

@@ -1,10 +1,8 @@
 package com.telerikacademy.testframework;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -51,12 +49,13 @@ public class UserActions {
         element.sendKeys(value);
     }
 
-    public void select(String value, String select, Object... arguments) {
-        String locator = Utils.getUIMappingByKey(select);
-        Utils.LOG.info("Selecting " + value + " from dropdown " + select);
+    public void selectFromDropDownMenu(String value, String dropDown) {
+        String locator = Utils.getUIMappingByKey(dropDown);
+        Utils.LOG.info("Selecting " + value + " from dropdown " + dropDown);
         Select element = new Select(driver.findElement(By.xpath(locator)));
-        element.selectByValue(value);
+        element.selectByVisibleText(value);
     }
+
 
     public void clearField(String field, Object... fieldArguments){
         String locator = Utils.getUIMappingByKey(field);
@@ -69,6 +68,11 @@ public class UserActions {
         String locator = Utils.getUIMappingByKey(key);
         WebElement element = driver.findElement(By.xpath(locator));
         element.sendKeys(fileLocation);
+    }
+
+    public String createRandomString(int number) {
+        Utils.LOG.info("Creating random string");
+        return RandomStringUtils.randomAlphabetic(number);
     }
 
     //############# WAITS #########
@@ -151,9 +155,14 @@ public class UserActions {
         Assert.assertNotNull(driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))));
     }
 
-    public void assertElementAttribute(String locator, String attributeName, String attributeValue) {
-        WebElement element = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
-        Assert.assertEquals("Attribute " + attributeName + " was not as expected.", attributeValue, element.getAttribute(attributeName));
+    public void assertAttributeValue(String locator, String expectedValue, String attribute) {
+        String actualResult = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getAttribute(attribute);
+        Assert.assertEquals(expectedValue, actualResult);
+    }
+
+    public void assertValueFromDropDownMenu(String locator, String value) {
+        String valueDropDownMenu = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
+        Assert.assertEquals(value, valueDropDownMenu);
     }
 
     public void assertNavigatedUrl(String urlKey) {
