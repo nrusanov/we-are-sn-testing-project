@@ -1,6 +1,6 @@
 # **Comments**
 
-## Test case 66
+## Test case 70
 
 * **Title:** Registered and logged in user should be able to comment his/her own public post
 * **Description:** Verify that a registered and logged in user is able to comment his/her own public post.
@@ -20,7 +20,7 @@
    * 8. Click on button 'Show Comments'
 * **Expected result:** The comment is created successfully with author TeamNeptunus and content: 'This is a test comment', the comments count is increased with one.
 
-## Test case 67
+## Test case 71
 
 * **Title:** Registered and logged in user should be able to comment his/her own private post
 * **Description:** Verify that a registered and logged in user is able to comment on his/her own private post.
@@ -40,7 +40,7 @@
    * 8. Click on button 'Show Comments'
 * **Expected result:** The comment is created successfully with author TeamNeptunus and content: 'This is a test comment for private post', the comments count is increased with one.
 
-## Test case 68
+## Test case 72
 
 * **Title:** Registered and logged in user should be able to edit his/her own comments on his/her own public posts
 * **Description:** Verify that a registered and logged in user is able to edit his/her own comments on his/her own public posts.
@@ -60,7 +60,7 @@
    * 8. Click on button 'Show Comments';
 * **Expected result:** The comment is edited successfully, the author is TeamNeptunus and content is: 'This is an edited comment', the comments count remains the same.
 
-## Test case 69
+## Test case 73
 
 * **Title:** Registered and logged in user should be able to edit his/her comment on his/her own private posts
 * **Description:** Verify that a registered and logged in user to edit edit his/her comment on his/her own private posts
@@ -79,7 +79,7 @@
    * 7. Click on button 'Show Comments';
 * **Expected result:** The comment is edited successfully, the author is TeamNeptunus and content is: 'This is an edited comment for private post', the comments count remains the same.
 
-## Test case 70
+## Test case 74
 
 * **Title:** Registered and logged in user should be able to like his/her own comments on his/her own public posts
 * **Description:** Verify that a registered and logged in user is able to like his/her own comments on his/her own public posts.
@@ -97,7 +97,7 @@
    * 6. On a comment with text: 'This is an edited comment' click on 'Like' button;
 * **Expected result:** Likes count is increased by one and the 'Like' button changes to 'Dislike'.
 
-## Test case 71
+## Test case 75
 
 * **Title:** Registered and logged in user should be able to like his/her own comments on his/her own private posts
 * **Description:** Verify that a registered and logged in user is able to like his/her own comments on his/her own private posts.
@@ -114,7 +114,7 @@
    * 5. On a comment with text: This is an edited comment for private post' click on 'Like' button;
 * **Expected result:** Likes count is increased by one and the 'Like' button changes to 'Dislike'.
 
-## Test case 72
+## Test case 76
 
 * **Title:** Registered and logged in user should be able to dislike his/her own like on his/her own comment on his/her own public post
 * **Description:** Verify that a registered and logged in user is able to dislike his/her own like on his/her own comment on his/her own public post.
@@ -132,7 +132,7 @@
    * 6. On a comment with text: 'This is an edited comment' click on 'Dislike' button;
 * **Expected result:** Likes count is increased by one and the 'Dislike' button changes to 'Like'.
 
-## Test case 73
+## Test case 77
 
 * **Title:** Registered and logged in user should be able to dislike his/her own like on his/her own comment on his/her own private post 
 * **Description:** Verify that a registered and logged in user is able to dislike his/her own like on his/her own comment on his/her own private post.
@@ -149,7 +149,7 @@
    * 5. On a comment with text: This is an edited comment for private post' click on 'Dislike' button;
 * **Expected result:** Likes count is decreased by one and the 'Dislike' button changes to 'Like'.
 
-## Test case 74
+## Test case 78
 
 * **Title:** Registered and logged in user should be able to delete his own comment on his/her own public post
 * **Description:** Verify that a registered and logged in user is able to delete his own comment on his/her own public post.
@@ -170,7 +170,7 @@
    * 9. Go back two times with the browser back button;
 * **Expected result:** A message with text: 'Comment deleted successfully' should appear after step 8 and comments count should be decreased with one after step 9.
 
-## Test case 75
+## Test case 79
 
 * **Title:** Registered and logged in user should be able to delete his own comment on his/her own private post
 * **Description:** Verify that a registered and logged in user is able to delete his own comment on his/her own private post.
@@ -190,7 +190,7 @@
    * 8. Go back two times with the browser back button;
 * **Expected result:** A message with text: 'Comment deleted successfully' should appear after step 7 and comments count should be decreased with one after step 8.
 
-## Test case 76
+## Test case 80
 
 * **Title:** Registered and logged in user should be able to comment public post of another user
 * **Description:** Verify that a registered and logged in user is able to comment public post of another user.
@@ -210,7 +210,7 @@
    * 8. Click on button 'Show Comments'
 * **Expected result:** The comment is created successfully with author TeamNeptunusTwo and content: 'This is a test comment from TeamNeptunusTwo', the comments count is increased with one.
 
-## Test case 77
+## Test case 81
 
 * **Title:** Registered and logged in user should be able to edit his/her own comments on another user's public posts
 * **Description:** Verify that a registered and logged in user is able to edit his/her own comments on another user's public posts.
@@ -230,7 +230,7 @@
    * 8. Click on button 'Show Comments';
 * **Expected result:** The comment is edited successfully, the author is TeamNeptunusTwo and content is: 'This is an edited comment from TeamNeptunusTwo', the comments count remains the same.
 
-## Test case 78
+## Test case 82
 
 * **Title:** Registered and logged in user should be able to like his/her own comments on another user's public posts
 * **Description:** Verify that a registered and logged in user is able to like his/her own comments on another user's public posts.
@@ -248,7 +248,7 @@
    * 6. On a comment with text: 'This is a test comment from TeamNeptunusTwo' click on 'LIKE' button;
 * **Expected result:** The likes count is increased by one and the 'Like' button changes to 'Dislike'.
 
-## Test case 79
+## Test case 83
 
 * **Title:** Registered and logged in user should be able to dislike his/her own comments on another user's public posts
 * **Description:** Verify that a registered and logged in user is able to dislike his/her own comments on another user's public posts.
@@ -266,7 +266,7 @@
    * 6. On a comment with text: 'This is a test comment from TeamNeptunusTwo' click on 'DISLIKE' button;
 * **Expected result:** The likes count is decreased by one and the 'Dislike' button changes to 'Like'.
 
-## Test case 80
+## Test case 84
 
 * **Title:** Registered and logged in user should be able to delete his/her own comments on another user's public posts
 * **Description:** Verify that a registered and logged in user is able to delete his/her own comments on another user's public posts.
@@ -287,7 +287,7 @@
    * 9. Go back two times with the browser back button;
 * **Expected result:** A message with text: 'Comment deleted successfully' should appear after step 8 and comments count should be decreased with one after step 9.
 
-## Test case 81
+## Test case 85
 
 * **Title:** Registered and logged in user should be able to like another user's comments on another user's public posts
 * **Description:** Verify that a registered and logged in user is able to like another user's comments on another user's public posts.
@@ -305,7 +305,7 @@
    * 6. On any comment (not created by TeamNeptunusTwo) click on 'LIKE' button;
 * **Expected result:** The likes count is increased by one and the 'Like' button changes to 'Dislike'.
 
-## Test case 82
+## Test case 86
 
 * **Title:** Registered and logged in user should be able to dislike his/her own like on another user's comments on another user's public posts
 * **Description:** Verify that a registered and logged in user is able to dislike his/her own like on another user's comments on, which comment is on another user's public posts.
@@ -323,7 +323,7 @@
    * 6. On the liked comment click on 'DISLIKE' button;
 * **Expected result:** The likes count is decreased by one and the 'Dislike' button changes to 'Like'.
 
-## Test case 83
+## Test case 87
 
 * **Title:** Registered and logged in user should not be able to create a comment with more than allowed symbols on his/her own public post
 * **Description:** Verify that a registered and logged in user is not able to create a comment with more than allowed symbols on his/her own public post.
@@ -342,7 +342,7 @@
    * 7. Click on button 'Post comment';
 * **Expected result:** An error message that a comment with more than 1 000 symbols should be displayed or the text box should not allow typing more than 1 000 symbols.
 
-## Test case 84
+## Test case 88
 
 * **Title:** Registered and logged in user should not be able to create a comment with more than allowed symbols on his/her own private post
 * **Description:** Verify that a registered and logged in user is not able to create a comment with more than allowed symbols on his/her own private post.
@@ -361,7 +361,7 @@
    * 7. Click on button 'Post comment';
 * **Expected result:** An error message that a comment with more than 1 000 symbols should be displayed or the text box should not allow typing more than 1 000 symbols.
 
-## Test case 85
+## Test case 89
 
 * **Title:** Registered and logged in user should not be able to create a comment on other user's public post with more than allowed symbols
 * **Description:** Verify that a registered and logged in user not be able to create a comment on other user's public post with more than allowed symbols.
@@ -380,7 +380,7 @@
    * 8. Click on button 'Post comment';
 * **Expected result:** An error message that a comment with more than 1 000 symbols should be displayed or the text box should not allow typing more than 1 000 symbols.
 
-## Test case 86
+## Test case 90
 
 * **Title:** Registered and logged in user should be able to create a new comment by pasting a text in the message field
 * **Description:** Verify that Registered and logged in user is able to create a new comment by pasting a text in the message field
@@ -400,7 +400,7 @@
    * 8. Click on button 'Show comments' and navigate to the newly created comment;
 * **Expected result:** The content of the comment should be equal to the one in step 6.
 
-## Test case 87
+## Test case 91
 
 * **Title:** A link in a comment could be clickable
 * **Description:** Verify that pasted link in a comment could be clickable and navigate to the respective URL.

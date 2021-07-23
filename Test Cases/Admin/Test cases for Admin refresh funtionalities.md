@@ -5,7 +5,7 @@
 * **Title:** Admin should be able to refresh posts rankings
 * **Description:** Verify that admin is able to refresh posts rankings.
 * **Narrative:** As an admin I want to be able to resfresh posts ranking.
-* **Priority:** Medium
+* **Priority:** High
 * **Pre-condition:** Application is running. The admin must be registered and logged in, site is running on localhost via Docker Desktop
 * **Test data:** Username: adminNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
