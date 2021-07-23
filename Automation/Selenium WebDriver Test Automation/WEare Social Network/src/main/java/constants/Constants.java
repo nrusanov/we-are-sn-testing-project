@@ -30,7 +30,11 @@ public interface Constants {
     final String SKILL_FOURTH = "skill4";
     final String SKILL_FIFTH = "skill5";
     final String WEEKLY_AVAILABILITY = "15.0";
+    final String PROFILE_PRIVACY = "public";
     final String USER_PROFILE_PICTURE = "C:\\Users\\Lenovo\\Desktop\\Final Project\\Neptunus.jpg";
+    final String POST_VISIBILITY = "Public post";
+    final String POST_CONTENT = "Hello Selenium WebDriver!";
+    final String POST_IMAGE = "C:\\Users\\Lenovo\\Desktop\\Final Project\\QA.png";
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";

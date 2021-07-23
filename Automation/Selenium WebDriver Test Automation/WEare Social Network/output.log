@@ -1,12 +1,51 @@
-2021-07-22 23:46:47,681 INFO  [main] Initializing WebDriver
-2021-07-22 23:46:50,997 INFO  [main] Initializing WebDriver
-2021-07-22 23:46:50,998 INFO  [main] Initializing WebDriver
-2021-07-22 23:46:50,998 INFO  [main] Initializing WebDriver
-2021-07-22 23:46:51,000 INFO  [main] Initializing WebDriver
-2021-07-22 23:46:51,804 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-22 23:46:57,119 INFO  [main] Clicking on element loginPage.loginButton
-2021-07-22 23:46:57,774 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
-2021-07-22 23:46:58,213 INFO  [main] Clicking on element personalProfilePage.editButton
-2021-07-22 23:46:58,703 INFO  [main] Clicking on element personalProfilePage.list.services
-2021-07-22 23:46:59,828 INFO  [main] Clicking on element personalProfilePage.updateServicesButton
-2021-07-22 23:47:01,765 INFO  [main] Quitting WebDriver
+2021-07-23 14:51:30,316 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,447 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,451 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,454 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,455 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:33,751 INFO  [main] 
+-------------------------------------------------------
+Executing story : BeforeStories
+-------------------------------------------------------
+
+2021-07-23 14:51:33,751 INFO  [main] Initializing WebDriver
+2021-07-23 14:51:34,458 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-23 14:51:39,319 INFO  [main] Clicking on element loginPage.loginButton
+2021-07-23 14:51:39,801 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : CreateNewPost.story
+-------------------------------------------------------
+
+2021-07-23 14:51:39,815 INFO  [pool-2-thread-1] Initializing WebDriver
+2021-07-23 14:51:39,815 INFO  [pool-2-thread-1] Initializing WebDriver
+2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Initializing WebDriver
+2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Initializing WebDriver
+2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Initializing WebDriver
+2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Executing step : Given I open Crete New Post page
+2021-07-23 14:51:39,916 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
+2021-07-23 14:51:40,220 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I open Crete New Post page
+2021-07-23 14:51:40,220 INFO  [pool-2-thread-1] Executing step : When I select public visibility from the dropdown menu
+2021-07-23 14:51:40,821 INFO  [pool-2-thread-1] Clicking on element createPostPage.postVisibilityDropDown
+2021-07-23 14:51:40,945 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
+2021-07-23 14:51:41,056 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I select ｟public｠ visibility from the dropdown menu
+2021-07-23 14:51:41,058 INFO  [pool-2-thread-1] Executing step : And I type the text "Hello Selenium WebDriver!" in the body field
+2021-07-23 14:51:41,200 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type the text "Hello Selenium WebDriver!" in the body field
+2021-07-23 14:51:41,201 INFO  [pool-2-thread-1] Executing step : And I upload a image in the post
+2021-07-23 14:51:41,239 INFO  [pool-2-thread-1] Uploading image
+2021-07-23 14:51:41,307 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a image in the post
+2021-07-23 14:51:41,309 INFO  [pool-2-thread-1] Executing step : And I click on 'Save post' button
+2021-07-23 14:51:41,353 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
+2021-07-23 14:51:41,811 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click on 'Save post' button
+2021-07-23 14:51:41,811 INFO  [pool-2-thread-1] Executing step : Then A public post is created, containing a body and an image
+2021-07-23 14:51:41,933 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then A public post is created, containing a body and an image
+2021-07-23 14:51:42,164 INFO  [main] 
+-------------------------------------------------------
+Executing story : AfterStories
+-------------------------------------------------------
+
+2021-07-23 14:51:42,165 INFO  [main] Quitting WebDriver

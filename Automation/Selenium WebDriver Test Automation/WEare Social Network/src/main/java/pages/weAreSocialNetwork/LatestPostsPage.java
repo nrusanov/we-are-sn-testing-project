@@ -8,6 +8,7 @@ public class LatestPostsPage extends BasePage implements Constants {
     public LatestPostsPage(WebDriver driver, String urlKey) {
         super (driver, "baseUrl");
     }
+
     public void navigateToLastPostsPage(String username, String password) {
         actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.LatestPosts", 30);
         actions.clickElement("homePage.navigationBar.LatestPosts");

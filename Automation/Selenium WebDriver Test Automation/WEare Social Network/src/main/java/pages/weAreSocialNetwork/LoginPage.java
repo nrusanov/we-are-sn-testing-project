@@ -15,14 +15,14 @@ public class LoginPage extends BasePage implements Constants {
     }
 
 
-    public void signInRegularUser() {
+    public void signInRegularUser(String username, String password) {
         actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
         actions.typeValueInField(FIRST_USER_USERNAME, "loginPage.usernameField");
         actions.typeValueInField(PASSWORD_FIRST_USER, "loginPage.passwordField");
         actions.clickElement("loginPage.loginButton");
     }
 
-    public void signInAdmin() {
+    public void signInAdmin(String username, String password) {
         navigateToPage();
         actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
         actions.typeValueInField(ADMIN_USERNAME, "loginPage.usernameField");

@@ -15,10 +15,6 @@ public class RegisterUserTests extends BaseTest {
 
     @Test
     public void TC_01_UserSuccessfulRegistration_When_RequiredFieldsAreFilled() {
-        registerPage.navigateToRegisterPage();
-
-        registerPage.assertRegisterPageNavigated();
-
         registerPage.registerRegularUser();
 
         registerPage.assertSuccessfulRegistration();

@@ -16,6 +16,7 @@ import org.jbehave.core.steps.InstanceStepsFactory;
 import org.jbehave.core.steps.PrintStreamStepMonitor;
 import org.junit.runner.RunWith;
 import reporter.JbehaveStoryReporter;
+import stepDefinitions.StepDefinitions;
 //import stepDefinitions.BaseStepDefinition;
 
 import java.util.Arrays;
@@ -30,7 +31,7 @@ public class JUnitRunner extends JUnitStories {
     public JUnitRunner() {
         super();
         Embedder embedder = configuredEmbedder();
-        String metaFilters = "-skip +createTopic";
+        String metaFilters = "-skip +userPostFunctionality";
         embedder.useMetaFilters(Arrays.asList(metaFilters));
 
         EmbedderControls embedderControls = embedder.embedderControls();
@@ -49,10 +50,10 @@ public class JUnitRunner extends JUnitStories {
                         .withRelativeDirectory("logs"));
     }
 
-//    @Override
-//    public InjectableStepsFactory stepsFactory() {
-//        return new InstanceStepsFactory(configuration(), new BaseStepDefinition());
-//    }
+    @Override
+    public InjectableStepsFactory stepsFactory() {
+        return new InstanceStepsFactory(configuration(), new StepDefinitions());
+    }
 
     @Override
     protected List<String> storyPaths() {

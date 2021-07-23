@@ -75,6 +75,27 @@ public class UserActions {
         return RandomStringUtils.randomAlphabetic(number);
     }
 
+//    public String createRandomString(String randomString) {
+//        String strCopy = String.copyValueOf(randomString.toCharArray());
+//        return strCopy;
+//    }
+//
+//    public String getRandomString(int n) {
+//        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+//                + "0123456789"
+//                + "abcdefghijklmnopqrstuvxyz";
+//        StringBuilder sb = new StringBuilder(n);
+//        for (int i = 0; i < n; i++) {
+//            int index
+//                    = (int) (AlphaNumericString.length()
+//                    * Math.random());
+//            sb.append(AlphaNumericString
+//                    .charAt(index));
+//        }
+//
+//        return sb.toString();
+//    }
+
     //############# WAITS #########
 
     public void waitForElementVisible(String locatorKey, Object... arguments) {
