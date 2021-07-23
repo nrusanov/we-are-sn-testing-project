@@ -22,8 +22,6 @@ public interface Constants {
     final String LAST_NAME_INVALID = "T";
     final String BIRTHDAY_DATE = "02022020";
     final String BIRTHDAY_DATE_ASSERT = "2020-02-02";
-    final String BIRTHDAY_MONTH = "06";
-    final String BIRTHDAY_YEAR = "2021";
     final String DROP_FEW_WORDS_FIELD = "We are future QA masters";
     final String PROFESSIONAL_CATEGORY = "Actor";
     final String SKILL_FIRST = "skill1";

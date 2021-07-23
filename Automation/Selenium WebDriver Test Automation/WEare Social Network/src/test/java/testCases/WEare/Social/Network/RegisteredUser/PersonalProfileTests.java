@@ -9,7 +9,7 @@ import testCases.WEare.Social.Network.BaseTest;
 public class PersonalProfileTests extends BaseTest {
 
     @Before
-    public void navigateToLoginPage() {
+    public void NavigateToPersonalProfilePage_When_RegularUserAuthenticate() {
         loginPage.navigateToLoginPage();
         loginPage.assertLoginPageNavigated();
 
