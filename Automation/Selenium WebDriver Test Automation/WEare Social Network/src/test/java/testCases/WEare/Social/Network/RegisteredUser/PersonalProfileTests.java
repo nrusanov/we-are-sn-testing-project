@@ -1,9 +1,8 @@
 package testCases.WEare.Social.Network.RegisteredUser;
 
+import constants.Constants;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 import testCases.WEare.Social.Network.BaseTest;
 
 public class PersonalProfileTests extends BaseTest {
@@ -13,7 +12,7 @@ public class PersonalProfileTests extends BaseTest {
         loginPage.navigateToLoginPage();
         loginPage.assertLoginPageNavigated();
 
-        loginPage.signInRegularUser();
+        loginPage.signInRegularUser(Constants.FIRST_USER_USERNAME, Constants.PASSWORD_FIRST_USER);
         loginPage.assertSuccessfulLogin();
 
         personalProfileEditorPage.navigateToPersonalProfileEditorPage();
@@ -49,7 +48,13 @@ public class PersonalProfileTests extends BaseTest {
 
     }
 
+    @Test
+    public void TC_05_UserSuccessfulUpdatePersonalInfoAndSafety_When_() {
+        personalProfileEditorPage.updatePersonalInfoAndSafety();
 
+        personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();
+
+    }
 
 
 

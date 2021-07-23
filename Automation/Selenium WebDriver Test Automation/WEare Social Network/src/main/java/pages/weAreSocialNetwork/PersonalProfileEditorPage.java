@@ -54,6 +54,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clickElement("personalProfilePage.list.editProfessionalInformation");
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.industry",TIMEOUT_SECONDS);
         actions.selectFromDropDownMenu(PROFESSIONAL_CATEGORY, "personalProfilePage.industry");
+        actions.clickElement("personalProfilePage.industryUpdateButton");
     }
 
 
@@ -76,8 +77,8 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clickElement("personalProfilePage.list.settings");
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.chooseFileButton",TIMEOUT_SECONDS);
         actions.uploadImage(USER_PROFILE_PICTURE,"personalProfilePage.chooseFileButton");
-        actions.waitForElementVisibleUntilTimeout("users.picture", TIMEOUT_SECONDS);
-        actions.selectFromDropDownMenu("personalProfilePage.privacy.public", "personalProfilePage.privacy");
+//        actions.waitForElementVisibleUntilTimeout("users.picture", TIMEOUT_SECONDS);
+        actions.selectFromDropDownMenu(PROFILE_PRIVACY, "personalProfilePage.privacy");
         actions.clickElement("personalProfilePage.settingsUpdateButton");
     }
 
@@ -94,8 +95,8 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
     }
 
     public void assertUpdatedProfessionalCategory() {
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.industry", TIMEOUT_SECONDS);
-        actions.assertValueFromDropDownMenu( "personalProfilePage.industry",PROFESSIONAL_CATEGORY );
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.updatedProfessionalCategory", TIMEOUT_SECONDS);
+        actions.assertAttributeValue("personalProfilePage.updatedProfessionalCategory", PROFESSIONAL_CATEGORY, "value");
     }
 
     public void assertUpdatedServices() {
@@ -108,9 +109,10 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.assertAttributeValue("personalProfilePage.weeklyAvailability", WEEKLY_AVAILABILITY, "value");
     }
 
+
     public void assertUpdatedPersonalInfoAndSafety() {
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.settingUpdated", TIMEOUT_SECONDS);
-        actions.assertElementPresent("personalProfilePage.settingUpdated");
+        actions.waitForElementPresentUntilTimeout("personalProfilePage.pictureUpdated", TIMEOUT_SECONDS);
+        actions.assertElementPresent("personalProfilePage.pictureUpdated");
     }
 
 
