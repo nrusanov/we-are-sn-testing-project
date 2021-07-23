@@ -1,6 +1,6 @@
 # **Posts**
 
-## Test case 42
+## Test case 47
 
 * **Title:** Registered and logged in user should be able create new public posts
 * **Description:** Verify that a registered and logged in user is able to create posts with attached file.
@@ -19,7 +19,7 @@
    * 7. Click on button 'Save post'
 * **Expected result:** The post is created successfully and could be seen in the page loaded and in the topic section of the post the text is: 'This is a test post' and bellow professional category of the user there is a text: 'Public Post: True'
 
-## Test case 43
+## Test case 48
 
 * **Title:** Registered and logged in user should be able to create a private post
 * **Description:** Verify that a registered and logged in user is able to create private posts with attached file.
@@ -38,7 +38,7 @@
    * 7. Click on button 'Save post'
 * **Expected result:** The post is created successfully and could be seen in the page loaded and in the topic section of the post the text is: 'This is a private post' and bellow professional category of the user there is a text: 'Public Post: False'
 
-## Test case 44
+## Test case 49
 
 * **Title:** Registered and logged in user should be able to edit his/her public posts
 * **Description:** Verify that a registered and logged in user to edit his/her public posts.
@@ -60,7 +60,7 @@
    * 10. Navigate to the edited post
 * **Expected result:** In the edited post in the section 'topic' the text is: 'Edited post'
 
-## Test case 45
+## Test case 50
 
 * **Title:** Registered and logged in user should be able to edit his/her private posts
 * **Description:** Verify that a registered and logged in user to edit his/her private posts.
@@ -81,7 +81,7 @@
    * 8. Navigate to the edited post
 * **Expected result:** In the edited post in the section 'topic' the text is: 'Edited private post'
 
-## Test case 46
+## Test case 51
 
 * **Title:** Registered and logged in user should be able to delete his/her public posts
 * **Description:** Verify that a registered and logged in user is able to delete his/her public posts.
@@ -101,7 +101,7 @@
    * 8. Click on 'Submit' button;
 * **Expected result:** A message for successfully deleted post is displayed
 
-## Test case 47
+## Test case 52
 
 * **Title:** Registered and logged in user should be able to delete his/her private posts
 * **Description:** Verify that a registered and logged in user is able to delete his/her private posts.
@@ -120,7 +120,7 @@
    * 7. Click on 'Submit' button;
 * **Expected result:** A message for successfully deleted post is displayed
 
-## Test case 48
+## Test case 53
 
 * **Title:** Registered and logged in user should be able create new posts with different types of attached files
 * **Description:** Verify that a registered and logged in user is able to create posts with different types of attached files.
@@ -139,7 +139,7 @@
    * 7. Click on button 'Save post'
 * **Expected result:** The post is created successfully and could be seen in the page loaded and in the topic section of the post the text is: 'This is a test post' and bellow professional category of the user there is a text: 'Public Post: True'. The files attached should be visible and could be read in the site or available to download.
 
-## Test case 49
+## Test case 54
 
 * **Title:** Already attached files should not be lost when post edited
 * **Description:** Verify that already attached files should not be lost, when post edited.
@@ -161,7 +161,7 @@
    * 10. Navigate to the edited post
 * **Expected result:** In the edited post in the section 'topic' the text is: 'Edited post' and the file attached is still visible
 
-## Test case 50
+## Test case 55
 
 * **Title:** Registered and logged in user should not be able create new public posts with empty message
 * **Description:** Verify that a registered and logged in user is not able to create new public posts with empty message.
@@ -179,7 +179,7 @@
    * 6. Click on button 'Save post'
 * **Expected result:** An error message that the post cannot be created blank should appear
 
-## Test case 51
+## Test case 56
 
 * **Title:** Registered and logged in user should not be able to create new private posts with empty message
 * **Description:** Verify that a registered and logged in user is not able to create new private posts with empty message.
@@ -197,7 +197,7 @@
    * 6. Click on button 'Save post'
 * **Expected result:** An error message that the post cannot be created blank should appear
 
-## Test case 52
+## Test case 57
 
 * **Title:** Registered and logged in user should not be able to create new public posts with more than allowed symbols
 * **Description:** Verify that a registered and logged in user is not able to create new public posts with more than allowed symbols.
@@ -215,7 +215,7 @@
    * 6. Click on button 'Save post'
 * **Expected result:** An error message that the post cannot be created with more than allowed symbols should appear or the text box should not allow typing more than 4 000 symbols
 
-## Test case 53
+## Test case 58
 
 * **Title:** Registered and logged in user should not be able to create new private posts with more than allowed symbols
 * **Description:** Verify that a registered and logged in user is not able to create new private posts with more than allowed symbols.
@@ -233,25 +233,7 @@
    * 6. Click on button 'Save post'
 * **Expected result:** An error message that the post cannot be created with more than allowed symbols should appear or the text box should not allow typing more than 1 000 symbols
 
-## Test case 54
-
-* **Title:** Registered and logged in user should not be able to create new private posts with more than allowed symbols
-* **Description:** Verify that a registered and logged in user is not able to create new private posts with more than allowed symbols.
-* **Narrative:** As a Registered user I want to use post and comment functionalities.
-* **Priority:** High
-* **Pre-condition:** Application is running. The user must be registered and logged in, site is running on localhost via Docker Desktop
-* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
-* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
-* **Steps to reproduce:** 
-   * 1. Navigate to URL: http://localhost:8081/;
-   * 2. Click on 'Add New post' button at the right corner of the page;
-   * 3. Navigate to the 'Create new post' section;
-   * 4. From 'Post's visibility' drop-down menu choose the option: 'Private post';
-   * 5. In the section 'Message' write a text with 1 001 symbols;
-   * 6. Click on button 'Save post'
-* **Expected result:** An error message that the post cannot be created with more than allowed symbols should appear or the text box should not allow typing more than 1 000 symbols
-
-## Test case 55
+## Test case 59
 
 * **Title:** Registered and logged in user should be able to create new post by pasting a text in the message field
 * **Description:** Verify that Registered and logged in user is able to create new post by pasting a text in the message field
@@ -270,7 +252,7 @@
    * 7. Navigate to the newly created post and click on button: 'Explore this post'
 * **Expected result:** Below the username of the user created the post the content should be equal to the one in step 5
 
-## Test case 56
+## Test case 60
 
 * **Title:** A link in a post could be clickable
 * **Description:** Verify that pasted link in a post could be clickable and navigate to the respective URL.
@@ -289,26 +271,7 @@
    * 7. Navigate to the newly created post and click on button: 'Explore this post'
 * **Expected result:** The link shoould be clickable and navigate to the designated URL.
 
-## Test case 56
-
-* **Title:** A link in a post could be clickable
-* **Description:** Verify that pasted link in a post could be clickable and navigate to the respective URL.
-* **Narrative:** As a Registered user I want to use post and comment functionalities.
-* **Priority:** Low
-* **Pre-condition:** Application is running. The user must be registered and logged in, site is running on localhost via Docker Desktop
-* **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
-* **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
-* **Steps to reproduce:** 
-   * 1. Navigate to URL: http://localhost:8081/;
-   * 2. Click on 'Add New post' button at the right corner of the page;
-   * 3. Navigate to the 'Create new post' section;
-   * 4. From 'Post's visibility' drop-down menu choose the option: 'Public post';
-   * 5. In the section 'Message' paste the following URL: https://www.telerikacademy.com/;
-   * 6. Click on button 'Save post';
-   * 7. Navigate to the newly created post and click on button: 'Explore this post'
-* **Expected result:** The link shoould be clickable and navigate to the designated URL.
-
-## Test case 57
+## Test case 61
 
 * **Title:** A public post could be changed to private
 * **Description:** Verify that already created public post could be changed to private.
@@ -330,7 +293,7 @@
    * 10. Navigate to the post edited.
 * **Expected result:** In the edited post details, the property Public Post should be False. 
 
-## Test case 58
+## Test case 62
 
 * **Title:** A private post could be changed to public
 * **Description:** Verify that already created private post could be changed to public.
@@ -352,7 +315,7 @@
    * 10. Navigate to the post edited.
 * **Expected result:** In the edited post details, the property Public Post should be True. 
 
-## Test case 59
+## Test case 63
 
 * **Title:** Registered and logged in user should be able to see all his/her posts
 * **Description:** Verify that Registered and logged in user is able to see all his/her posts not depending on what their visibility is
@@ -369,7 +332,7 @@
    * 5. Click on 'All posts of this user' button;
   * **Expected result:** A list of posts should appear, each of them having the following attributes: picture /if attached/, author, professional category of author, Public Post: True/False (depending on post's visibility), Topic, date and time of post creation, two buttons: 'Explore post' and 'See profile', Likes, Comments and Rank and a button for post like /or dislike, if already liked/. 
 
-## Test case 60
+## Test case 64
 
 * **Title:** Registered and logged in user is able to see public posts of other users
 * **Description:** Verify that registered and logged in user is able to see public posts of other users.
@@ -384,7 +347,7 @@
    * 3. Navigate to the 'Browse public posts' section and click on 'Browse' button below this section;
 * **Expected result:** A list of public posts should appear, each of them having the following attributes: picture /if attached/, author, professional category of author, Public Post: True, Topic, date and time of post creation, two buttons: 'Explore post' and 'See profile', Likes, Comments and Rank and a button for post like /or dislike, if already liked/. 
 
-## Test case 61
+## Test case 65
 
 * **Title:** Registered and logged in user is not able to see private posts of other users
 * **Description:** Verify that registered and logged in user is not able to see private posts of other users.
@@ -399,7 +362,7 @@
    * 3. Navigate to the 'Browse public posts' section and click on 'Browse' button below this section;
 * **Expected result:** A list of public posts should appear, each of them having the following attributes: picture /if attached/, author, professional category of author, Public Post: True /for all posts in list/, Topic, date and time of post creation, two buttons: 'Explore post' and 'See profile', Likes, Comments and Rank and a button for post like /or dislike, if already liked/.
 
-## Test case 62
+## Test case 66
 
 * **Title:** Registered and logged in user is able to like his/her own posts
 * **Description:** Verify that registered and logged in user is able to like his/her own posts.
@@ -415,7 +378,7 @@
    * 4. Navigate to a post with author 'TeamNeptunus' and click on 'Like' button
 * **Expected result:** The value of Likes property should be increased by 1 and the button 'Like' should be changed to 'Dislike' 
 
-## Test case 63
+## Test case 67
 
 * **Title:** Registered and logged in user is able to dislike his/her own posts
 * **Description:** Verify that registered and logged in user is able to dislike his/her own posts.
@@ -431,7 +394,7 @@
    * 4. Navigate to a post with author 'TeamNeptunus' that already has like from the same author and click on 'dislike' button
 * **Expected result:** The value of Likes property should be decreased by 1 and the button 'Dislike' should be changed to 'Like' 
 
-## Test case 64
+## Test case 68
 
 * **Title:** Registered and logged in user is able to like other users' posts
 * **Description:** Verify that registered and logged in user is able to like other users' posts.
@@ -447,7 +410,7 @@
    * 4. Navigate to a post with author 'TeamNeptunus' and click on 'Like' button
 * **Expected result:** The value of Likes property should be increased by 1 and the button 'Like' should be changed to 'Dislike' 
 
-## Test case 63
+## Test case 69
 
 * **Title:** Registered and logged in user is able to dislike other users' posts
 * **Description:** Verify that registered and logged in user is able to dislike other users' posts.

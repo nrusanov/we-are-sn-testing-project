@@ -24,7 +24,7 @@
 * **Title:** Admin is able to unsend already sent friend request
 * **Description:** Verify that admin is able to unsend friend requests to other registered users when logged in.
 * **Narrative:** As admin I want to use connection functionalities.
-* **Priority:** Medium
+* **Priority:** High
 * **Pre-condition:** Application is running. The admin must be registered and logged in, site is running on localhost via Docker Desktop and admin has already sent a friend request
 * **Test data:** Username: adminNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
