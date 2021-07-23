@@ -3,6 +3,7 @@ package testCases.WEare.Social.Network;
 import com.telerikacademy.testframework.UserActions;
 import org.junit.After;
 import org.junit.Before;
+import pages.weAreSocialNetwork.CreateNewPostPage;
 import pages.weAreSocialNetwork.LoginPage;
 import pages.weAreSocialNetwork.PersonalProfileEditorPage;
 import pages.weAreSocialNetwork.RegisterPage;
@@ -13,6 +14,7 @@ public class BaseTest {
 	protected RegisterPage registerPage = new RegisterPage(actions.getDriver());
 	protected LoginPage loginPage = new LoginPage(actions.getDriver());
 	protected PersonalProfileEditorPage personalProfileEditorPage = new PersonalProfileEditorPage(actions.getDriver());
+	protected CreateNewPostPage createNewPostPage = new CreateNewPostPage (actions.getDriver ());
 
 	@Before
 	public void setUp(){

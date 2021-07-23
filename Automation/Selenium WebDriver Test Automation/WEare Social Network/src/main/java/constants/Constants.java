@@ -35,7 +35,6 @@ public interface Constants {
     final String POST_CONTENT = "Hello Selenium WebDriver!";
     final String POST_IMAGE = "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png";
     final String FRIEND_REQUEST_MESSAGE = "Good job! You have send friend request!";
-
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";
     final String ADMIN_PASSWORD = "Neptunus_21";

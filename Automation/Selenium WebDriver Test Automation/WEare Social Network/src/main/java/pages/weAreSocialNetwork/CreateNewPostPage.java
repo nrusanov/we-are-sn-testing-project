@@ -20,6 +20,11 @@ public class CreateNewPostPage extends BasePage implements Constants {
         actions.selectFromDropDownMenu(POST_VISIBILITY, "createPostPage.postVisibilityDropDown");
     }
 
+    public void assertCreatePostPageNavigated() {
+        actions.waitForElementVisibleUntilTimeout("createPostPage.bodyField", TIMEOUT_SECONDS);
+        actions.assertElementPresent("createPostPage.bodyField");
+    }
+
     public void fillInThePostBodyWithText() {
         actions.waitForElementVisibleUntilTimeout("createPostPage.bodyField", TIMEOUT_SECONDS);
         actions.typeValueInField(POST_CONTENT,"createPostPage.bodyField" );
@@ -41,15 +46,5 @@ public class CreateNewPostPage extends BasePage implements Constants {
         actions.waitForElementPresentUntilTimeout("createPostPage.uploadedPicture", TIMEOUT_SECONDS);
         actions.assertElementPresent("createPostPage.uploadedPicture");
     }
-
-
-
-
-
-
-
-
-
-
 
 }

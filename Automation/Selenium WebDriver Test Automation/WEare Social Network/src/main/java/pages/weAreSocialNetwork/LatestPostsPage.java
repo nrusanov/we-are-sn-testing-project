@@ -10,7 +10,7 @@ public class LatestPostsPage extends BasePage implements Constants {
     }
 
     public void navigateToLastPostsPage(String username, String password) {
-        actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.LatestPosts", 30);
+        actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.LatestPosts", TIMEOUT_SECONDS);
         actions.clickElement("homePage.navigationBar.LatestPosts");
     }
 
@@ -20,15 +20,15 @@ public class LatestPostsPage extends BasePage implements Constants {
     }
 
     public void filterPublicPosts() {
-        actions.waitForElementPresentUntilTimeout("LatestPostsPage.browsePublicPostsButton", 30);
+        actions.waitForElementPresentUntilTimeout("LatestPostsPage.browsePublicPostsButton", TIMEOUT_SECONDS);
         actions.clickElement("personalProfilePage.updateMyProfileButton");
     }
 
     public void filterCategories (){
-        actions.waitForElementVisibleUntilTimeout("LatestPostsPage.browseCategoryButton", 30);
-        actions.waitForElementVisibleUntilTimeout("LatestPostsPage.browseCategoryDropDown", 30);
+        actions.waitForElementVisibleUntilTimeout("LatestPostsPage.browseCategoryButton", TIMEOUT_SECONDS);
+        actions.waitForElementVisibleUntilTimeout("LatestPostsPage.browseCategoryDropDown", TIMEOUT_SECONDS);
         actions.clickElement("LatestPostsPage.browseCategoryDropDown");
-        actions.waitForElementVisibleUntilTimeout("LatestPostsPage.allCategoryButton", 30);
+        actions.waitForElementVisibleUntilTimeout("LatestPostsPage.allCategoryButton", TIMEOUT_SECONDS);
         actions.clickElement("LatestPostsPage.allCategoryButton");
     }
 
