@@ -1,4 +1,4 @@
-package testCases.WEare.Social.Network.Admin;
+package testCases.WEare.Social.Network.admin;
 
 import org.junit.Before;
 import org.junit.Test;

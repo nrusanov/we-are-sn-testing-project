@@ -14,13 +14,13 @@ public class CreateNewPostPage extends BasePage implements Constants {
         actions.clickElement("homePage.navigationBar.createPost");
     }
 
-    public void selectPostVisibility(String visibility) {
+    public void selectPostVisibility() {
         actions.waitForElementVisibleUntilTimeout("createPostPage.postVisibilityDropDown", TIMEOUT_SECONDS);
         actions.clickElement("createPostPage.postVisibilityDropDown");
         actions.selectFromDropDownMenu(POST_VISIBILITY, "createPostPage.postVisibilityDropDown");
     }
 
-    public void fillInThePostBodyWithText(String text) {
+    public void fillInThePostBodyWithText() {
         actions.waitForElementVisibleUntilTimeout("createPostPage.bodyField", TIMEOUT_SECONDS);
         actions.typeValueInField(POST_CONTENT,"createPostPage.bodyField" );
     }

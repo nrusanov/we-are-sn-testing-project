@@ -16,14 +16,13 @@ public interface Constants {
     final String PASSWORD_SECOND_USER = "Neptunus_21";
     final String CONFIRM_PASSWORD_FIRST_USER = "Neptunus_21";
     final String CONFIRM_PASSWORD_SECOND_USER = "Neptunus_21";
-    final String FIRST_NAME = "Neptunus";
-    final String LAST_NAME = "Team";
-    final String FIRST_NAME_INVALID = "N";
-    final String LAST_NAME_INVALID = "T";
+    final String FIRST_NAME = "Team";
+    final String LAST_NAME = "NeptunusTwo";
     final String BIRTHDAY_DATE = "02022020";
     final String BIRTHDAY_DATE_ASSERT = "2020-02-02";
     final String DROP_FEW_WORDS_FIELD = "We are future QA masters";
     final String PROFESSIONAL_CATEGORY = "Actor";
+    final String PROFESSIONAL_CATEGORY_SECOND_USER = "Dentist";
     final String SKILL_FIRST = "skill1";
     final String SKILL_SECOND = "skill2";
     final String SKILL_THIRD = "skill3";
@@ -31,10 +30,11 @@ public interface Constants {
     final String SKILL_FIFTH = "skill5";
     final String WEEKLY_AVAILABILITY = "15.0";
     final String PROFILE_PRIVACY = "public";
-    final String USER_PROFILE_PICTURE = "C:\\Users\\Lenovo\\Desktop\\Final Project\\Neptunus.jpg";
+    final String USER_PROFILE_PICTURE = "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\Neptunus.jpg";
     final String POST_VISIBILITY = "Public post";
     final String POST_CONTENT = "Hello Selenium WebDriver!";
-    final String POST_IMAGE = "C:\\Users\\Lenovo\\Desktop\\Final Project\\QA.png";
+    final String POST_IMAGE = "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png";
+    final String FRIEND_REQUEST_MESSAGE = "Good job! You have send friend request!";
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";

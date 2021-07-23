@@ -186,6 +186,12 @@ public class UserActions {
         Assert.assertEquals(value, valueDropDownMenu);
     }
 
+    public void assertTextEquals(String locator, String expectedText) {
+        String actualText = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
+        Assert.assertEquals(expectedText, actualText);
+    }
+
+
     public void assertNavigatedUrl(String urlKey) {
         String currentUrl = driver.getCurrentUrl();
         String expectedUrl = Utils.getConfigPropertyByKey(urlKey);
