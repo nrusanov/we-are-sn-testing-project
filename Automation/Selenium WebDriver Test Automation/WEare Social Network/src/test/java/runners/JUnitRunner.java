@@ -31,7 +31,7 @@ public class JUnitRunner extends JUnitStories {
     public JUnitRunner() {
         super();
         Embedder embedder = configuredEmbedder();
-        String metaFilters = "-skip +userPostFunctionality";
+        String metaFilters = "+userSearchFunctionality +userConnectFunctionality +userPostFunctionality";
         embedder.useMetaFilters(Arrays.asList(metaFilters));
 
         EmbedderControls embedderControls = embedder.embedderControls();

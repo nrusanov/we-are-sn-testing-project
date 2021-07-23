@@ -1,4 +1,4 @@
-package testCases.WEare.Social.Network.RegisteredUser;
+package testCases.WEare.Social.Network.admin;
 
 import constants.Constants;
 import org.junit.Before;
@@ -6,7 +6,6 @@ import org.junit.Test;
 import testCases.WEare.Social.Network.BaseTest;
 
 public class LoginPageTests extends BaseTest {
-
 
     @Before
     public void navigateToLoginPage() {
@@ -16,12 +15,10 @@ public class LoginPageTests extends BaseTest {
     }
 
     @Test
-    public void TC_01_UserSuccessfullyLogin_When_EnterValidCredentials() {
-        loginPage.signInRegularUser(Constants.FIRST_USER_USERNAME, Constants.PASSWORD_FIRST_USER);
+    public void TC_01_AdminSuccessfullyLogin_When_EnterValidCredentials() {
+        loginPage.signInAdmin(Constants.ADMIN_USERNAME, Constants.ADMIN_PASSWORD);
 
         loginPage.assertSuccessfulLogin();
     }
-
-
 
 }

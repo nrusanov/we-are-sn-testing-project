@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import constants.Constants;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
@@ -40,34 +39,82 @@ public class StepDefinitions extends BaseStepDefinitions {
     @Then("Assert $element present")
     public void assertElementPresent(String locator) {actions.assertElementPresent(locator); }
 
-
-    @Given("I open Crete New Post page")
+    @Given("I open Create New Post page")
     public void openLoginPage(){createNewPostPage.navigateToCreateNewPostPage();}
 
     @When("I select $visibility visibility from the dropdown menu")
-    public void selectPostVisibility(String visibility) {
-        createNewPostPage.selectPostVisibility(Constants.POST_VISIBILITY);
+    public void selectPostVisibility() {
+        createNewPostPage.selectPostVisibility();
     }
 
     @When("I type the text $text in the body field")
     public void fillInThePostBodyWithText() {
-        createNewPostPage.fillInThePostBodyWithText(Constants.POST_CONTENT);
+        createNewPostPage.fillInThePostBodyWithText();
     }
+
     @When("I upload a image in the post")
     public void uploadImageТоТhePost() {
         createNewPostPage.uploadImageТоТhePost();
     }
 
     @When("I click on 'Save post' button")
-     public void clickOnSavePostButton() {
-         createNewPostPage.clickOnSavePostButton();
+    public void clickOnSavePostButton() {
+        createNewPostPage.clickOnSavePostButton();
         }
 
-      @Then("A public post is created, containing a body and an image")
-    public void assertPostIsCreated() {
-        createNewPostPage.assertPostIsCreated();
-
+        @Then("A public post is created, containing a body and an image")
+    public void assertPostIsCreated() { createNewPostPage.assertPostIsCreated();
         }
+
+    @Given("I type user professional category $value in the search box")
+    public void fillInProfessionalCategoryField() {
+        homePage.fillInProfessionalCategoryField();
+    }
+
+    @Given("I type user first name $value and last name $value in the search box")
+    public void fillInNameField() {
+        homePage.fillInNameField();
+    }
+
+    @When("I click on 'Search' button")
+    public void clickOnSearchButton() {
+        homePage.clickOnSearchButton();
+    }
+
+
+    @Then("User profile is displayed")
+    public void assertUserProfileIsDisplayed() {
+        homePage.assertUserProfileIsDisplayed();
+    }
+
+    @Then("I open Home page")
+    public void openHomePae() {homePage.navigateToHomePage(); }
+
+    @Then("I log out")
+    public void clickOnLogOutButton() {
+        logOutPage.clickOnLogOutButton();
+    }
+    @Then("I am logged out")
+    public void assertUserIsLoggedOut() {
+        logOutPage.assertUserIsLoggedOut();
+    }
+
+    @When("I click on 'See Profile' button")
+    public void clickOnSeeProfileButton() {
+        searchPage.clickOnSeeProfileButton();
+    }
+
+    @When("I click on 'Connect' button")
+    public void clickOnConnectButton() {
+        searchPage.clickOnConnectButton();
+    }
+
+//    @Then("Friend Request is sent")
+//    public void assertConnectRequestIsSend() {
+//        searchPage.assertConnectRequestIsSend();
+//    }
+
+
 
 
 
