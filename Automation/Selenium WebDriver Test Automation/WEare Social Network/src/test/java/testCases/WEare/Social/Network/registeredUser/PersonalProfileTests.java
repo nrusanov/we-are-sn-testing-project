@@ -1,4 +1,4 @@
-package testCases.WEare.Social.Network.RegisteredUser;
+package testCases.WEare.Social.Network.registeredUser;
 
 import constants.Constants;
 import org.junit.Before;
@@ -45,7 +45,6 @@ public class PersonalProfileTests extends BaseTest {
         personalProfileEditorPage.updateServices();
 
         personalProfileEditorPage.assertUpdatedServices();
-
     }
 
     @Test
@@ -53,7 +52,6 @@ public class PersonalProfileTests extends BaseTest {
         personalProfileEditorPage.updatePersonalInfoAndSafety();
 
         personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();
-
     }
 
 

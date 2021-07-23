@@ -1,51 +1,119 @@
-2021-07-23 14:51:30,316 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,447 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,451 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,454 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,455 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,484 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:33,751 INFO  [main] 
+2021-07-23 19:28:58,260 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,768 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,768 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,768 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,776 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,778 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,778 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,778 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:00,797 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:01,448 INFO  [main] 
 -------------------------------------------------------
 Executing story : BeforeStories
 -------------------------------------------------------
 
-2021-07-23 14:51:33,751 INFO  [main] Initializing WebDriver
-2021-07-23 14:51:34,458 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-23 14:51:39,319 INFO  [main] Clicking on element loginPage.loginButton
-2021-07-23 14:51:39,801 INFO  [pool-2-thread-1] 
+2021-07-23 19:29:01,448 INFO  [main] Initializing WebDriver
+2021-07-23 19:29:02,015 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-23 19:29:02,431 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : UserSendFriendRequest.story
+-------------------------------------------------------
+
+2021-07-23 19:29:06,756 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-23 19:29:07,171 INFO  [pool-2-thread-1] Executing step : Given I type user first name Neptunus and last name TeamTwo in the search box
+2021-07-23 19:29:07,872 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type user first name Neptunus and last name TeamTwo in the search box
+2021-07-23 19:29:07,872 INFO  [pool-2-thread-1] Executing step : When I click on 'Search' button
+2021-07-23 19:29:07,916 INFO  [pool-2-thread-1] Clicking on element homePage.searchButton
+2021-07-23 19:29:08,206 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click on 'Search' button
+2021-07-23 19:29:08,206 INFO  [pool-2-thread-1] Executing step : And I click on 'See Profile' button
+2021-07-23 19:29:08,238 INFO  [pool-2-thread-1] Clicking on element searchPage.seeProfileButton
+2021-07-23 19:29:08,716 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click on 'See Profile' button
+2021-07-23 19:29:08,716 INFO  [pool-2-thread-1] Executing step : And I click on 'Connect' button
+2021-07-23 19:29:08,737 INFO  [pool-2-thread-1] Clicking on element searchPage.connectButton
+2021-07-23 19:29:09,134 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click on 'Connect' button
+2021-07-23 19:29:09,140 INFO  [pool-2-thread-1] IGNORED STEP : !-- Then Friend Request is sent
+2021-07-23 19:29:09,141 INFO  [pool-2-thread-1] Executing step : Then I log out
+2021-07-23 19:29:09,204 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
+2021-07-23 19:29:09,537 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then I log out
+2021-07-23 19:29:09,537 INFO  [pool-2-thread-1] Executing step : And I am logged out
+2021-07-23 19:29:09,618 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I am logged out
+2021-07-23 19:29:09,637 INFO  [pool-2-thread-1] 
 -------------------------------------------------------
 Executing story : CreateNewPost.story
 -------------------------------------------------------
 
-2021-07-23 14:51:39,815 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-23 14:51:39,815 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-23 14:51:39,816 INFO  [pool-2-thread-1] Executing step : Given I open Crete New Post page
-2021-07-23 14:51:39,916 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
-2021-07-23 14:51:40,220 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I open Crete New Post page
-2021-07-23 14:51:40,220 INFO  [pool-2-thread-1] Executing step : When I select public visibility from the dropdown menu
-2021-07-23 14:51:40,821 INFO  [pool-2-thread-1] Clicking on element createPostPage.postVisibilityDropDown
-2021-07-23 14:51:40,945 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
-2021-07-23 14:51:41,056 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I select ｟public｠ visibility from the dropdown menu
-2021-07-23 14:51:41,058 INFO  [pool-2-thread-1] Executing step : And I type the text "Hello Selenium WebDriver!" in the body field
-2021-07-23 14:51:41,200 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type the text "Hello Selenium WebDriver!" in the body field
-2021-07-23 14:51:41,201 INFO  [pool-2-thread-1] Executing step : And I upload a image in the post
-2021-07-23 14:51:41,239 INFO  [pool-2-thread-1] Uploading image
-2021-07-23 14:51:41,307 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a image in the post
-2021-07-23 14:51:41,309 INFO  [pool-2-thread-1] Executing step : And I click on 'Save post' button
-2021-07-23 14:51:41,353 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
-2021-07-23 14:51:41,811 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click on 'Save post' button
-2021-07-23 14:51:41,811 INFO  [pool-2-thread-1] Executing step : Then A public post is created, containing a body and an image
-2021-07-23 14:51:41,933 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then A public post is created, containing a body and an image
-2021-07-23 14:51:42,164 INFO  [main] 
+2021-07-23 19:29:13,979 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-23 19:29:14,339 INFO  [pool-2-thread-1] Executing step : Given I open Create New Post page
+2021-07-23 19:29:14,400 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
+2021-07-23 19:29:14,736 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I open Create New Post page
+2021-07-23 19:29:14,736 INFO  [pool-2-thread-1] Executing step : When I select public visibility from the dropdown menu
+2021-07-23 19:29:15,351 INFO  [pool-2-thread-1] Clicking on element createPostPage.postVisibilityDropDown
+2021-07-23 19:29:15,459 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
+2021-07-23 19:29:15,569 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I select ｟public｠ visibility from the dropdown menu
+2021-07-23 19:29:15,569 INFO  [pool-2-thread-1] Executing step : And I type the text "Hello Selenium WebDriver!" in the body field
+2021-07-23 19:29:15,720 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type the text "Hello Selenium WebDriver!" in the body field
+2021-07-23 19:29:15,720 INFO  [pool-2-thread-1] Executing step : And I upload a image in the post
+2021-07-23 19:29:15,764 INFO  [pool-2-thread-1] Uploading image
+2021-07-23 19:29:15,844 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a image in the post
+2021-07-23 19:29:15,844 INFO  [pool-2-thread-1] Executing step : And I click on 'Save post' button
+2021-07-23 19:29:15,887 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
+2021-07-23 19:29:16,464 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click on 'Save post' button
+2021-07-23 19:29:16,464 INFO  [pool-2-thread-1] Executing step : Then A public post is created, containing a body and an image
+2021-07-23 19:29:16,561 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then A public post is created, containing a body and an image
+2021-07-23 19:29:16,561 INFO  [pool-2-thread-1] Executing step : And I open Home page
+2021-07-23 19:29:16,577 INFO  [pool-2-thread-1] Clicking on element homePage.weAreButton
+2021-07-23 19:29:16,881 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I open Home page
+2021-07-23 19:29:16,881 INFO  [pool-2-thread-1] Executing step : And I log out
+2021-07-23 19:29:16,928 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
+2021-07-23 19:29:17,236 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I log out
+2021-07-23 19:29:17,237 INFO  [pool-2-thread-1] Executing step : And I am logged out
+2021-07-23 19:29:17,315 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I am logged out
+2021-07-23 19:29:17,326 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : UserSearchForProfileByName.story
+-------------------------------------------------------
+
+2021-07-23 19:29:21,678 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-23 19:29:22,057 INFO  [pool-2-thread-1] Executing step : Given I type user first name Team and last name NeptunusTwo in the search box
+2021-07-23 19:29:22,745 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type user first name Team and last name NeptunusTwo in the search box
+2021-07-23 19:29:22,745 INFO  [pool-2-thread-1] Executing step : When I click on 'Search' button
+2021-07-23 19:29:22,782 INFO  [pool-2-thread-1] Clicking on element homePage.searchButton
+2021-07-23 19:29:23,039 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click on 'Search' button
+2021-07-23 19:29:23,039 INFO  [pool-2-thread-1] Executing step : Then User profile is displayed
+2021-07-23 19:29:23,210 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then User profile is displayed
+2021-07-23 19:29:23,210 INFO  [pool-2-thread-1] Executing step : And I log out
+2021-07-23 19:29:23,252 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
+2021-07-23 19:29:23,477 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I log out
+2021-07-23 19:29:23,478 INFO  [pool-2-thread-1] Executing step : And I am logged out
+2021-07-23 19:29:23,545 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I am logged out
+2021-07-23 19:29:23,551 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : UserSearchForProfileByProfessionalCategory.story
+-------------------------------------------------------
+
+2021-07-23 19:29:27,923 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-23 19:29:28,315 INFO  [pool-2-thread-1] Executing step : Given I type user professional category Dentist in the search box
+2021-07-23 19:29:28,982 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type user professional category Dentist in the search box
+2021-07-23 19:29:28,983 INFO  [pool-2-thread-1] Executing step : When I click on 'Search' button
+2021-07-23 19:29:29,015 INFO  [pool-2-thread-1] Clicking on element homePage.searchButton
+2021-07-23 19:29:29,274 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click on 'Search' button
+2021-07-23 19:29:29,275 INFO  [pool-2-thread-1] Executing step : Then User profile is displayed
+2021-07-23 19:29:29,432 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then User profile is displayed
+2021-07-23 19:29:29,432 INFO  [pool-2-thread-1] Executing step : And I log out
+2021-07-23 19:29:29,480 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
+2021-07-23 19:29:29,693 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I log out
+2021-07-23 19:29:29,693 INFO  [pool-2-thread-1] Executing step : And I am logged out
+2021-07-23 19:29:29,761 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I am logged out
+2021-07-23 19:29:29,902 INFO  [main] 
 -------------------------------------------------------
 Executing story : AfterStories
 -------------------------------------------------------
 
-2021-07-23 14:51:42,165 INFO  [main] Quitting WebDriver
+2021-07-23 19:29:29,903 INFO  [main] Quitting WebDriver

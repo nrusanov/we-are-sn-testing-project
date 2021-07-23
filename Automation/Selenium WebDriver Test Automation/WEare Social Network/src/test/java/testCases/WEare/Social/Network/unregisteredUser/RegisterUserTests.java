@@ -1,4 +1,4 @@
-package testCases.WEare.Social.Network.UnregisteredUser;
+package testCases.WEare.Social.Network.unregisteredUser;
 
 import org.junit.Before;
 import org.junit.Test;
