@@ -21,7 +21,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clickElement("personalProfilePage.editButton");
     }
 
-    public void updatePersonalInformationWithAllRequiredFields() {
+    public void userUpdatePersonalInformationWithAllRequiredFields() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
         actions.clearField("personalProfilePage.firstName");
         actions.typeValueInField(FIRST_NAME, "personalProfilePage.firstName");
@@ -33,8 +33,20 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clickElement("personalProfilePage.updateMyProfileButton");
     }
 
+    public void adminUpdatePersonalInformationWithAllRequiredFields() {
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
+        actions.clearField("personalProfilePage.firstName");
+        actions.typeValueInField(FIRST_NAME, "personalProfilePage.firstName");
+        actions.clearField("personalProfilePage.lastName");
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.lastName", TIMEOUT_SECONDS);
+        actions.typeValueInField(ADMIN_LAST_NAME, "personalProfilePage.lastName");
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.birthday", TIMEOUT_SECONDS);
+        actions.typeValueInField(BIRTHDAY_DATE,"personalProfilePage.birthday");
+        actions.clickElement("personalProfilePage.updateMyProfileButton");
+    }
 
-    public void updatePersonalInformationWithAllRequiredFieldsAndAllNotRequiredFields() {
+
+    public void userUpdatePersonalInformationWithAllRequiredFieldsAndAllNotRequiredFields() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
         actions.clearField("personalProfilePage.firstName");
         actions.typeValueInField(FIRST_NAME, "personalProfilePage.firstName");
@@ -43,9 +55,26 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clearField("personalProfilePage.birthday");
         actions.typeValueInField(BIRTHDAY_DATE,"personalProfilePage.birthday");
         actions.clickElement("personalProfilePage.updateMyProfileButton");
-        actions.selectFromDropDownMenu("personalProfilePage.gender.female", "personalProfilePage.gender");
+        actions.selectFromDropDownMenu(GENDER, "personalProfilePage.gender");
+        actions.clearField("personalProfilePage.dropFewWordsField");
         actions.typeValueInField(DROP_FEW_WORDS_FIELD, "personalProfilePage.dropFewWordsField");
-        actions.selectFromDropDownMenu("personalProfilePage.city.plovdiv", "personalProfilePage.city");
+        actions.selectFromDropDownMenu(CITY, "personalProfilePage.city");
+        actions.clickElement("personalProfilePage.updateMyProfileButton");
+    }
+
+    public void adminUpdatePersonalInformationWithAllRequiredFieldsAndAllNotRequiredFields() {
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
+        actions.clearField("personalProfilePage.firstName");
+        actions.typeValueInField(FIRST_NAME, "personalProfilePage.firstName");
+        actions.clearField("personalProfilePage.lastName");
+        actions.typeValueInField(ADMIN_LAST_NAME, "personalProfilePage.lastName");
+        actions.clearField("personalProfilePage.birthday");
+        actions.typeValueInField(BIRTHDAY_DATE,"personalProfilePage.birthday");
+        actions.clickElement("personalProfilePage.updateMyProfileButton");
+        actions.selectFromDropDownMenu(GENDER, "personalProfilePage.gender");
+        actions.clearField("personalProfilePage.dropFewWordsField");
+        actions.typeValueInField(DROP_FEW_WORDS_FIELD, "personalProfilePage.dropFewWordsField");
+        actions.selectFromDropDownMenu(CITY, "personalProfilePage.city");
         actions.clickElement("personalProfilePage.updateMyProfileButton");
     }
 
@@ -77,7 +106,6 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clickElement("personalProfilePage.list.settings");
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.chooseFileButton",TIMEOUT_SECONDS);
         actions.uploadImage(USER_PROFILE_PICTURE,"personalProfilePage.chooseFileButton");
-//        actions.waitForElementVisibleUntilTimeout("users.picture", TIMEOUT_SECONDS);
         actions.selectFromDropDownMenu(PROFILE_PRIVACY, "personalProfilePage.privacy");
         actions.clickElement("personalProfilePage.settingsUpdateButton");
     }
@@ -87,16 +115,39 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.assertElementPresent("personalProfilePage.list.editPersonalInformation");
     }
 
-    public void assertUpdatedPersonalInformationWithAllRequiredFields() {
+    public void assertUserUpdatedPersonalInformationWithAllRequiredFields() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
         actions.assertAttributeValue("personalProfilePage.firstName", FIRST_NAME, "value");
         actions.assertAttributeValue("personalProfilePage.lastName", LAST_NAME, "value");
         actions.assertAttributeValue("personalProfilePage.birthday", BIRTHDAY_DATE_ASSERT, "value");
     }
 
+    public void assertAdminUpdatedPersonalInformationWithAllRequiredFields() {
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
+        actions.assertAttributeValue("personalProfilePage.firstName", FIRST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.lastName", ADMIN_LAST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.birthday", BIRTHDAY_DATE_ASSERT, "value");
+    }
+
+    public void assertUserUpdatedPersonalInformationWithAllRequiredFieldsAndAllNotRequired() {
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
+        actions.assertAttributeValue("personalProfilePage.firstName", FIRST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.lastName", LAST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.birthday", BIRTHDAY_DATE_ASSERT, "value");
+        actions.assertAttributeValue("personalProfilePage.dropFewWordsField",DROP_FEW_WORDS_FIELD , "value");
+    }
+
+    public void assertAdminUpdatedPersonalInformationWithAllRequiredFieldsAndAllNotRequired() {
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
+        actions.assertAttributeValue("personalProfilePage.firstName", FIRST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.lastName", ADMIN_LAST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.birthday", BIRTHDAY_DATE_ASSERT, "value");
+        actions.assertAttributeValue("personalProfilePage.dropFewWordsField",DROP_FEW_WORDS_FIELD , "value");
+    }
+
     public void assertUpdatedProfessionalCategory() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.updatedProfessionalCategory", TIMEOUT_SECONDS);
-        actions.assertAttributeValue("personalProfilePage.updatedProfessionalCategory", PROFESSIONAL_CATEGORY, "value");
+        actions.assertElementPresent("personalProfilePage.updatedProfessionalCategory");
     }
 
     public void assertUpdatedServices() {

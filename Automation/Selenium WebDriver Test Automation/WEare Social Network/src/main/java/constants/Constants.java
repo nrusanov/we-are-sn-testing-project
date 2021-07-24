@@ -1,9 +1,5 @@
 package constants;
 
-import com.telerikacademy.testframework.UserActions;
-
-import java.util.UUID;
-
 public interface Constants {
 
     final int TIMEOUT_SECONDS = 30;
@@ -21,6 +17,8 @@ public interface Constants {
     final String BIRTHDAY_DATE = "02022020";
     final String BIRTHDAY_DATE_ASSERT = "2020-02-02";
     final String DROP_FEW_WORDS_FIELD = "We are future QA masters";
+    final String GENDER = "FEMALE";
+    final String CITY = "Plovdiv";
     final String PROFESSIONAL_CATEGORY = "Actor";
     final String PROFESSIONAL_CATEGORY_SECOND_USER = "Dentist";
     final String SKILL_FIRST = "skill1";
@@ -31,13 +29,10 @@ public interface Constants {
     final String WEEKLY_AVAILABILITY = "15.0";
     final String PROFILE_PRIVACY = "public";
     final String USER_PROFILE_PICTURE = "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\Neptunus.jpg";
-    final String POST_VISIBILITY = "Public post";
-    final String POST_CONTENT = "Hello Selenium WebDriver!";
-    final String POST_IMAGE = "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png";
-    final String FRIEND_REQUEST_MESSAGE = "Good job! You have send friend request!";
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";
     final String ADMIN_PASSWORD = "Neptunus_21";
     final String ADMIN_CONFIRM_PASSWORD = "Neptunus_21";
+    final String ADMIN_LAST_NAME = "NeptunusAdmin";
 
 }

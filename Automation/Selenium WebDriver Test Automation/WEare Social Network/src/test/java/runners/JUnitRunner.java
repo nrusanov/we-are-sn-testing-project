@@ -17,7 +17,7 @@ import org.jbehave.core.steps.PrintStreamStepMonitor;
 import org.junit.runner.RunWith;
 import reporter.JbehaveStoryReporter;
 import stepDefinitions.StepDefinitions;
-//import stepDefinitions.BaseStepDefinition;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +31,7 @@ public class JUnitRunner extends JUnitStories {
     public JUnitRunner() {
         super();
         Embedder embedder = configuredEmbedder();
-        String metaFilters = "+userSearchFunctionality +userConnectFunctionality +userPostFunctionality";
+        String metaFilters = "-skip +userSearchFunctionality";
         embedder.useMetaFilters(Arrays.asList(metaFilters));
 
         EmbedderControls embedderControls = embedder.embedderControls();
