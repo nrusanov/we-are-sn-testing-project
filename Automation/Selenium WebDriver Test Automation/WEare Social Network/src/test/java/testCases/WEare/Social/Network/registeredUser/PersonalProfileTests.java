@@ -12,7 +12,7 @@ public class PersonalProfileTests extends BaseTest {
         loginPage.navigateToLoginPage();
         loginPage.assertLoginPageNavigated();
 
-        loginPage.signInRegularUser(Constants.FIRST_USER_USERNAME, Constants.PASSWORD_FIRST_USER);
+        loginPage.signInRegularUser();
         loginPage.assertSuccessfulLogin();
 
         personalProfileEditorPage.navigateToPersonalProfileEditorPage();
@@ -21,23 +21,23 @@ public class PersonalProfileTests extends BaseTest {
 
     @Test
     public void TC_01_UserSuccessfulUpdatePersonalInformation_When_RequiredFieldsAreFilled() {
-        personalProfileEditorPage.updatePersonalInformationWithAllRequiredFields();
+        personalProfileEditorPage.userUpdatePersonalInformationWithAllRequiredFields();
 
-        personalProfileEditorPage.assertUpdatedPersonalInformationWithAllRequiredFields();
+        personalProfileEditorPage.assertUserUpdatedPersonalInformationWithAllRequiredFields();
     }
 
     @Test
     public void TC_02_UserSuccessfulUpdatePersonalInformation_When_RequiredAndNotRequiredFieldsAreFilled() {
-        personalProfileEditorPage.updatePersonalInformationWithAllRequiredFields();
+        personalProfileEditorPage.userUpdatePersonalInformationWithAllRequiredFieldsAndAllNotRequiredFields();
 
-        personalProfileEditorPage.assertUpdatedPersonalInformationWithAllRequiredFields();
+        personalProfileEditorPage.assertUserUpdatedPersonalInformationWithAllRequiredFieldsAndAllNotRequired();
     }
 
     @Test
     public void TC_03_UserSuccessfulUpdateProfessionalCategory_When_CategoryIsSelected() {
         personalProfileEditorPage.updateProfessionalCategory();
 
-//        personalProfileEditorPage.assertUpdatedProfessionalCategory();
+        personalProfileEditorPage.assertUpdatedProfessionalCategory();
     }
 
     @Test
@@ -48,7 +48,7 @@ public class PersonalProfileTests extends BaseTest {
     }
 
     @Test
-    public void TC_05_UserSuccessfulUpdatePersonalInfoAndSafety_When_() {
+    public void TC_05_UserSuccessfulUpdatePersonalInfoAndSafety_When_UploadProfilePictureAndChooseVisibility() {
         personalProfileEditorPage.updatePersonalInfoAndSafety();
 
         personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();
