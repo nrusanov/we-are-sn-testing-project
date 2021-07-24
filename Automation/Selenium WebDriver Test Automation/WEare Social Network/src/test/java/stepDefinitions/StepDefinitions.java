@@ -22,7 +22,6 @@ public class StepDefinitions extends BaseStepDefinitions {
         actions.typeValueInField(value, field);
     }
 
-
     @Given("I clear $field and type $value in the field")
     @When("I clear $field and type $value in the field")
     @Then("I clear $field and type $value in the field")
@@ -42,7 +41,7 @@ public class StepDefinitions extends BaseStepDefinitions {
     @When("$Element element is present")
     @Then("$Element element is present")
     public void assertElementPresent(String locator) {
-        actions.waitForElementVisibleUntilTimeout(locator, 5);
+        actions.waitForElementVisibleUntilTimeout(locator, 10);
         actions.assertElementPresent(locator); }
 
     @Given("$Element element contains the value $value")

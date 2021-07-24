@@ -1,62 +1,130 @@
-2021-07-24 20:37:22,545 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,190 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,191 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,192 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,193 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,194 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,210 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,210 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,210 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,211 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,211 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:26,534 INFO  [main] 
+2021-07-24 23:33:44,158 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,606 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,606 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,606 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,606 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,606 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,622 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,622 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,622 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,622 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:47,622 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:48,397 INFO  [main] 
 -------------------------------------------------------
 Executing story : BeforeStories
 -------------------------------------------------------
 
-2021-07-24 20:37:26,555 INFO  [main] Initializing WebDriver
-2021-07-24 20:37:27,080 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-24 20:37:27,552 INFO  [pool-2-thread-1] 
+2021-07-24 23:33:48,417 INFO  [main] Initializing WebDriver
+2021-07-24 23:33:48,964 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-24 23:33:49,449 INFO  [pool-2-thread-1] 
 -------------------------------------------------------
-Executing story : CreateNewPost.story
+Executing story : DisconnectAlreadyAcceptedFriendRequest.story
 -------------------------------------------------------
 
-2021-07-24 20:37:27,576 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
-2021-07-24 20:37:27,853 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
-2021-07-24 20:37:27,854 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
-2021-07-24 20:37:27,998 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
-2021-07-24 20:37:27,999 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
-2021-07-24 20:37:28,049 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
-2021-07-24 20:37:28,492 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
-2021-07-24 20:37:28,493 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
-2021-07-24 20:37:28,575 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-24 20:37:28,575 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.createPost element
-2021-07-24 20:37:28,632 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
-2021-07-24 20:37:28,890 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.createPost｠ element
-2021-07-24 20:37:28,891 INFO  [pool-2-thread-1] Executing step : And I select Public post from createPostPage.postVisibilityDropDown dropdown
-2021-07-24 20:37:28,891 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
-2021-07-24 20:37:29,071 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I select ｟Public post｠ from ｟createPostPage.postVisibilityDropDown｠ dropdown
-2021-07-24 20:37:29,072 INFO  [pool-2-thread-1] Executing step : And I type Hello Selenium WebDriver! in createPostPage.bodyField field
-2021-07-24 20:37:29,243 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Hello Selenium WebDriver!｠ in ｟createPostPage.bodyField｠ field
-2021-07-24 20:37:29,243 INFO  [pool-2-thread-1] Executing step : And I upload a C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png in createPostPage.chooseFileButton
-2021-07-24 20:37:29,289 INFO  [pool-2-thread-1] Uploading image
-2021-07-24 20:37:29,354 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a ｟C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png｠ in ｟createPostPage.chooseFileButton｠
-2021-07-24 20:37:29,355 INFO  [pool-2-thread-1] Executing step : And I click createPostPage.savePostButton element
-2021-07-24 20:37:29,394 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
-2021-07-24 20:37:30,175 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟createPostPage.savePostButton｠ element
-2021-07-24 20:37:30,176 INFO  [pool-2-thread-1] Executing step : Then createPostPage.createdPost element is present
-2021-07-24 20:37:30,875 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟createPostPage.createdPost｠ element is present
-2021-07-24 20:37:30,875 INFO  [pool-2-thread-1] Executing step : And I click homePage.weAreButton element
-2021-07-24 20:37:30,905 INFO  [pool-2-thread-1] Clicking on element homePage.weAreButton
-2021-07-24 20:37:31,246 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.weAreButton｠ element
-2021-07-24 20:37:31,247 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
-2021-07-24 20:37:31,293 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
-2021-07-24 20:37:31,634 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
-2021-07-24 20:37:31,635 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
-2021-07-24 20:37:31,705 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
-2021-07-24 20:37:31,846 INFO  [main] 
+2021-07-24 23:33:49,503 INFO  [pool-2-thread-1] Executing step : Given I type adminRandom in loginPage.usernameField field
+2021-07-24 23:33:49,721 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟adminRandom｠ in ｟loginPage.usernameField｠ field
+2021-07-24 23:33:49,723 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
+2021-07-24 23:33:49,881 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
+2021-07-24 23:33:49,881 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
+2021-07-24 23:33:49,934 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-24 23:33:50,417 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
+2021-07-24 23:33:50,417 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
+2021-07-24 23:33:50,504 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-24 23:33:50,505 INFO  [pool-2-thread-1] Executing step : When I type Dentist in homePage.professionalCategoryField field
+2021-07-24 23:33:50,665 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I type ｟Dentist｠ in ｟homePage.professionalCategoryField｠ field
+2021-07-24 23:33:50,666 INFO  [pool-2-thread-1] Executing step : And I click homePage.searchButton element
+2021-07-24 23:33:50,709 INFO  [pool-2-thread-1] Clicking on element homePage.searchButton
+2021-07-24 23:33:50,986 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.searchButton｠ element
+2021-07-24 23:33:50,987 INFO  [pool-2-thread-1] Executing step : And homePage.assertNames element contains the value Team NeptunusTwo
+2021-07-24 23:33:51,017 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.assertNames｠ element contains the value ｟Team NeptunusTwo｠
+2021-07-24 23:33:51,018 INFO  [pool-2-thread-1] Executing step : And I click searchPage.seeProfileButton element
+2021-07-24 23:33:51,082 INFO  [pool-2-thread-1] Clicking on element searchPage.seeProfileButton
+2021-07-24 23:33:51,533 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟searchPage.seeProfileButton｠ element
+2021-07-24 23:33:51,533 INFO  [pool-2-thread-1] Executing step : And I click personalProfilePage.disconnectButton element
+2021-07-24 23:33:51,598 INFO  [pool-2-thread-1] Clicking on element personalProfilePage.disconnectButton
+2021-07-24 23:33:51,769 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟personalProfilePage.disconnectButton｠ element
+2021-07-24 23:33:51,769 INFO  [pool-2-thread-1] Executing step : Then personalProfilePage.connectButton element is present
+2021-07-24 23:33:56,485 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟personalProfilePage.connectButton｠ element is present
+2021-07-24 23:33:56,486 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
+2021-07-24 23:33:56,528 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
+2021-07-24 23:33:56,836 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
+2021-07-24 23:33:56,836 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
+2021-07-24 23:33:56,903 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
+2021-07-24 23:33:56,923 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : SendAndAcceptFriendRequest.story
+-------------------------------------------------------
+
+2021-07-24 23:33:56,928 INFO  [pool-2-thread-1] Executing step : Given I type adminRandom in loginPage.usernameField field
+2021-07-24 23:33:57,052 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟adminRandom｠ in ｟loginPage.usernameField｠ field
+2021-07-24 23:33:57,052 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
+2021-07-24 23:33:57,163 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
+2021-07-24 23:33:57,164 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
+2021-07-24 23:33:57,198 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-24 23:33:57,615 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
+2021-07-24 23:33:57,615 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
+2021-07-24 23:33:57,680 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-24 23:33:57,680 INFO  [pool-2-thread-1] Executing step : When I type Team NeptunusTwo in homePage.namesField field
+2021-07-24 23:33:57,861 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I type ｟Team NeptunusTwo｠ in ｟homePage.namesField｠ field
+2021-07-24 23:33:57,861 INFO  [pool-2-thread-1] Executing step : And I click homePage.searchButton element
+2021-07-24 23:33:57,899 INFO  [pool-2-thread-1] Clicking on element homePage.searchButton
+2021-07-24 23:33:58,252 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.searchButton｠ element
+2021-07-24 23:33:58,253 INFO  [pool-2-thread-1] Executing step : And I click searchPage.seeProfileButton element
+2021-07-24 23:33:58,333 INFO  [pool-2-thread-1] Clicking on element searchPage.seeProfileButton
+2021-07-24 23:33:58,720 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟searchPage.seeProfileButton｠ element
+2021-07-24 23:33:58,720 INFO  [pool-2-thread-1] Executing step : And I click personalProfilePage.connectButton element
+2021-07-24 23:33:58,768 INFO  [pool-2-thread-1] Clicking on element personalProfilePage.connectButton
+2021-07-24 23:33:59,000 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟personalProfilePage.connectButton｠ element
+2021-07-24 23:33:59,002 INFO  [pool-2-thread-1] Executing step : Then searchPage.FriendRequestMessage element is present
+2021-07-24 23:34:13,442 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+FAILED STEP : Then ｟searchPage.FriendRequestMessage｠ element is present
+-------------------------------------------------------
+
+2021-07-24 23:34:13,442 INFO  [pool-2-thread-1] REASON: Element with locator: '//div[contains(text(),'Good job! You have send friend request!')]' was not found.
+2021-07-24 23:34:13,473 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : DisconnectAlreadyAcceptedFriendRequest.story
+-------------------------------------------------------
+
+2021-07-24 23:34:13,473 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
+2021-07-24 23:34:22,730 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+FAILED STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
+-------------------------------------------------------
+
+2021-07-24 23:34:22,730 INFO  [pool-2-thread-1] REASON: Element with locator: '//input[@id='username']' was not found.
+2021-07-24 23:34:22,746 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : SendAndAcceptFriendRequest.story
+-------------------------------------------------------
+
+2021-07-24 23:34:22,746 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
+2021-07-24 23:34:31,931 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+FAILED STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
+-------------------------------------------------------
+
+2021-07-24 23:34:31,931 INFO  [pool-2-thread-1] REASON: Element with locator: '//input[@id='username']' was not found.
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : SendFriendRequest.story
+-------------------------------------------------------
+
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- Given I type randomUsername in loginPage.usernameField field
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And I type Neptunus_21 in loginPage.passwordField field
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And I click loginPage.loginButton element
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And homePage.navigationBar.logOutButton element is present
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- When I type Team NeptunusAdmin in homePage.namesField field
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And I click homePage.searchButton element
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And I click searchPage.seeProfileButton element
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And I click personalProfilePage.connectButton element
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- Then searchPage.FriendRequestMessage element is present
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And I click homePage.navigationBar.logOutButton element
+2021-07-24 23:34:31,946 INFO  [pool-2-thread-1] IGNORED STEP : !-- And homePage.navigationBar.signInButton element is present
+2021-07-24 23:34:32,112 INFO  [main] 
 -------------------------------------------------------
 Executing story : AfterStories
 -------------------------------------------------------
 
-2021-07-24 20:37:31,846 INFO  [main] Quitting WebDriver
+2021-07-24 23:34:32,112 INFO  [main] Quitting WebDriver
