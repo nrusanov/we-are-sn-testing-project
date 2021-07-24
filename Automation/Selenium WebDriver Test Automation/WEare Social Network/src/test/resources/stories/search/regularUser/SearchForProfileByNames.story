@@ -1,21 +1,22 @@
 Meta:
-@connections
-@userConnectFunctionality
+@regularUser
+@search
+@userSearchFunctionality
 
 Narrative:
 As a regular user
-I want to send friend request
-So that i can interact with other users
+I want to search for a user profile by first and last names
+So that i can interact with him
 
-Scenario: A regular user send a friend request to another user
+
+Scenario: Search for a user profile as a regular user
 Given I type randomUsername in loginPage.usernameField field
 And I type Neptunus_21 in loginPage.passwordField field
 And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present
-When I type Team NeptunusTwo in homePage.namesField field
+When I type Team NeptunusTwo  in homePage.namesField field
 And I click homePage.searchButton element
-And I click searchPage.seeProfileButton element
-And I click searchPage.connectButton element
-Then searchPage.FriendRequestMessage element is present
+Then homePage.assertNames element contains the value Team NeptunusTwo
+And homePage.assertProfessionalCategory element contains the value Dentist
 And I click homePage.navigationBar.logOutButton element
 And homePage.navigationBar.signInButton element is present
