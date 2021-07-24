@@ -1,13 +1,62 @@
-2021-07-24 20:03:54,699 INFO  [main] Initializing WebDriver
-2021-07-24 20:03:58,391 INFO  [main] Initializing WebDriver
-2021-07-24 20:03:58,391 INFO  [main] Initializing WebDriver
-2021-07-24 20:03:58,391 INFO  [main] Initializing WebDriver
-2021-07-24 20:03:58,391 INFO  [main] Initializing WebDriver
-2021-07-24 20:03:59,033 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-24 20:03:59,725 INFO  [main] Clicking on element loginPage.loginButton
-2021-07-24 20:04:00,401 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
-2021-07-24 20:04:00,857 INFO  [main] Clicking on element personalProfilePage.editButton
-2021-07-24 20:04:01,497 INFO  [main] Clicking on element personalProfilePage.list.editProfessionalInformation
-2021-07-24 20:04:01,597 INFO  [main] Selecting Actor from dropdown personalProfilePage.industry
-2021-07-24 20:04:01,688 INFO  [main] Clicking on element personalProfilePage.industryUpdateButton
-2021-07-24 20:04:02,110 INFO  [main] Quitting WebDriver
+2021-07-24 20:37:22,545 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,190 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,191 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,192 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,193 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,194 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,210 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,210 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,210 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,211 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,211 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:26,534 INFO  [main] 
+-------------------------------------------------------
+Executing story : BeforeStories
+-------------------------------------------------------
+
+2021-07-24 20:37:26,555 INFO  [main] Initializing WebDriver
+2021-07-24 20:37:27,080 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-24 20:37:27,552 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : CreateNewPost.story
+-------------------------------------------------------
+
+2021-07-24 20:37:27,576 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
+2021-07-24 20:37:27,853 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
+2021-07-24 20:37:27,854 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
+2021-07-24 20:37:27,998 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
+2021-07-24 20:37:27,999 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
+2021-07-24 20:37:28,049 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-24 20:37:28,492 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
+2021-07-24 20:37:28,493 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
+2021-07-24 20:37:28,575 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-24 20:37:28,575 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.createPost element
+2021-07-24 20:37:28,632 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
+2021-07-24 20:37:28,890 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.createPost｠ element
+2021-07-24 20:37:28,891 INFO  [pool-2-thread-1] Executing step : And I select Public post from createPostPage.postVisibilityDropDown dropdown
+2021-07-24 20:37:28,891 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
+2021-07-24 20:37:29,071 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I select ｟Public post｠ from ｟createPostPage.postVisibilityDropDown｠ dropdown
+2021-07-24 20:37:29,072 INFO  [pool-2-thread-1] Executing step : And I type Hello Selenium WebDriver! in createPostPage.bodyField field
+2021-07-24 20:37:29,243 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Hello Selenium WebDriver!｠ in ｟createPostPage.bodyField｠ field
+2021-07-24 20:37:29,243 INFO  [pool-2-thread-1] Executing step : And I upload a C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png in createPostPage.chooseFileButton
+2021-07-24 20:37:29,289 INFO  [pool-2-thread-1] Uploading image
+2021-07-24 20:37:29,354 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a ｟C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\QA.png｠ in ｟createPostPage.chooseFileButton｠
+2021-07-24 20:37:29,355 INFO  [pool-2-thread-1] Executing step : And I click createPostPage.savePostButton element
+2021-07-24 20:37:29,394 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
+2021-07-24 20:37:30,175 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟createPostPage.savePostButton｠ element
+2021-07-24 20:37:30,176 INFO  [pool-2-thread-1] Executing step : Then createPostPage.createdPost element is present
+2021-07-24 20:37:30,875 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟createPostPage.createdPost｠ element is present
+2021-07-24 20:37:30,875 INFO  [pool-2-thread-1] Executing step : And I click homePage.weAreButton element
+2021-07-24 20:37:30,905 INFO  [pool-2-thread-1] Clicking on element homePage.weAreButton
+2021-07-24 20:37:31,246 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.weAreButton｠ element
+2021-07-24 20:37:31,247 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
+2021-07-24 20:37:31,293 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
+2021-07-24 20:37:31,634 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
+2021-07-24 20:37:31,635 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
+2021-07-24 20:37:31,705 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
+2021-07-24 20:37:31,846 INFO  [main] 
+-------------------------------------------------------
+Executing story : AfterStories
+-------------------------------------------------------
+
+2021-07-24 20:37:31,846 INFO  [main] Quitting WebDriver

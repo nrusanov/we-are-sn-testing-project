@@ -21,13 +21,7 @@ public class BaseStepDefinitions {
         loginPage.assertLoginPageNavigated();
     }
 
-    @BeforeScenario
-    public void logIn() {
-        loginPage.signInRegularUser();
-        loginPage.assertSuccessfulLogin();
-    }
-
-
+    
     @AfterStories
     public void tearDown() {
         UserActions.quitDriver();

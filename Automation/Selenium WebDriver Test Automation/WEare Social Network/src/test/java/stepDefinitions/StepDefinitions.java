@@ -18,6 +18,7 @@ public class StepDefinitions extends BaseStepDefinitions {
     @When("I type $value in $name field")
     @Then("I type $value in $name field")
     public void typeInField(String value, String field) {
+        actions.waitForElementVisibleUntilTimeout(field, 5);
         actions.typeValueInField(value, field);
     }
 
@@ -40,7 +41,9 @@ public class StepDefinitions extends BaseStepDefinitions {
     @Given("$Element element is present")
     @When("$Element element is present")
     @Then("$Element element is present")
-    public void assertElementPresent(String locator) {actions.assertElementPresent(locator); }
+    public void assertElementPresent(String locator) {
+        actions.waitForElementVisibleUntilTimeout(locator, 5);
+        actions.assertElementPresent(locator); }
 
     @Given("$Element element contains the value $value")
     @When("$Element element contains the value $value")
