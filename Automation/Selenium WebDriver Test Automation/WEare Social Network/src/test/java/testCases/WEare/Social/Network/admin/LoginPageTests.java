@@ -1,6 +1,5 @@
 package testCases.WEare.Social.Network.admin;
 
-import constants.Constants;
 import org.junit.Before;
 import org.junit.Test;
 import testCases.WEare.Social.Network.BaseTest;
@@ -16,7 +15,7 @@ public class LoginPageTests extends BaseTest {
 
     @Test
     public void TC_01_AdminSuccessfullyLogin_When_EnterValidCredentials() {
-        loginPage.signInAdmin();
+        loginPage.loginInAdmin();
 
         loginPage.assertSuccessfulLogin();
     }

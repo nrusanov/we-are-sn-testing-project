@@ -21,7 +21,7 @@ public class BaseStepDefinitions {
         loginPage.assertLoginPageNavigated();
     }
 
-    
+
     @AfterStories
     public void tearDown() {
         UserActions.quitDriver();

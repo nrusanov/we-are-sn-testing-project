@@ -1,16 +1,17 @@
 package stepDefinitions;
 
+import constants.Constants;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
-public class StepDefinitions extends BaseStepDefinitions {
+public class StepDefinitions extends BaseStepDefinitions implements Constants {
 
     @Given("I click $element element")
     @When("I click $element element")
     @Then("I click $element element")
     public void clickElement(String element) {
-        actions.waitForElementVisibleUntilTimeout(element, 5);
+        actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
         actions.clickElement(element);
     }
 
@@ -18,10 +19,9 @@ public class StepDefinitions extends BaseStepDefinitions {
     @When("I type $value in $name field")
     @Then("I type $value in $name field")
     public void typeInField(String value, String field) {
-        actions.waitForElementVisibleUntilTimeout(field, 5);
+        actions.waitForElementVisibleUntilTimeout(field, TIMEOUT_SECONDS);
         actions.typeValueInField(value, field);
     }
-
 
     @Given("I clear $field and type $value in the field")
     @When("I clear $field and type $value in the field")
@@ -42,20 +42,22 @@ public class StepDefinitions extends BaseStepDefinitions {
     @When("$Element element is present")
     @Then("$Element element is present")
     public void assertElementPresent(String locator) {
-        actions.waitForElementVisibleUntilTimeout(locator, 5);
+        actions.waitForElementVisibleUntilTimeout(locator, TIMEOUT_SECONDS);
         actions.assertElementPresent(locator); }
 
     @Given("$Element element contains the value $value")
     @When("$Element element contains the value $value")
     @Then("$Element element contains the value $value")
-    public void assertElementContainsValue(String locator, String value) {actions.assertElementPresent(locator); }
+    public void assertElementContainsValue(String locator, String value) {
+        actions.waitForElementVisibleUntilTimeout(locator, TIMEOUT_SECONDS);
+        actions.assertElementPresent(locator); }
 
 
     @Given("I upload a $image in $field")
     @When("I upload a $image in $field")
     @Then("I upload a $image in $field")
     public void uploadImageТоТhePost(String image,String element) {
-        actions.waitForElementVisibleUntilTimeout(element, 5);
+        actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
         actions.uploadImage(image, element);
     }
 

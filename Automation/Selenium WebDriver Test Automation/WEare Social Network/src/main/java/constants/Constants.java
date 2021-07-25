@@ -2,7 +2,7 @@ package constants;
 
 public interface Constants {
 
-    final int TIMEOUT_SECONDS = 30;
+    final int TIMEOUT_SECONDS = 10;
     final int USERNAME_LENGTH = 6;
     final String FIRST_USER_USERNAME = "randomUsername";
     final String SECOND_USER_USERNAME = "randomSecondUsername";
@@ -13,7 +13,8 @@ public interface Constants {
     final String CONFIRM_PASSWORD_FIRST_USER = "Neptunus_21";
     final String CONFIRM_PASSWORD_SECOND_USER = "Neptunus_21";
     final String FIRST_NAME = "Team";
-    final String LAST_NAME = "NeptunusTwo";
+    final String LAST_NAME_FIRST_USER = "NeptunusOne";
+    final String LAST_NAME_SECOND_USER = "NeptunusTwo";
     final String BIRTHDAY_DATE = "02022020";
     final String BIRTHDAY_DATE_ASSERT = "2020-02-02";
     final String DROP_FEW_WORDS_FIELD = "We are future QA masters";
