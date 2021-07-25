@@ -15,7 +15,7 @@ public class LoginPageTests extends BaseTest {
 
     @Test
     public void TC_01_AdminSuccessfullyLogin_When_EnterValidCredentials() {
-        loginPage.signInAdmin();
+        loginPage.loginInAdmin();
 
         loginPage.assertSuccessfulLogin();
     }

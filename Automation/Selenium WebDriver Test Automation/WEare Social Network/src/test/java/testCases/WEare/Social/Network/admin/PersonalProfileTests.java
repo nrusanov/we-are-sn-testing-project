@@ -11,7 +11,7 @@ public class PersonalProfileTests extends BaseTest {
         loginPage.navigateToLoginPage();
         loginPage.assertLoginPageNavigated();
 
-        loginPage.signInAdmin();
+        loginPage.loginInAdmin();
         loginPage.assertSuccessfulLogin();
 
         personalProfileEditorPage.navigateToPersonalProfileEditorPage();
