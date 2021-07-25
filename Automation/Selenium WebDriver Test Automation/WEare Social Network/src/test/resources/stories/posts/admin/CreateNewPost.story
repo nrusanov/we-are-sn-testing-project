@@ -1,7 +1,7 @@
 Meta:
 @admin
 @posts
-@userPostFunctionality
+@adminPostFunctionality
 
 Narrative:
 As an admin
@@ -9,7 +9,7 @@ I want to create a new public post
 So that a public post is created
 
 Scenario: Create a new public post as an admin
-Given I type adminUsername in loginPage.usernameField field
+Given I type adminRandom in loginPage.usernameField field
 And I type Neptunus_21 in loginPage.passwordField field
 And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present

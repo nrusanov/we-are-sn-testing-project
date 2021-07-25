@@ -1,6 +1,5 @@
 package testCases.WEare.Social.Network.admin;
 
-import constants.Constants;
 import org.junit.Before;
 import org.junit.Test;
 import testCases.WEare.Social.Network.BaseTest;
