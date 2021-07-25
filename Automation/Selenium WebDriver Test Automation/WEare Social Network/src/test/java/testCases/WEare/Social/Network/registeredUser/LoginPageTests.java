@@ -17,7 +17,7 @@ public class LoginPageTests extends BaseTest {
 
     @Test
     public void TC_01_UserSuccessfullyLogin_When_EnterValidCredentials() {
-        loginPage.signInRegularUser();
+        loginPage.loginRegularUser();
 
         loginPage.assertSuccessfulLogin();
     }

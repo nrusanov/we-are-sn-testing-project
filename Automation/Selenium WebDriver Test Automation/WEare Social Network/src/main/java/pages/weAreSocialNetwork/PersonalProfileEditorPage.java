@@ -27,7 +27,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.typeValueInField(FIRST_NAME, "personalProfilePage.firstName");
         actions.clearField("personalProfilePage.lastName");
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.lastName", TIMEOUT_SECONDS);
-        actions.typeValueInField(LAST_NAME, "personalProfilePage.lastName");
+        actions.typeValueInField(LAST_NAME_FIRST_USER, "personalProfilePage.lastName");
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.birthday", TIMEOUT_SECONDS);
         actions.typeValueInField(BIRTHDAY_DATE,"personalProfilePage.birthday");
         actions.clickElement("personalProfilePage.updateMyProfileButton");
@@ -51,7 +51,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clearField("personalProfilePage.firstName");
         actions.typeValueInField(FIRST_NAME, "personalProfilePage.firstName");
         actions.clearField("personalProfilePage.lastName");
-        actions.typeValueInField(LAST_NAME, "personalProfilePage.lastName");
+        actions.typeValueInField(LAST_NAME_FIRST_USER, "personalProfilePage.lastName");
         actions.clearField("personalProfilePage.birthday");
         actions.typeValueInField(BIRTHDAY_DATE,"personalProfilePage.birthday");
         actions.clickElement("personalProfilePage.updateMyProfileButton");
@@ -118,7 +118,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
     public void assertUserUpdatedPersonalInformationWithAllRequiredFields() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
         actions.assertAttributeValue("personalProfilePage.firstName", FIRST_NAME, "value");
-        actions.assertAttributeValue("personalProfilePage.lastName", LAST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.lastName", LAST_NAME_FIRST_USER, "value");
         actions.assertAttributeValue("personalProfilePage.birthday", BIRTHDAY_DATE_ASSERT, "value");
     }
 
@@ -132,7 +132,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
     public void assertUserUpdatedPersonalInformationWithAllRequiredFieldsAndAllNotRequired() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.firstName", TIMEOUT_SECONDS);
         actions.assertAttributeValue("personalProfilePage.firstName", FIRST_NAME, "value");
-        actions.assertAttributeValue("personalProfilePage.lastName", LAST_NAME, "value");
+        actions.assertAttributeValue("personalProfilePage.lastName", LAST_NAME_FIRST_USER, "value");
         actions.assertAttributeValue("personalProfilePage.birthday", BIRTHDAY_DATE_ASSERT, "value");
         actions.assertAttributeValue("personalProfilePage.dropFewWordsField",DROP_FEW_WORDS_FIELD , "value");
     }

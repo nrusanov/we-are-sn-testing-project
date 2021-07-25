@@ -12,7 +12,7 @@ public class PersonalProfileTests extends BaseTest {
         loginPage.navigateToLoginPage();
         loginPage.assertLoginPageNavigated();
 
-        loginPage.signInRegularUser();
+        loginPage.loginRegularUser();
         loginPage.assertSuccessfulLogin();
 
         personalProfileEditorPage.navigateToPersonalProfileEditorPage();
