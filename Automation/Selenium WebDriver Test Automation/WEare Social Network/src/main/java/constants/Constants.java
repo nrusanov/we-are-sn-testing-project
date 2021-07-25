@@ -29,7 +29,10 @@ public interface Constants {
     final String SKILL_FIFTH = "skill5";
     final String WEEKLY_AVAILABILITY = "15.0";
     final String PROFILE_PRIVACY = "public";
-    final String USER_PROFILE_PICTURE = "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\Neptunus.jpg";
+    final String USER_PROFILE_PICTURE = "C:\\Users\\Niki\\Desktop\\QA28\\QA module\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\Neptunus.jpg";
+    // "C:\\Users\\Lenovo\\Desktop\\Neptunus Final Project\\neptunus-final-project\\Automation\\Selenium WebDriver Test Automation\\Data\\Neptunus.jpg";
+    // "C:\Users\\Niki\\Desktop\\QA28\\QA module\\neptunus-final-project\\Automation\Selenium WebDriver Test Automation\Data\\Neptunus.jpg"
+    //https://visafoto.com/img/docs/zz_2x2_1mb.jpg
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";
     final String ADMIN_PASSWORD = "Neptunus_21";
