@@ -4,8 +4,7 @@ import org.openqa.selenium.devtools.v84.indexeddb.model.Key;
 
 public interface Constants {
 
-    final int TIMEOUT_SECONDS = 5;
-    final int USERNAME_LENGTH = 6;
+    final int TIMEOUT_SECONDS = 10;
     final String FIRST_USER_USERNAME = "randomUsername";
     final String SECOND_USER_USERNAME = "randomSecondUsername";
     final String EMAIL_FIRST_USER = "Neptunus.qa21@gmail.com";

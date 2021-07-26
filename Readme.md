@@ -35,7 +35,7 @@
 ### 7. Logged bugs:
  - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/issues)
 
-### 8. Postman API WebDriver WEare Social Network Tests
+### 8. Postman API WEare Social Network Tests
  - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Automation/Postman%20Test%20Automation)
 
 ### 9. Selenium WebDriver WEare Social Network final project
