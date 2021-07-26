@@ -6,14 +6,22 @@ Meta:
 Narrative:
 As an admin
 I want to disable user profile
-So that i
+So that I can restrict the users access to the site
 
 
-Scenario: The admin disables a regular user profile
-Given I type adminRandom in loginPage.usernameField field
+Lifecycle:
+Before:
+Scope: STORY
+
+Given I click homePage.navigationBar.signInButton element
+And homePage.navigationBar.signInButton element is present
+When I type adminRandom in loginPage.usernameField field
 And I type Neptunus_21 in loginPage.passwordField field
 And I click loginPage.loginButton element
-And homePage.navigationBar.logOutButton element is present
+Then homePage.navigationBar.logOutButton element is present
+
+Scenario: The admin disables a regular user profile
+Given homePage.navigationBar.logOutButton element is present
 When I type Team NeptunusTwo in homePage.namesField field
 And I click homePage.searchButton element
 And homePage.assertSecondUserName element contains the value Team NeptunusTwo

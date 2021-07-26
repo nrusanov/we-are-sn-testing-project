@@ -14,12 +14,11 @@ public class BaseStepDefinitions {
         UserActions.loadBrowser("baseUrl");
     }
 
-    @BeforeScenario
-    public void setUp() {
-        UserActions.loadBrowser("baseUrl");
-        loginPage.navigateToLoginPage();
-        loginPage.assertLoginPageNavigated();
-    }
+//    @BeforeScenario
+//    public void setUp() {
+//        loginPage.navigateToLoginPage();
+//        loginPage.assertLoginPageNavigated();
+//    }
 
 
     @AfterStories
