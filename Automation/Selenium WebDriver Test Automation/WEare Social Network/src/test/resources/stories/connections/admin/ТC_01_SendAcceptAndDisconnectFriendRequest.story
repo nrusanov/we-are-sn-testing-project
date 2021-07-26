@@ -9,6 +9,13 @@ I want to send friend request, accept friend request, disconnect already accepte
 So that i can use connectivity functionality
 
 
+Lifecycle:
+Before:
+Scope: STORY
+Given I click homePage.navigationBar.signInButton element
+And homePage.navigationBar.signInButton element is present
+
+
 Scenario: An admin sends friend request to a regular user
 Given I type adminRandom in loginPage.usernameField field
 And I type Neptunus_21 in loginPage.passwordField field

@@ -1,237 +1,70 @@
-2021-07-26 12:44:36,594 INFO  [main] Initializing WebDriver
-2021-07-26 12:44:40,284 INFO  [main] Initializing WebDriver
-2021-07-26 12:44:40,313 INFO  [main] Initializing WebDriver
-2021-07-26 12:44:41,729 INFO  [main] 
+2021-07-26 16:10:47,115 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:51,146 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:51,242 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:51,661 INFO  [main] 
 -------------------------------------------------------
 Executing story : BeforeStories
 -------------------------------------------------------
 
-2021-07-26 12:44:41,729 INFO  [main] Initializing WebDriver
-2021-07-26 12:44:42,367 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-Executing story : CreateNewPost.story
--------------------------------------------------------
-
-2021-07-26 12:44:42,378 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-26 12:44:42,755 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 12:44:43,234 INFO  [pool-2-thread-1] Executing step : Given I type adminRandom in loginPage.usernameField field
-2021-07-26 12:44:43,436 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟adminRandom｠ in ｟loginPage.usernameField｠ field
-2021-07-26 12:44:43,436 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
-2021-07-26 12:44:43,579 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
-2021-07-26 12:44:43,579 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
-2021-07-26 12:44:43,624 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
-2021-07-26 12:44:44,004 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
-2021-07-26 12:44:44,004 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
-2021-07-26 12:44:44,086 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-26 12:44:44,086 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.createPost element
-2021-07-26 12:44:44,154 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
-2021-07-26 12:44:44,403 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.createPost｠ element
-2021-07-26 12:44:44,403 INFO  [pool-2-thread-1] Executing step : And I select Public post from createPostPage.postVisibilityDropDown dropdown
-2021-07-26 12:44:44,994 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
-2021-07-26 12:44:45,103 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I select ｟Public post｠ from ｟createPostPage.postVisibilityDropDown｠ dropdown
-2021-07-26 12:44:45,103 INFO  [pool-2-thread-1] Executing step : And I type Hello Selenium WebDriver! in createPostPage.bodyField field
-2021-07-26 12:44:45,265 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Hello Selenium WebDriver!｠ in ｟createPostPage.bodyField｠ field
-2021-07-26 12:44:45,266 INFO  [pool-2-thread-1] Executing step : And I upload a C:\Users\Lenovo\Desktop\Neptunus Final Project\neptunus-final-project\Automation\Selenium WebDriver Test Automation\WEare Social Network\src\test\resources\images\QA.png in createPostPage.chooseFileButton
-2021-07-26 12:44:45,302 INFO  [pool-2-thread-1] Uploading image
-2021-07-26 12:44:45,366 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a ｟C:\Users\Lenovo\Desktop\Neptunus Final Project\neptunus-final-project\Automation\Selenium WebDriver Test Automation\WEare Social Network\src\test\resources\images\QA.png｠ in ｟createPostPage.chooseFileButton｠
-2021-07-26 12:44:45,366 INFO  [pool-2-thread-1] Executing step : And I click createPostPage.savePostButton element
-2021-07-26 12:44:45,399 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
-2021-07-26 12:44:45,912 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟createPostPage.savePostButton｠ element
-2021-07-26 12:44:45,912 INFO  [pool-2-thread-1] Executing step : Then createPostPage.createdPost element is present
-2021-07-26 12:44:46,462 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟createPostPage.createdPost｠ element is present
-2021-07-26 12:44:46,462 INFO  [pool-2-thread-1] Executing step : And I click homePage.weAreButton element
-2021-07-26 12:44:46,501 INFO  [pool-2-thread-1] Clicking on element homePage.weAreButton
-2021-07-26 12:44:46,817 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.weAreButton｠ element
-2021-07-26 12:44:46,817 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
-2021-07-26 12:44:46,865 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
-2021-07-26 12:44:47,196 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
-2021-07-26 12:44:47,197 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
-2021-07-26 12:44:47,245 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
-2021-07-26 12:44:47,252 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-Executing story : TC_01_CreateNewPost.story
--------------------------------------------------------
-
-2021-07-26 12:44:47,253 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-26 12:44:47,501 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 12:44:47,902 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
-2021-07-26 12:44:48,048 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
-2021-07-26 12:44:48,048 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
-2021-07-26 12:44:48,176 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
-2021-07-26 12:44:48,176 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
-2021-07-26 12:44:48,217 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
-2021-07-26 12:44:48,583 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
-2021-07-26 12:44:48,583 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
-2021-07-26 12:44:48,647 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-26 12:44:48,647 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.createPost element
-2021-07-26 12:44:48,694 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.createPost
-2021-07-26 12:44:48,919 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.createPost｠ element
-2021-07-26 12:44:48,919 INFO  [pool-2-thread-1] Executing step : And I select Public post from createPostPage.postVisibilityDropDown dropdown
-2021-07-26 12:44:49,516 INFO  [pool-2-thread-1] Selecting Public post from dropdown createPostPage.postVisibilityDropDown
-2021-07-26 12:44:49,609 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I select ｟Public post｠ from ｟createPostPage.postVisibilityDropDown｠ dropdown
-2021-07-26 12:44:49,609 INFO  [pool-2-thread-1] Executing step : And I type Hello Selenium WebDriver! in createPostPage.bodyField field
-2021-07-26 12:44:49,731 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Hello Selenium WebDriver!｠ in ｟createPostPage.bodyField｠ field
-2021-07-26 12:44:49,731 INFO  [pool-2-thread-1] Executing step : And I upload a C:\Users\Lenovo\Desktop\Neptunus Final Project\neptunus-final-project\Automation\Selenium WebDriver Test Automation\WEare Social Network\src\test\resources\images\QA.png in createPostPage.chooseFileButton
-2021-07-26 12:44:49,766 INFO  [pool-2-thread-1] Uploading image
-2021-07-26 12:44:49,818 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I upload a ｟C:\Users\Lenovo\Desktop\Neptunus Final Project\neptunus-final-project\Automation\Selenium WebDriver Test Automation\WEare Social Network\src\test\resources\images\QA.png｠ in ｟createPostPage.chooseFileButton｠
-2021-07-26 12:44:49,818 INFO  [pool-2-thread-1] Executing step : And I click createPostPage.savePostButton element
-2021-07-26 12:44:49,848 INFO  [pool-2-thread-1] Clicking on element createPostPage.savePostButton
-2021-07-26 12:44:50,510 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟createPostPage.savePostButton｠ element
-2021-07-26 12:44:50,510 INFO  [pool-2-thread-1] Executing step : Then createPostPage.createdPost element is present
-2021-07-26 12:44:51,472 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟createPostPage.createdPost｠ element is present
-2021-07-26 12:44:51,472 INFO  [pool-2-thread-1] Executing step : And I click homePage.weAreButton element
-2021-07-26 12:44:51,525 INFO  [pool-2-thread-1] Clicking on element homePage.weAreButton
-2021-07-26 12:44:51,814 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.weAreButton｠ element
-2021-07-26 12:44:51,814 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
-2021-07-26 12:44:51,861 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
-2021-07-26 12:44:52,252 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
-2021-07-26 12:44:52,253 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
-2021-07-26 12:44:52,321 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
-2021-07-26 12:44:52,328 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-Executing story : TC_02_EditPost.story
--------------------------------------------------------
-
-2021-07-26 12:44:52,332 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-26 12:44:52,596 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 12:44:52,976 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
-2021-07-26 12:44:53,131 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
-2021-07-26 12:44:53,131 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
-2021-07-26 12:44:53,269 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
-2021-07-26 12:44:53,269 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
-2021-07-26 12:44:53,303 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
-2021-07-26 12:44:53,693 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
-2021-07-26 12:44:53,693 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
-2021-07-26 12:44:53,762 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-26 12:44:53,762 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.LatestPosts element is present
-2021-07-26 12:44:53,854 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.LatestPosts｠ element is present
-2021-07-26 12:44:53,855 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.LatestPosts element
-2021-07-26 12:44:53,907 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.LatestPosts
-2021-07-26 12:44:54,648 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.LatestPosts｠ element
-2021-07-26 12:44:54,649 INFO  [pool-2-thread-1] Executing step : And browsedPosts.exploreThisPostButton element is present
-2021-07-26 12:44:54,716 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟browsedPosts.exploreThisPostButton｠ element is present
-2021-07-26 12:44:54,717 INFO  [pool-2-thread-1] Executing step : And I click browsedPosts.exploreThisPostButton element
-2021-07-26 12:44:54,758 INFO  [pool-2-thread-1] Clicking on element browsedPosts.exploreThisPostButton
-2021-07-26 12:44:55,113 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟browsedPosts.exploreThisPostButton｠ element
-2021-07-26 12:44:55,113 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.editPostButton element is present
-2021-07-26 12:44:55,756 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.editPostButton｠ element is present
-2021-07-26 12:44:55,756 INFO  [pool-2-thread-1] Executing step : And I click exploreThisPostPage.editPostButton element
-2021-07-26 12:44:55,781 INFO  [pool-2-thread-1] Clicking on element exploreThisPostPage.editPostButton
-2021-07-26 12:44:56,028 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟exploreThisPostPage.editPostButton｠ element
-2021-07-26 12:44:56,028 INFO  [pool-2-thread-1] Executing step : And editPostPage.postVisibilityDropDown element is present
-2021-07-26 12:44:56,638 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟editPostPage.postVisibilityDropDown｠ element is present
-2021-07-26 12:44:56,638 INFO  [pool-2-thread-1] Executing step : And I select Public post from editPostPage.postVisibilityDropDown dropdown
-2021-07-26 12:44:56,663 INFO  [pool-2-thread-1] Selecting Public post from dropdown editPostPage.postVisibilityDropDown
-2021-07-26 12:44:56,745 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I select ｟Public post｠ from ｟editPostPage.postVisibilityDropDown｠ dropdown
-2021-07-26 12:44:56,746 INFO  [pool-2-thread-1] Executing step : And editPostPage.editPostTextArea element is present
-2021-07-26 12:44:56,801 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟editPostPage.editPostTextArea｠ element is present
-2021-07-26 12:44:56,801 INFO  [pool-2-thread-1] Executing step : And I type This is an edited public post in editPostPage.editPostTextArea field
-2021-07-26 12:44:56,911 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟This is an edited public post｠ in ｟editPostPage.editPostTextArea｠ field
-2021-07-26 12:44:56,911 INFO  [pool-2-thread-1] Executing step : And editPostPage.savePostButton element is present
-2021-07-26 12:44:56,961 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟editPostPage.savePostButton｠ element is present
-2021-07-26 12:44:56,961 INFO  [pool-2-thread-1] Executing step : And I click editPostPage.savePostButton element
-2021-07-26 12:44:56,992 INFO  [pool-2-thread-1] Clicking on element editPostPage.savePostButton
-2021-07-26 12:44:57,265 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟editPostPage.savePostButton｠ element
-2021-07-26 12:44:57,265 INFO  [pool-2-thread-1] Executing step : Then editPostPage.postAuthor element contains the value RandomUsername
-2021-07-26 12:44:57,851 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟editPostPage.postAuthor｠ element contains the value ｟RandomUsername｠
-2021-07-26 12:44:57,851 INFO  [pool-2-thread-1] Executing step : And editPostPage.postContent element contains the value This is an edited public post
-2021-07-26 12:44:57,902 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟editPostPage.postContent｠ element contains the value ｟This is an edited public post｠
-2021-07-26 12:44:57,902 INFO  [pool-2-thread-1] Executing step : And I click homePage.weAreButton element
-2021-07-26 12:44:57,933 INFO  [pool-2-thread-1] Clicking on element homePage.weAreButton
-2021-07-26 12:44:58,201 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.weAreButton｠ element
-2021-07-26 12:44:58,202 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
-2021-07-26 12:44:58,249 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.logOutButton
-2021-07-26 12:44:58,564 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
-2021-07-26 12:44:58,564 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
-2021-07-26 12:44:58,612 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
-2021-07-26 12:44:58,616 INFO  [pool-2-thread-1] 
+2021-07-26 16:10:51,692 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:52,233 INFO  [pool-2-thread-1] 
 -------------------------------------------------------
 Executing story : TC_03_LikePost.story
 -------------------------------------------------------
 
-2021-07-26 12:44:58,616 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-26 12:44:58,864 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 12:44:59,247 INFO  [pool-2-thread-1] Executing step : Given I type randomUsername in loginPage.usernameField field
-2021-07-26 12:44:59,398 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I type ｟randomUsername｠ in ｟loginPage.usernameField｠ field
-2021-07-26 12:44:59,399 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
-2021-07-26 12:44:59,521 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
-2021-07-26 12:44:59,522 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
-2021-07-26 12:44:59,554 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
-2021-07-26 12:44:59,946 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
-2021-07-26 12:44:59,946 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.logOutButton element is present
-2021-07-26 12:44:59,994 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-26 12:44:59,994 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.LatestPosts element is present
-2021-07-26 12:45:00,079 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.LatestPosts｠ element is present
-2021-07-26 12:45:00,079 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.LatestPosts element
-2021-07-26 12:45:00,130 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.LatestPosts
-2021-07-26 12:45:00,863 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.LatestPosts｠ element
-2021-07-26 12:45:00,864 INFO  [pool-2-thread-1] Executing step : And browsedPosts.exploreThisPostButton element is present
-2021-07-26 12:45:00,912 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟browsedPosts.exploreThisPostButton｠ element is present
-2021-07-26 12:45:00,912 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.postAuthor element contains the value RandomUsername
-2021-07-26 12:45:00,974 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.postAuthor｠ element contains the value ｟RandomUsername｠
-2021-07-26 12:45:00,974 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.postContent element contains the value This is an edited public post
-2021-07-26 12:45:01,035 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.postContent｠ element contains the value ｟This is an edited public post｠
-2021-07-26 12:45:01,035 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.likeButton element is present
-2021-07-26 12:45:02,228 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.likeButton｠ element is present
-2021-07-26 12:45:02,228 INFO  [pool-2-thread-1] Executing step : And I click exploreThisPostPage.likeButton element
-2021-07-26 12:45:03,015 INFO  [pool-2-thread-1] Clicking on element exploreThisPostPage.likeButton
-2021-07-26 12:45:03,080 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟exploreThisPostPage.likeButton｠ element
-2021-07-26 12:45:03,080 INFO  [pool-2-thread-1] Executing step : Then exploreThisPostPage.dislikeButton element is present
-2021-07-26 12:45:03,241 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟exploreThisPostPage.dislikeButton｠ element is present
-2021-07-26 12:45:03,241 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.likeCount element contains the value Likes: 1
-2021-07-26 12:45:03,297 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.likeCount｠ element contains the value ｟Likes: 1｠
-2021-07-26 12:45:03,297 INFO  [pool-2-thread-1] Executing step : And I click homePage.navigationBar.logOutButton element
-2021-07-26 12:45:17,835 INFO  [pool-2-thread-1] 
+2021-07-26 16:10:52,259 INFO  [pool-2-thread-1] Executing step : Given I click homePage.navigationBar.signInButton element
+2021-07-26 16:10:52,363 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
+2021-07-26 16:10:52,661 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I click ｟homePage.navigationBar.signInButton｠ element
+2021-07-26 16:10:52,661 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
+2021-07-26 16:10:52,777 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
+2021-07-26 16:10:52,778 INFO  [pool-2-thread-1] Executing step : When I type adminRandom in loginPage.usernameField field
+2021-07-26 16:10:52,969 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I type ｟adminRandom｠ in ｟loginPage.usernameField｠ field
+2021-07-26 16:10:52,971 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
+2021-07-26 16:10:53,116 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
+2021-07-26 16:10:53,117 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
+2021-07-26 16:10:53,164 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-26 16:10:53,661 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
+2021-07-26 16:10:53,662 INFO  [pool-2-thread-1] Executing step : Then homePage.navigationBar.logOutButton element is present
+2021-07-26 16:10:53,807 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-26 16:10:53,811 INFO  [pool-2-thread-1] Executing step : Given homePage.navigationBar.logOutButton element is present
+2021-07-26 16:10:53,863 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-26 16:10:53,864 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.LatestPosts element is present
+2021-07-26 16:10:53,975 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.LatestPosts｠ element is present
+2021-07-26 16:10:53,976 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.LatestPosts element
+2021-07-26 16:10:54,039 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.LatestPosts
+2021-07-26 16:10:55,079 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.LatestPosts｠ element
+2021-07-26 16:10:55,080 INFO  [pool-2-thread-1] Executing step : And browsedPosts.exploreThisPostButton element is present
+2021-07-26 16:10:55,154 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟browsedPosts.exploreThisPostButton｠ element is present
+2021-07-26 16:10:55,155 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.postAuthor element contains the value RandomUsername
+2021-07-26 16:10:55,223 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.postAuthor｠ element contains the value ｟RandomUsername｠
+2021-07-26 16:10:55,223 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.postContent element contains the value This is an edited public post
+2021-07-26 16:10:55,295 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.postContent｠ element contains the value ｟This is an edited public post｠
+2021-07-26 16:10:55,295 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.likeButton element is present
+2021-07-26 16:10:56,647 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.likeButton｠ element is present
+2021-07-26 16:10:56,647 INFO  [pool-2-thread-1] Executing step : And I click exploreThisPostPage.likeButton element
+2021-07-26 16:10:57,511 INFO  [pool-2-thread-1] Clicking on element exploreThisPostPage.likeButton
+2021-07-26 16:10:57,660 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟exploreThisPostPage.likeButton｠ element
+2021-07-26 16:10:57,661 INFO  [pool-2-thread-1] Executing step : Then exploreThisPostPage.dislikeButton element is present
+2021-07-26 16:10:57,963 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟exploreThisPostPage.dislikeButton｠ element is present
+2021-07-26 16:10:57,963 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.likeCount element contains the value Likes: 1
+2021-07-26 16:10:58,034 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.likeCount｠ element contains the value ｟Likes: 1｠
+2021-07-26 16:10:58,044 INFO  [pool-2-thread-1] Executing step : And I click exploreThisPostPage.seeProfileButton element
+2021-07-26 16:10:58,080 INFO  [pool-2-thread-1] Clicking on element exploreThisPostPage.seeProfileButton
+2021-07-26 16:10:59,269 INFO  [pool-2-thread-1] 
 -------------------------------------------------------
-FAILED STEP : And I click ｟homePage.navigationBar.logOutButton｠ element
--------------------------------------------------------
-
-2021-07-26 12:45:17,835 INFO  [pool-2-thread-1] REASON: Element with locator: '//a[@href="/logout"]' was not found.
-2021-07-26 12:45:17,850 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-Executing story : TC_04_DislikePost.story
--------------------------------------------------------
-
-2021-07-26 12:45:17,850 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-26 12:45:22,314 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 12:45:22,332 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-FAILED STEP : stepDefinitions.BaseStepDefinitions.setUp()
+FAILED STEP : And I click ｟exploreThisPostPage.seeProfileButton｠ element
 -------------------------------------------------------
 
-2021-07-26 12:45:22,332 INFO  [pool-2-thread-1] REASON: Method setUp (annotated with @BeforeScenario in class stepDefinitions.BaseStepDefinitions) failed: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(), "Sign")]"}
+2021-07-26 16:10:59,269 INFO  [pool-2-thread-1] REASON: element click intercepted: Element <a href="/auth/users/122/profile" class="btn btn-primary">...</a> is not clickable at point (532, 19). Other element would receive the click: <div class="collapse navbar-collapse" id="ftco-nav">...</div>
   (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
 System info: host: 'DAYANA', ip: '172.31.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0adf0f0d02d2dd97fea1b3ebe442ee52
-*** Element info: {Using=xpath, value=//a[contains(text(), "Sign")]}
-2021-07-26 12:45:22,348 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-Executing story : TC_05_DeletePost.story
--------------------------------------------------------
-
-2021-07-26 12:45:22,349 INFO  [pool-2-thread-1] Initializing WebDriver
-2021-07-26 12:45:26,723 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 12:45:26,732 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-FAILED STEP : stepDefinitions.BaseStepDefinitions.setUp()
--------------------------------------------------------
-
-2021-07-26 12:45:26,733 INFO  [pool-2-thread-1] REASON: Method setUp (annotated with @BeforeScenario in class stepDefinitions.BaseStepDefinitions) failed: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(), "Sign")]"}
-  (Session info: chrome=92.0.4515.107)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
-System info: host: 'DAYANA', ip: '172.31.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:51087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0adf0f0d02d2dd97fea1b3ebe442ee52
-*** Element info: {Using=xpath, value=//a[contains(text(), "Sign")]}
-2021-07-26 12:45:26,864 INFO  [main] 
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e17f098e27444bc55d0d379be996255
+2021-07-26 16:10:59,438 INFO  [main] 
 -------------------------------------------------------
 Executing story : AfterStories
 -------------------------------------------------------
 
-2021-07-26 12:45:26,864 INFO  [main] Quitting WebDriver
+2021-07-26 16:10:59,440 INFO  [main] Quitting WebDriver
