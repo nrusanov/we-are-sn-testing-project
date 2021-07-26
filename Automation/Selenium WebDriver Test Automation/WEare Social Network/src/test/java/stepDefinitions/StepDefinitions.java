@@ -35,6 +35,7 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
     @When("I select $value from $dropdown dropdown")
     @Then("I select $value from $dropdown dropdown")
     public void selectFromDropDownMenu(String value, String select) {
+        actions.waitForElementVisibleUntilTimeout(select, TIMEOUT_SECONDS);
         actions.selectFromDropDownMenu(value, select);
     }
 
