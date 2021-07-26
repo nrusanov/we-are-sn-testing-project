@@ -10,16 +10,11 @@ public class BaseStepDefinitions {
     protected LoginPage loginPage=new LoginPage(actions.getDriver());
 
     @BeforeStories
-    public void loadBrowser() {
+    public void setUp() {
         UserActions.loadBrowser("baseUrl");
+        loginPage.navigateToLoginPage();
+        loginPage.assertLoginPageNavigated();
     }
-
-//    @BeforeScenario
-//    public void setUp() {
-//        loginPage.navigateToLoginPage();
-//        loginPage.assertLoginPageNavigated();
-//    }
-
 
     @AfterStories
     public void tearDown() {
