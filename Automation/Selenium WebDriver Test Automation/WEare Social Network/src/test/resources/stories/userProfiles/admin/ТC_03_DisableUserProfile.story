@@ -12,7 +12,6 @@ So that I can restrict the users access to the site
 Lifecycle:
 Before:
 Scope: STORY
-
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
 When I type adminRandom in loginPage.usernameField field

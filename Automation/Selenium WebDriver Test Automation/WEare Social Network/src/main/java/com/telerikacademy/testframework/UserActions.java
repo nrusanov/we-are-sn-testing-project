@@ -1,6 +1,5 @@
 package com.telerikacademy.testframework;
 
-import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -70,31 +69,12 @@ public class UserActions {
         element.sendKeys(fileLocation);
     }
 
-    public String createRandomString(int number) {
-        Utils.LOG.info("Creating random string");
-        return RandomStringUtils.randomAlphabetic(number);
+    public void scrollUp(String locator){
+        JavascriptExecutor jsExecuter = (JavascriptExecutor) driver;
+        WebElement webElement = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
+        jsExecuter.executeScript("scroll(0, -250);", webElement);
     }
 
-//    public String createRandomString(String randomString) {
-//        String strCopy = String.copyValueOf(randomString.toCharArray());
-//        return strCopy;
-//    }
-//
-//    public String getRandomString(int n) {
-//        String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-//                + "0123456789"
-//                + "abcdefghijklmnopqrstuvxyz";
-//        StringBuilder sb = new StringBuilder(n);
-//        for (int i = 0; i < n; i++) {
-//            int index
-//                    = (int) (AlphaNumericString.length()
-//                    * Math.random());
-//            sb.append(AlphaNumericString
-//                    .charAt(index));
-//        }
-//
-//        return sb.toString();
-//    }
 
     //############# WAITS #########
 

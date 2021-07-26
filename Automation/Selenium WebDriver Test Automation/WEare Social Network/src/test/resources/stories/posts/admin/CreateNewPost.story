@@ -12,8 +12,6 @@ So that a public post is created
 Lifecycle:
 Before:
 Scope: STORY
-
-
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
 When I type adminRandom in loginPage.usernameField field

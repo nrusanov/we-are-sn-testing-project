@@ -12,7 +12,6 @@ So that i can use connectivity functionality
 Lifecycle:
 Before:
 Scope: STORY
-
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
 
