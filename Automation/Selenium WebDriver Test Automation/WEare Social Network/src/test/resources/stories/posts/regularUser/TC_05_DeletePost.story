@@ -16,10 +16,11 @@ And homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present
 When I click homePage.navigationBar.LatestPosts element
 And browsedPosts.exploreThisPostButton element is present
-And I click browsedPosts.exploreThisPostButtonn element
-And exploreThisPostPage.deleteCommentButton element is present
+And I click browsedPosts.exploreThisPostButton element
+And exploreThisPostPage.deletePostButton element is present
+And I click exploreThisPostPage.deletePostButton element
 And deletePostPage.deletePostDropDown element is present
-And I select deletePostPage.deleteConfirmationOption from deletePostPage.deletePostDropDown dropdown
+And I select Delete post from deletePostPage.deletePostDropDown dropdown
 And I click deletePostPage.submitButton element
 Then deletedPostPage.deletedPostMessage element is present
 And deletedPostPage.deletedPostMessage element contains the value Post deleted successfully

@@ -29,10 +29,14 @@
  - [Admin](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Cases/Admin)
 
 
-
-
 ### 6. Test Cases execution report:
  - [Access here](https://telerikacademy-my.sharepoint.com/:f:/p/nikolay_rusanov_a28_learn/EkNyCtXR4lZBtxrYGfH1OYsBHHn5guyPf5N7fUMn_Jdtag?e=bCNNlo)
 
 ### 7. Logged bugs:
  - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/issues)
+
+### 8. Postman API WebDriver WEare Social Network Tests
+ - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Automation/Postman%20Test%20Automation)
+
+### 9. Selenium WebDriver WEare Social Network final project
+ - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Automation/Selenium%20WebDriver%20Test%20Automation/WEare%20Social%20Network)

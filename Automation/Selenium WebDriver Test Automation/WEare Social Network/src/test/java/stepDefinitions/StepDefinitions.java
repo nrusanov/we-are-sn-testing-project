@@ -35,6 +35,7 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
     @When("I select $value from $dropdown dropdown")
     @Then("I select $value from $dropdown dropdown")
     public void selectFromDropDownMenu(String value, String select) {
+        actions.waitForElementVisibleUntilTimeout(select, TIMEOUT_SECONDS);
         actions.selectFromDropDownMenu(value, select);
     }
 
@@ -60,6 +61,15 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
         actions.uploadImage(image, element);
     }
+
+    @Given("I scroll up to the $element element")
+    @When("I scroll up to the $element element")
+    @Then("I scroll up to the $element element")
+    public void scrollUp(String element) {
+        actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
+        actions.scrollUp(element);
+    }
+
 
 
 

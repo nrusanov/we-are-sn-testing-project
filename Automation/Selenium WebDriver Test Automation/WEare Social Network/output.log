@@ -1,13 +1,70 @@
-2021-07-26 10:23:01,714 INFO  [main] Initializing WebDriver
-2021-07-26 10:23:05,403 INFO  [main] Initializing WebDriver
-2021-07-26 10:23:05,403 INFO  [main] Initializing WebDriver
-2021-07-26 10:23:05,403 INFO  [main] Initializing WebDriver
-2021-07-26 10:23:05,403 INFO  [main] Initializing WebDriver
-2021-07-26 10:23:06,016 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-26 10:23:06,720 INFO  [main] Clicking on element loginPage.loginButton
-2021-07-26 10:23:07,358 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
-2021-07-26 10:23:07,800 INFO  [main] Clicking on element personalProfilePage.editButton
-2021-07-26 10:23:08,415 INFO  [main] Clicking on element personalProfilePage.list.editProfessionalInformation
-2021-07-26 10:23:08,520 INFO  [main] Selecting Actor from dropdown personalProfilePage.industry
-2021-07-26 10:23:08,611 INFO  [main] Clicking on element personalProfilePage.industryUpdateButton
-2021-07-26 10:23:09,102 INFO  [main] Quitting WebDriver
+2021-07-26 16:10:47,115 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:51,146 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:51,242 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:51,661 INFO  [main] 
+-------------------------------------------------------
+Executing story : BeforeStories
+-------------------------------------------------------
+
+2021-07-26 16:10:51,692 INFO  [main] Initializing WebDriver
+2021-07-26 16:10:52,233 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+Executing story : TC_03_LikePost.story
+-------------------------------------------------------
+
+2021-07-26 16:10:52,259 INFO  [pool-2-thread-1] Executing step : Given I click homePage.navigationBar.signInButton element
+2021-07-26 16:10:52,363 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
+2021-07-26 16:10:52,661 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I click ｟homePage.navigationBar.signInButton｠ element
+2021-07-26 16:10:52,661 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
+2021-07-26 16:10:52,777 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
+2021-07-26 16:10:52,778 INFO  [pool-2-thread-1] Executing step : When I type adminRandom in loginPage.usernameField field
+2021-07-26 16:10:52,969 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I type ｟adminRandom｠ in ｟loginPage.usernameField｠ field
+2021-07-26 16:10:52,971 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in loginPage.passwordField field
+2021-07-26 16:10:53,116 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟loginPage.passwordField｠ field
+2021-07-26 16:10:53,117 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
+2021-07-26 16:10:53,164 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
+2021-07-26 16:10:53,661 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
+2021-07-26 16:10:53,662 INFO  [pool-2-thread-1] Executing step : Then homePage.navigationBar.logOutButton element is present
+2021-07-26 16:10:53,807 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-26 16:10:53,811 INFO  [pool-2-thread-1] Executing step : Given homePage.navigationBar.logOutButton element is present
+2021-07-26 16:10:53,863 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given ｟homePage.navigationBar.logOutButton｠ element is present
+2021-07-26 16:10:53,864 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.LatestPosts element is present
+2021-07-26 16:10:53,975 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.LatestPosts｠ element is present
+2021-07-26 16:10:53,976 INFO  [pool-2-thread-1] Executing step : When I click homePage.navigationBar.LatestPosts element
+2021-07-26 16:10:54,039 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.LatestPosts
+2021-07-26 16:10:55,079 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I click ｟homePage.navigationBar.LatestPosts｠ element
+2021-07-26 16:10:55,080 INFO  [pool-2-thread-1] Executing step : And browsedPosts.exploreThisPostButton element is present
+2021-07-26 16:10:55,154 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟browsedPosts.exploreThisPostButton｠ element is present
+2021-07-26 16:10:55,155 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.postAuthor element contains the value RandomUsername
+2021-07-26 16:10:55,223 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.postAuthor｠ element contains the value ｟RandomUsername｠
+2021-07-26 16:10:55,223 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.postContent element contains the value This is an edited public post
+2021-07-26 16:10:55,295 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.postContent｠ element contains the value ｟This is an edited public post｠
+2021-07-26 16:10:55,295 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.likeButton element is present
+2021-07-26 16:10:56,647 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.likeButton｠ element is present
+2021-07-26 16:10:56,647 INFO  [pool-2-thread-1] Executing step : And I click exploreThisPostPage.likeButton element
+2021-07-26 16:10:57,511 INFO  [pool-2-thread-1] Clicking on element exploreThisPostPage.likeButton
+2021-07-26 16:10:57,660 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟exploreThisPostPage.likeButton｠ element
+2021-07-26 16:10:57,661 INFO  [pool-2-thread-1] Executing step : Then exploreThisPostPage.dislikeButton element is present
+2021-07-26 16:10:57,963 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟exploreThisPostPage.dislikeButton｠ element is present
+2021-07-26 16:10:57,963 INFO  [pool-2-thread-1] Executing step : And exploreThisPostPage.likeCount element contains the value Likes: 1
+2021-07-26 16:10:58,034 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟exploreThisPostPage.likeCount｠ element contains the value ｟Likes: 1｠
+2021-07-26 16:10:58,044 INFO  [pool-2-thread-1] Executing step : And I click exploreThisPostPage.seeProfileButton element
+2021-07-26 16:10:58,080 INFO  [pool-2-thread-1] Clicking on element exploreThisPostPage.seeProfileButton
+2021-07-26 16:10:59,269 INFO  [pool-2-thread-1] 
+-------------------------------------------------------
+FAILED STEP : And I click ｟exploreThisPostPage.seeProfileButton｠ element
+-------------------------------------------------------
+
+2021-07-26 16:10:59,269 INFO  [pool-2-thread-1] REASON: element click intercepted: Element <a href="/auth/users/122/profile" class="btn btn-primary">...</a> is not clickable at point (532, 19). Other element would receive the click: <div class="collapse navbar-collapse" id="ftco-nav">...</div>
+  (Session info: chrome=92.0.4515.107)
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DAYANA', ip: '172.31.224.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.107, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63879}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e17f098e27444bc55d0d379be996255
+2021-07-26 16:10:59,438 INFO  [main] 
+-------------------------------------------------------
+Executing story : AfterStories
+-------------------------------------------------------
+
+2021-07-26 16:10:59,440 INFO  [main] Quitting WebDriver
