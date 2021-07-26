@@ -8,7 +8,7 @@ Before:
 Scope: STORY
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
-When I type adminRandom in loginPage.usernameField field
+When I type randomUsername in loginPage.usernameField field
 And I type Neptunus_21 in loginPage.passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
@@ -31,6 +31,6 @@ And exploreThisPostPage.dislikeButton element is present
 And I click exploreThisPostPage.dislikeButton element
 Then exploreThisPostPage.likeButton element is present
 And exploreThisPostPage.dislikeCount element contains the value Likes: 0
-And I scroll up to the homePage.navigationBar.logOutButton element
+And I click exploreThisPostPage.seeProfileButton element
 And I click homePage.navigationBar.logOutButton element
 And homePage.navigationBar.signInButton element is present

@@ -69,12 +69,6 @@ public class UserActions {
         element.sendKeys(fileLocation);
     }
 
-    public void scrollUp(String locator){
-        JavascriptExecutor jsExecuter = (JavascriptExecutor) driver;
-        WebElement webElement = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
-        jsExecuter.executeScript("scroll(0, -250);", webElement);
-    }
-
 
     //############# WAITS #########
 
@@ -121,17 +115,6 @@ public class UserActions {
         }
     }
 
-        public boolean isElementVisible(String locator) {
-            try {
-                Integer defaultTimeout = Integer.parseInt(Utils.getConfigPropertyByKey("config.defaultTimeoutSeconds"));
-                WebDriverWait wait = new WebDriverWait(driver, defaultTimeout);
-                wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(Utils.getUIMappingByKey(locator))));
-                return true;
-            } catch (Exception exception) {
-                return false;
-            }
-        }
-
     public void waitForElementPresentUntilTimeout(String locator, int seconds, String... locatorArguments) {
         locator = String.format(locator, locatorArguments);
         WebDriverWait wait = new WebDriverWait(driver, seconds);
@@ -161,23 +144,11 @@ public class UserActions {
         Assert.assertEquals(expectedValue, actualResult);
     }
 
-    public void assertValueFromDropDownMenu(String locator, String value) {
-        String valueDropDownMenu = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
-        Assert.assertEquals(value, valueDropDownMenu);
-    }
-
-    public void assertTextEquals(String locator, String expectedText) {
-        String actualText = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
-        Assert.assertEquals(expectedText, actualText);
-    }
-
-
     public void assertNavigatedUrl(String urlKey) {
         String currentUrl = driver.getCurrentUrl();
         String expectedUrl = Utils.getConfigPropertyByKey(urlKey);
         Assert.assertTrue("Landed URL is not as expected. Actual URL: " + currentUrl + ". Expected URL: " + expectedUrl, currentUrl.contains(expectedUrl));
     }
-
 
     public void pressKey(Keys key) {
         Actions actions = new Actions(driver);
