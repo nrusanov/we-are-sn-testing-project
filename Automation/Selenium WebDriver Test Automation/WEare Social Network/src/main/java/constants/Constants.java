@@ -1,5 +1,7 @@
 package constants;
 
+import org.openqa.selenium.devtools.v84.indexeddb.model.Key;
+
 public interface Constants {
 
     final int TIMEOUT_SECONDS = 5;
@@ -36,5 +38,7 @@ public interface Constants {
     final String ADMIN_PASSWORD = "Neptunus_21";
     final String ADMIN_CONFIRM_PASSWORD = "Neptunus_21";
     final String ADMIN_LAST_NAME = "NeptunusAdmin";
+
+//    final String HOME_KEY = sendKeys (key.Home);
 
 }

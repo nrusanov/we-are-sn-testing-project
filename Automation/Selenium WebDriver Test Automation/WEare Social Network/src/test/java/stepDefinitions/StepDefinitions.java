@@ -62,15 +62,6 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.uploadImage(image, element);
     }
 
-    @Given("I scroll up to the $element element")
-    @When("I scroll up to the $element element")
-    @Then("I scroll up to the $element element")
-    public void scrollUp(String element) {
-        actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
-        actions.scrollUp(element);
-    }
-
-
 
 
 
