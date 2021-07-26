@@ -202,7 +202,7 @@
 * **Title:** Registered and logged in user should not be able to create new public posts with more than allowed symbols
 * **Description:** Verify that a registered and logged in user is not able to create new public posts with more than allowed symbols.
 * **Narrative:** As a Registered user I want to use post and comment functionalities.
-* **Priority:** High
+* **Priority:** Medium
 * **Pre-condition:** Application is running. The user must be registered and logged in, site is running on localhost via Docker Desktop
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
@@ -211,7 +211,7 @@
    * 2. Click on 'Add New post' button at the right corner of the page;
    * 3. Navigate to the 'Create new post' section;
    * 4. From 'Post's visibility' drop-down menu choose the option: 'Public post';
-   * 5. In the section 'Message' write a text with 4 001 symbols;
+   * 5. In the section 'Message' try to write a text with 1 000 and 1 001 symbols;
    * 6. Click on button 'Save post'
 * **Expected result:** An error message that the post cannot be created with more than allowed symbols should appear or the text box should not allow typing more than 4 000 symbols
 
@@ -220,7 +220,7 @@
 * **Title:** Registered and logged in user should not be able to create new private posts with more than allowed symbols
 * **Description:** Verify that a registered and logged in user is not able to create new private posts with more than allowed symbols.
 * **Narrative:** As a Registered user I want to use post and comment functionalities.
-* **Priority:** High
+* **Priority:** Medium
 * **Pre-condition:** Application is running. The user must be registered and logged in, site is running on localhost via Docker Desktop
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
@@ -229,7 +229,7 @@
    * 2. Click on 'Add New post' button at the right corner of the page;
    * 3. Navigate to the 'Create new post' section;
    * 4. From 'Post's visibility' drop-down menu choose the option: 'Private post';
-   * 5. In the section 'Message' write a text with 1 001 symbols;
+   * 5. In the section 'Message' try to write a text with 1 000 and 1 001 symbols;
    * 6. Click on button 'Save post'
 * **Expected result:** An error message that the post cannot be created with more than allowed symbols should appear or the text box should not allow typing more than 1 000 symbols
 

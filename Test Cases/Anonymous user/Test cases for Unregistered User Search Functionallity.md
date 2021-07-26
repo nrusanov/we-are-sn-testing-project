@@ -254,8 +254,8 @@ Search should display results in chronological order by entering Last name
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
 * **Steps to reproduce:** 
    * 1. Navigate to URL http://localhost:8081/;
-   * 2. Try to type any text with 256 symbols in the first search box;
-   * 3. Try to type any text with 256 symbols in the second search box;
+   * 2. Try to type any text with 255 and 256 symbols in the first search box;
+   * 3. Try to type any text with 255 and 256 symbols in the second search box;
    * 4. Click on button 'Search'
 * **Expected result:** Each search box should not allow typing more than 255 symbols in it
 
