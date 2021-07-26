@@ -3,6 +3,7 @@ Meta:
 @posts
 @userPostFunctionality
 
+
 Narrative:
 As a regular user
 I want to dislike my own already liked public post
@@ -23,7 +24,6 @@ And exploreThisPostPage.postContent element contains the value This is an edited
 And exploreThisPostPage.dislikeButton element is present
 And I click exploreThisPostPage.dislikeButton element
 Then exploreThisPostPage.likeButton element is present
-And exploreThisPostPage.likeCount element contains the value Likes: 0
-And I click homePage.weAreButton element
+And exploreThisPostPage.dislikeCount element contains the value Likes: 0
 And I click homePage.navigationBar.logOutButton element
 And homePage.navigationBar.signInButton element is present
