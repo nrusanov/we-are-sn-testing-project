@@ -56,7 +56,6 @@ public class UserActions {
         element.selectByVisibleText(value);
     }
 
-
     public void clearField(String field, Object... fieldArguments){
         String locator = Utils.getUIMappingByKey(field);
         WebElement element = driver.findElement(By.xpath(locator));
@@ -68,6 +67,13 @@ public class UserActions {
         String locator = Utils.getUIMappingByKey(key);
         WebElement element = driver.findElement(By.xpath(locator));
         element.sendKeys(fileLocation);
+    }
+
+    public void scrollDown(String locator){
+        waitForElementVisibleUntilTimeout(locator,10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement webElement = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
+        js.executeScript("arguments[0].scrollIntoView();", webElement);
     }
 
 
@@ -116,6 +122,17 @@ public class UserActions {
         }
     }
 
+        public boolean isElementVisible(String locator) {
+            try {
+                Integer defaultTimeout = Integer.parseInt(Utils.getConfigPropertyByKey("config.defaultTimeoutSeconds"));
+                WebDriverWait wait = new WebDriverWait(driver, defaultTimeout);
+                wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(Utils.getUIMappingByKey(locator))));
+                return true;
+            } catch (Exception exception) {
+                return false;
+            }
+        }
+
     public void waitForElementPresentUntilTimeout(String locator, int seconds, String... locatorArguments) {
         locator = String.format(locator, locatorArguments);
         WebDriverWait wait = new WebDriverWait(driver, seconds);
@@ -142,7 +159,13 @@ public class UserActions {
 
     public void assertAttributeValue(String locator, String expectedValue, String attribute) {
         String actualResult = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getAttribute(attribute);
-        Assert.assertEquals(expectedValue, actualResult);
+        Assert.assertEquals("The actual value is not equal to expected", expectedValue, actualResult);
+    }
+
+    public void assertAttributeText(String locator, String expectedValue) {
+        WebElement element = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
+        String actualResult = element.getAttribute ("textContent");
+        Assert.assertTrue ("The actual text is not equal to expected", actualResult.equals (expectedValue));
     }
 
     public void assertNavigatedUrl(String urlKey) {
@@ -150,6 +173,7 @@ public class UserActions {
         String expectedUrl = Utils.getConfigPropertyByKey(urlKey);
         Assert.assertTrue("Landed URL is not as expected. Actual URL: " + currentUrl + ". Expected URL: " + expectedUrl, currentUrl.contains(expectedUrl));
     }
+
 
     public void pressKey(Keys key) {
         Actions actions = new Actions(driver);

@@ -1,18 +1,17 @@
 package pages.weAreSocialNetwork;
-
-import com.telerikacademy.testframework.Utils;
 import constants.Constants;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
-
+import java.nio.file.Paths;
 
 public class PersonalProfileEditorPage extends BasePage implements Constants {
 
     public PersonalProfileEditorPage(WebDriver driver) {
         super(driver, "baseUrl");
     }
+
+     String userDirectory = Paths.get("")
+            .toAbsolutePath()
+            .toString();
 
     public void navigateToPersonalProfileEditorPage() {
         actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.PersonalProfile", TIMEOUT_SECONDS);
@@ -90,7 +89,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
     public void updateServices() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.list.services", TIMEOUT_SECONDS);
         actions.clickElement("personalProfilePage.list.services");
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field",TIMEOUT_SECONDS);
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field", TIMEOUT_SECONDS);
         actions.typeValueInField(SKILL_FIRST,"personalProfilePage.skill1Field");
         actions.typeValueInField(SKILL_SECOND,"personalProfilePage.skill2Field");
         actions.typeValueInField(SKILL_THIRD,"personalProfilePage.skill3Field");
@@ -149,17 +148,6 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.updatedProfessionalCategory", TIMEOUT_SECONDS);
         actions.assertElementPresent("personalProfilePage.updatedProfessionalCategory");
     }
-
-    public void assertUpdatedServices() {
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field", TIMEOUT_SECONDS);
-        actions.assertAttributeValue("personalProfilePage.skill1Field",SKILL_FIRST, "value");
-        actions.assertAttributeValue("personalProfilePage.skill2Field",SKILL_SECOND, "value");
-        actions.assertAttributeValue("personalProfilePage.skill3Field",SKILL_THIRD, "value");
-        actions.assertAttributeValue("personalProfilePage.skill4Field",SKILL_FOURTH, "value");
-        actions.assertAttributeValue("personalProfilePage.skill5Field",SKILL_FIFTH, "value");
-        actions.assertAttributeValue("personalProfilePage.weeklyAvailability", WEEKLY_AVAILABILITY, "value");
-    }
-
 
     public void assertUpdatedPersonalInfoAndSafety() {
         actions.waitForElementPresentUntilTimeout("personalProfilePage.pictureUpdated", TIMEOUT_SECONDS);

@@ -9,8 +9,8 @@ I want to delete my own public post
 So that a public post is deleted
 
 Scenario: Delete my own public post as a regular user
-Given I type randomUsername in loginPage.usernameField field
-And I type Neptunus_21 in loginPage.passwordField field
+Given I type randomUsername in usernameField field
+And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present

@@ -1,6 +1,6 @@
 package testCases.WEare.Social.Network.registeredUser;
 
-import constants.Constants;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import testCases.WEare.Social.Network.BaseTest;
@@ -20,6 +20,12 @@ public class LoginPageTests extends BaseTest {
         loginPage.loginRegularUser();
 
         loginPage.assertSuccessfulLogin();
+    }
+
+    @After
+    public void logOut() {
+        logOutPage.clickOnLogOutButton();
+        logOutPage.assertUserIsLoggedOut();
     }
 
 
