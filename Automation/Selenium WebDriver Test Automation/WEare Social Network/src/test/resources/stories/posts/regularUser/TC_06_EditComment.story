@@ -9,8 +9,8 @@ I want to edit my own comment my own public post
 So that a comment on public post is edited
 
 Scenario: Edit my own comment my own public post as a regular user
-Given I type randomUsername in loginPage.usernameField field
-And I type Neptunus_21 in loginPage.passwordField field
+Given I type randomUsername in usernameField field
+And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present
@@ -21,8 +21,8 @@ And exploreThisPostPage.showCommentsButton element is present
 And I click exploreThisPostPage.showCommentsButton element
 And exploreThisPostPage.editCommentButton element is present
 And I click exploreThisPostPage.editCommentButton element
-And editCommentPage.textArea element is present
-And I type This is an edited comment in editCommentPage.textArea field
+And textArea element is present
+And I type This is an edited comment in textArea field
 And I click editCommentPage.editCommentButton element
 And exploreThisPostPage.showCommentsButton element is present
 And I click exploreThisPostPage.showCommentsButton element

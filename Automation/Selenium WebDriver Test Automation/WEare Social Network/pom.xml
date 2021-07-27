@@ -17,7 +17,7 @@
         <!-- Selenium dependencies -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
-            <groupId>org.selеniumhq.selenium</groupId>
+            <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.0.0-alpha-7</version>
         </dependency>
@@ -51,7 +51,6 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.5</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.jbehave/jbehave-core -->
         <dependency>
             <groupId>org.jbehave</groupId>
@@ -82,9 +81,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
                 <configuration>
                     <source>1.8</source>
-                    <target>2.22.0</target>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>

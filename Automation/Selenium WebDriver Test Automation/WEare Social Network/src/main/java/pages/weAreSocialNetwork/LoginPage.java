@@ -16,16 +16,16 @@ public class LoginPage extends BasePage implements Constants {
 
 
     public void loginRegularUser() {
-        actions.waitForElementPresentUntilTimeout("loginPage.usernameField", TIMEOUT_SECONDS);
-        actions.typeValueInField(FIRST_USER_USERNAME, "loginPage.usernameField");
-        actions.typeValueInField(PASSWORD_FIRST_USER, "loginPage.passwordField");
+        actions.waitForElementPresentUntilTimeout("usernameField", TIMEOUT_SECONDS);
+        actions.typeValueInField(FIRST_USER_USERNAME, "usernameField");
+        actions.typeValueInField(PASSWORD_FIRST_USER, "passwordField");
         actions.clickElement("loginPage.loginButton");
     }
 
     public void loginInAdmin() {
-        actions.waitForElementPresentUntilTimeout("loginPage.usernameField", TIMEOUT_SECONDS);
-        actions.typeValueInField(ADMIN_USERNAME, "loginPage.usernameField");
-        actions.typeValueInField(ADMIN_PASSWORD, "loginPage.passwordField");
+        actions.waitForElementPresentUntilTimeout("usernameField", TIMEOUT_SECONDS);
+        actions.typeValueInField(ADMIN_USERNAME, "usernameField");
+        actions.typeValueInField(ADMIN_PASSWORD, "passwordField");
         actions.clickElement("loginPage.loginButton");
     }
 
