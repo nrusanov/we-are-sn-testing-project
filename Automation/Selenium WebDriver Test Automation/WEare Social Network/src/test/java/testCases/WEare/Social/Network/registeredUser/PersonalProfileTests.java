@@ -44,7 +44,7 @@ public class PersonalProfileTests extends BaseTest {
     public void TC_04_UserSuccessfulUpdateServices_When_FieldsAreFilled() {
         personalProfileEditorPage.updateServices();
 
-        personalProfileEditorPage.assertUpdatedServices();
+        userDetailsPage.assertUpdatedServices();
     }
 
     @Test

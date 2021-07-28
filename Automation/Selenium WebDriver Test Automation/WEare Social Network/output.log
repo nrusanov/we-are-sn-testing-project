@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2021-07-27 01:45:50,518 INFO  [main] Initializing WebDriver
 2021-07-27 01:45:54,805 INFO  [main] Initializing WebDriver
 2021-07-27 01:45:54,829 INFO  [main] Initializing WebDriver
@@ -216,3 +217,22 @@ Executing story : AfterStories
 -------------------------------------------------------
 
 2021-07-27 01:46:17,938 INFO  [main] Quitting WebDriver
+=======
+2021-07-27 23:08:56,393 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:03,261 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:03,262 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:03,263 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:03,264 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:03,264 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:03,269 INFO  [main] Initializing WebDriver
+2021-07-27 23:09:05,733 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-27 23:09:07,456 INFO  [main] Clicking on element loginPage.loginButton
+2021-07-27 23:09:09,109 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
+2021-07-27 23:09:10,060 INFO  [main] Clicking on element personalProfilePage.editButton
+2021-07-27 23:09:11,210 INFO  [main] Clicking on element personalProfilePage.list.settings
+2021-07-27 23:09:11,555 INFO  [main] Uploading image
+2021-07-27 23:09:11,676 INFO  [main] Selecting public from dropdown personalProfilePage.privacy
+2021-07-27 23:09:11,822 INFO  [main] Clicking on element personalProfilePage.settingsUpdateButton
+2021-07-27 23:09:14,053 INFO  [main] Clicking on element homePage.navigationBar.logOutButton
+2021-07-27 23:09:15,032 INFO  [main] Quitting WebDriver
+>>>>>>> b8b1ec8dc7af684c33cbb14cf7ce70b3150b308c

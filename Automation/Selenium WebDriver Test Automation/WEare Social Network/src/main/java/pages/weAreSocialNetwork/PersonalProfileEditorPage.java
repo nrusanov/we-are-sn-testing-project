@@ -89,7 +89,7 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
     public void updateServices() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.list.services", TIMEOUT_SECONDS);
         actions.clickElement("personalProfilePage.list.services");
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field",TIMEOUT_SECONDS);
+        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field", TIMEOUT_SECONDS);
         actions.typeValueInField(SKILL_FIRST,"personalProfilePage.skill1Field");
         actions.typeValueInField(SKILL_SECOND,"personalProfilePage.skill2Field");
         actions.typeValueInField(SKILL_THIRD,"personalProfilePage.skill3Field");
@@ -148,17 +148,6 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.updatedProfessionalCategory", TIMEOUT_SECONDS);
         actions.assertElementPresent("personalProfilePage.updatedProfessionalCategory");
     }
-
-    public void assertUpdatedServices() {
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field", TIMEOUT_SECONDS);
-        actions.assertAttributeValue("personalProfilePage.skill1Field",SKILL_FIRST, "value");
-        actions.assertAttributeValue("personalProfilePage.skill2Field",SKILL_SECOND, "value");
-        actions.assertAttributeValue("personalProfilePage.skill3Field",SKILL_THIRD, "value");
-        actions.assertAttributeValue("personalProfilePage.skill4Field",SKILL_FOURTH, "value");
-        actions.assertAttributeValue("personalProfilePage.skill5Field",SKILL_FIFTH, "value");
-        actions.assertAttributeValue("personalProfilePage.weeklyAvailability", WEEKLY_AVAILABILITY, "value");
-    }
-
 
     public void assertUpdatedPersonalInfoAndSafety() {
         actions.waitForElementPresentUntilTimeout("personalProfilePage.pictureUpdated", TIMEOUT_SECONDS);

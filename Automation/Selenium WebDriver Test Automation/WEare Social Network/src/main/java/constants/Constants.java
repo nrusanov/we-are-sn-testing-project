@@ -31,14 +31,20 @@ public interface Constants {
     final String SKILL_FOURTH = "skill4";
     final String SKILL_FIFTH = "skill5";
     final String WEEKLY_AVAILABILITY = "15.0";
+    final String WEEKLY_AVAILABILITY_FULL_TEXT = WEEKLY_AVAILABILITY + " hours/weekly";
     final String PROFILE_PRIVACY = "public";
     final String USER_PICTURE = "\\src\\test\\resources\\images\\Neptunus.jpg";
     final String POST_PICTURE = "\\src\\test\\resources\\images\\QA.png";
     final String USER_DIRECTORY = Paths.get("")
             .toAbsolutePath()
             .toString();
+<<<<<<< HEAD
     final String USER_PROFILE_PICTURE = USER_PICTURE + USER_DIRECTORY;
     final String POST_PROFILE_PICTURE = POST_PICTURE + USER_DIRECTORY;
+=======
+    final String USER_PROFILE_PICTURE = USER_DIRECTORY + USER_PICTURE;
+    final String POST_PROFILE_PICTURE = USER_DIRECTORY + POST_PICTURE;
+>>>>>>> b8b1ec8dc7af684c33cbb14cf7ce70b3150b308c
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";
