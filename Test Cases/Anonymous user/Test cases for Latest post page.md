@@ -1,6 +1,6 @@
 # **"Latest post" page**
 
-## Test case 48
+## Test case 75
 
 * **Title:** Unregistered user should be able to see all public posts
 * **Narrative:** As an unregistered user I want to be able to see all public posts
@@ -13,7 +13,7 @@
    * 2. Click on "Latest posts" link, which is located in the header menu;
 * **Expected result:** To be displayed all public posts to site users.
 
-## Test case 49
+## Test case 76
 
 * **Title:** Unregistered user should be able to see all public posts in a chronological order
 * **Narrative:** As an unregistered user I want to be able to see all public posts in a chronological order.
@@ -26,7 +26,7 @@
    * 2. Click on "Latest posts" link, which is located in the header menu;
 * **Expected result:** To be displayed all public posts to site users in a chronological order.
 
-## Test case 50
+## Test case 77
 
 * **Title:** Unregistered user should be able to filter all public posts by professional category
 * **Narrative:**  As an unregistered user I want to be able to filter all public posts by professional category.
@@ -41,7 +41,7 @@
    * 3. Click on "Browse" button
 * **Expected result:** To be displayed all public posts of registered users with the respective category.
 
-## Test case 51
+## Test case 78
 
 * **Title:** Unregistered user should be able to see all filtered public posts by professional category in a chronological order
 * **Narrative:**  As an unregistered user I want to be able to see all filtered public posts  by professional category in a chronological order.
@@ -56,7 +56,7 @@
    * 3. Click on "Browse" button
 * **Expected result:** To be displayed all filtered public posts in a chronological order of registered users with the respective category.
 
-## Test case 52
+## Test case 79
 
 * **Title:** Unregistered user should be able to explore a user post on a registered user
 * **Narrative:** As an unregistered user I want to be able to explore a user post on a registered user and see the comments in it.
@@ -71,7 +71,7 @@
    * 3. Scroll down to the "Show Comments" button and click on it
 * **Expected result:** To be displayed all content of the post, as well as comments, if any.
 
-## Test case 53
+## Test case 80
 
 * **Title:** Unregistered user should be able to see all public posts of the selected user
 * **Narrative:** As an unregistered user I want to be able to see all public posts of the selected user.
@@ -86,7 +86,7 @@
    * 3. Navigate to the "All posts of this user" button, which is located to the right below the header.
 * **Expected result:** To be displayed all public posts of the selected user.
 
-## Test case 54
+## Test case 81
 
 * **Title:** Unregistered user cannot like a post (negative)
 * **Narrative:** As an unregistered user I want to get a proper error message when I try to like a users posts.
@@ -100,7 +100,7 @@
    * 2. Choose one of the users posts and click on "Like" button;
 * **Expected result:** The unregistered user cannot press the "Like" button.
 
-## Test case 55
+## Test case 82
 
 * **Title:** Unregistered user cannot dislike a post (negative)
 * **Narrative:** As an unregistered user I want to get a proper error message when I try to dislike an already liked users posts.
@@ -114,7 +114,7 @@
    * 2. Choose one of the users posts and click on "Like" button;
 * **Expected result:** The unregistered user cannot press the "Dislike" button, because there was no way to like the post before.
 
-## Test case 56
+## Test case 83
 
 * **Title:** Unregistered user cannot comment a post (negative)
 * **Narrative:** As an unregistered user I want to get a proper error message when I try to comment a users posts.

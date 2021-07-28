@@ -38,8 +38,13 @@ public interface Constants {
     final String USER_DIRECTORY = Paths.get("")
             .toAbsolutePath()
             .toString();
+<<<<<<< HEAD
+    final String USER_PROFILE_PICTURE = USER_PICTURE + USER_DIRECTORY;
+    final String POST_PROFILE_PICTURE = POST_PICTURE + USER_DIRECTORY;
+=======
     final String USER_PROFILE_PICTURE = USER_DIRECTORY + USER_PICTURE;
     final String POST_PROFILE_PICTURE = USER_DIRECTORY + POST_PICTURE;
+>>>>>>> b8b1ec8dc7af684c33cbb14cf7ce70b3150b308c
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";

@@ -18,6 +18,7 @@
    * 6. Click on 'See profile' button;
    * 7. Click on 'connect' button;
 * **Expected result:** The friend request is sent successfully and a relevant message is displayed 
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 93
 
@@ -54,6 +55,7 @@
    * 5. Click on 'Approve Request' button;
    * 6. Click on 'Personal Profile' link at the site header
 * **Expected result:** The count in Friends List is increased by one.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 95
 
@@ -84,6 +86,7 @@
    * 1. Navigate to URL: http://localhost:8081/;
    * 2. Click on 'Personal Profile' link at the site header;
 * **Expected result:** There should have button for unfriend.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 97
 

@@ -19,6 +19,7 @@
    * 7. Click on button 'Post comment';
    * 8. Click on button 'Show Comments'
 * **Expected result:** The comment is created successfully with author TeamNeptunus and content: 'This is a test comment', the comments count is increased with one.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 71
 
@@ -59,6 +60,7 @@
    * 7. In the textbox for Message type: 'This is an edited comment';
    * 8. Click on button 'Show Comments';
 * **Expected result:** The comment is edited successfully, the author is TeamNeptunus and content is: 'This is an edited comment', the comments count remains the same.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 73
 
@@ -96,6 +98,7 @@
    * 5. Click on button 'Show Comments';
    * 6. On a comment with text: 'This is an edited comment' click on 'Like' button;
 * **Expected result:** Likes count is increased by one and the 'Like' button changes to 'Dislike'.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 75
 
@@ -131,6 +134,7 @@
    * 5. Click on button 'Show Comments';
    * 6. On a comment with text: 'This is an edited comment' click on 'Dislike' button;
 * **Expected result:** Likes count is increased by one and the 'Dislike' button changes to 'Like'.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 77
 
@@ -169,6 +173,7 @@
    * 8. Click on 'Submit' button;
    * 9. Go back two times with the browser back button;
 * **Expected result:** A message with text: 'Comment deleted successfully' should appear after step 8 and comments count should be decreased with one after step 9.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 79
 

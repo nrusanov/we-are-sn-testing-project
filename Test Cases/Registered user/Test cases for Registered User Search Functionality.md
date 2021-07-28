@@ -75,6 +75,7 @@
    * 2. In the first search box fill in: 'painter';
    * 3. Click on button 'Search'
 * **Expected result:** A result with the following user details should appear: profile picture, location, names, member since and a button 'See profile' / or a list of users, each of them having the above properties.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 112
 
@@ -105,8 +106,7 @@
    * 2. In the second search box fill in: 'Test User';
    * 3. Click on button 'Search'
 * **Expected result:** A result with the following user details should appear: profile picture, location, names, member since and a button 'See profile'.
-
-Search should display results in chronological order by entering Last name
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 114
 
@@ -137,6 +137,7 @@ Search should display results in chronological order by entering Last name
    * 2. Leave the two search boxes blank;
    * 3. Click on button 'Search'
 * **Expected result:** An error message saying that search criteria should be filled in should be displayed.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 116
 
@@ -304,3 +305,4 @@ Search should display results in chronological order by entering Last name
    * 3. Click on button 'Search'
    * 4. For the first user in the list click on button 'See Profile'
 * **Expected result:** A new page should be loaded with the user detals.
+* **Executed by automation tool:** Postman, Selenium WebDriver

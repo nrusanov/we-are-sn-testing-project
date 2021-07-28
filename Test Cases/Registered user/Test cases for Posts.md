@@ -18,6 +18,7 @@
    * 6. From the 'Select File' section choose a file with .jpg extension from your computer and click 'Open';
    * 7. Click on button 'Save post'
 * **Expected result:** The post is created successfully and could be seen in the page loaded and in the topic section of the post the text is: 'This is a test post' and bellow professional category of the user there is a text: 'Public Post: True'
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 48
 
@@ -59,6 +60,7 @@
    * 9. Click on 'All posts of this user' button;
    * 10. Navigate to the edited post
 * **Expected result:** In the edited post in the section 'topic' the text is: 'Edited post'
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 50
 
@@ -100,6 +102,7 @@
    * 7. From the drop-down menu 'Do You want to delete this post?' choose 'Delete post'
    * 8. Click on 'Submit' button;
 * **Expected result:** A message for successfully deleted post is displayed
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 52
 
@@ -138,6 +141,7 @@
    * 6. From the 'Select File' section choose a file with the following extensions from your computer and click 'Open': .md, .txt, .pdf, .docx, .doc;
    * 7. Click on button 'Save post'
 * **Expected result:** The post is created successfully and could be seen in the page loaded and in the topic section of the post the text is: 'This is a test post' and bellow professional category of the user there is a text: 'Public Post: True'. The files attached should be visible and could be read in the site or available to download.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 54
 
@@ -377,6 +381,7 @@
    * 3. Navigate to the 'Browse public posts' section and click on 'Browse' button below this section;
    * 4. Navigate to a post with author 'TeamNeptunus' and click on 'Like' button
 * **Expected result:** The value of Likes property should be increased by 1 and the button 'Like' should be changed to 'Dislike' 
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 67
 
@@ -393,6 +398,7 @@
    * 3. Navigate to the 'Browse public posts' section and click on 'Browse' button below this section;
    * 4. Navigate to a post with author 'TeamNeptunus' that already has like from the same author and click on 'dislike' button
 * **Expected result:** The value of Likes property should be decreased by 1 and the button 'Dislike' should be changed to 'Like' 
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 68
 

@@ -15,6 +15,7 @@
    * 4. Navigate to the "LOGOUT" button, which is located in the upper right corner;
    * 5. Click on "LOGOUT" button
 * **Expected result:** Admin to be successfully logged out.
+* **Executed by automation tool:** Selenium WebDriver
 
 
 

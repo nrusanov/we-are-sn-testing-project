@@ -80,6 +80,7 @@
    * 5. Choose one of the users public posts and click on "Explore this post" button;
    * 6. Scroll down to the "Show Comments" button and click on it
 * **Expected result:** To be displayed all content of the post, as well as comments, if any.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 46
 

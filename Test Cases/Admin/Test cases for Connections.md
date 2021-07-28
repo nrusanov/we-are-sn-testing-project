@@ -18,6 +18,7 @@
    * 6. Click on 'See profile' button;
    * 7. Click on 'connect' button;
 * **Expected result:** The friend request is sent successfully and a relevant message is displayed 
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 92
 
@@ -84,6 +85,7 @@
    * 1. Navigate to URL: http://localhost:8081/;
    * 2. Click on 'Personal Profile' link at the site header;
 * **Expected result:** There should have button for unfriend.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 96
 

@@ -1,6 +1,6 @@
 # **"About us" page**
 
-## Test case 57
+## Test case 84
 
 * **Title:** Unregistered user should be able to access "About us" page
 * **Description:** Verify that an unregistered user is able to acces "About us" page from the header menu, which contains information about the site and the creators of the site.
