@@ -38,7 +38,7 @@ public class PersonalProfileTests extends BaseTest {
     public void TC_03_AdminSuccessfulUpdateProfessionalCategory_When_CategoryIsSelected() {
         personalProfileEditorPage.updateProfessionalCategory();
 
-        personalProfileEditorPage.assertUpdatedProfessionalCategory();
+        userDetailsPage.assertUpdatedProfessionalCategory();
     }
 
 

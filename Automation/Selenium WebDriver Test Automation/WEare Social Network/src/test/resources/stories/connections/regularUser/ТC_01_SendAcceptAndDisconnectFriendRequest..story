@@ -30,7 +30,7 @@ Then searchPage.FriendRequestMessage element is present
 And I click homePage.navigationBar.logOutButton element
 And homePage.navigationBar.signInButton element is present
 
-Scenario: The second regular user accepts the frind request from the first regular user
+Scenario: The second regular user accepts the friend request from the first regular user
 Given I type randomSecondUsername in usernameField field
 And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element

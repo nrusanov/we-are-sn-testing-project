@@ -15,14 +15,21 @@ public class RegisterPage extends BasePage implements Constants {
         actions.clickElement("homePage.navigationBar.registerButton");
     }
 
-
-
     public void registerRegularUser() {
         actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
         actions.typeValueInField(FIRST_USER_USERNAME, "usernameField");
         actions.typeValueInField(EMAIL_FIRST_USER, "registerPage.emailField");
         actions.typeValueInField(PASSWORD_FIRST_USER, "passwordField");
-        actions.typeValueInField(PASSWORD_SECOND_USER,"registerPage.confirmPasswordField");
+        actions.typeValueInField(CONFIRM_PASSWORD_FIRST_USER,"registerPage.confirmPasswordField");
+        actions.clickElement("registerPage.registerButton");
+    }
+
+    public void registerSecondRegularUser() {
+        actions.waitForElementPresentUntilTimeout("registerPage.joinMessage", TIMEOUT_SECONDS);
+        actions.typeValueInField(SECOND_USER_USERNAME, "usernameField");
+        actions.typeValueInField(EMAIL_SECOND_USER, "registerPage.emailField");
+        actions.typeValueInField(PASSWORD_SECOND_USER, "passwordField");
+        actions.typeValueInField(CONFIRM_PASSWORD_SECOND_USER,"registerPage.confirmPasswordField");
         actions.clickElement("registerPage.registerButton");
     }
 

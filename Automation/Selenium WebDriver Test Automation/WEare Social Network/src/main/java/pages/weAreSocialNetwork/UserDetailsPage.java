@@ -19,4 +19,14 @@ public class UserDetailsPage extends BasePage implements Constants {
         actions.assertAttributeText("userDetailsPage.updatedWeeklyAvailability",
                 WEEKLY_AVAILABILITY_FULL_TEXT);
     }
+
+    public void assertUpdatedProfessionalCategory() {
+        actions.waitForElementVisibleUntilTimeout("userDetailsPage.updatedProfessionalCategory", TIMEOUT_SECONDS);
+        actions.assertAttributeText ("userDetailsPage.updatedProfessionalCategory", PROFESSIONAL_CATEGORY);
+    }
+
+    public void assertUpdatedProfessionalCategoryForSecondUser() {
+        actions.waitForElementVisibleUntilTimeout("userDetailsPage.updatedProfessionalCategory", TIMEOUT_SECONDS);
+        actions.assertAttributeText ("userDetailsPage.updatedProfessionalCategory", PROFESSIONAL_CATEGORY_SECOND_USER);
+    }
 }

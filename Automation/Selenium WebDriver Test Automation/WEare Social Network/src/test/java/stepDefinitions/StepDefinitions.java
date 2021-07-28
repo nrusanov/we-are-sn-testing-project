@@ -44,15 +44,16 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
     @Then("$Element element is present")
     public void assertElementPresent(String locator) {
         actions.waitForElementVisibleUntilTimeout(locator, TIMEOUT_SECONDS);
-        actions.assertElementPresent(locator); }
+        actions.assertElementPresent(locator);
+    }
 
     @Given("$Element element contains the value $value")
     @When("$Element element contains the value $value")
     @Then("$Element element contains the value $value")
     public void assertElementContainsValue(String locator, String value) {
         actions.waitForElementVisibleUntilTimeout(locator, TIMEOUT_SECONDS);
-        actions.assertElementPresent(locator); }
-
+        actions.assertElementPresent (locator);
+    }
 
     @Given("I upload $image in $field")
     @When("I upload $image in $field")
@@ -61,11 +62,5 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
         actions.uploadImage(image, element);
     }
-
-
-
-
-
-
 
 }
