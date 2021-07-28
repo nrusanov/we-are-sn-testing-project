@@ -41,15 +41,9 @@ public class PersonalProfileTests extends BaseTest {
         personalProfileEditorPage.assertUpdatedProfessionalCategory();
     }
 
-    @Test
-    public void TC_04_AdminSuccessfulUpdateServices_When_FieldsAreFilled() {
-        personalProfileEditorPage.updateServices();
-
-        userDetailsPage.assertUpdatedServices();
-    }
 
     @Test
-    public void TC_05_AdminSuccessfulUpdatePersonalInfoAndSafety_When_UploadProfilePictureAndChooseVisibility() {
+    public void TC_04_AdminSuccessfulUpdatePersonalInfoAndSafety_When_UploadProfilePictureAndChooseVisibility() {
         personalProfileEditorPage.updatePersonalInfoAndSafety();
 
         personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();

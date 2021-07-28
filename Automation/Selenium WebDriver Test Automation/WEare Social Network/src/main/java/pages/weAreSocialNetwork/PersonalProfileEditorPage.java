@@ -9,10 +9,6 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         super(driver, "baseUrl");
     }
 
-     String userDirectory = Paths.get("")
-            .toAbsolutePath()
-            .toString();
-
     public void navigateToPersonalProfileEditorPage() {
         actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.PersonalProfile", TIMEOUT_SECONDS);
         actions.clickElement("homePage.navigationBar.PersonalProfile");
@@ -85,20 +81,6 @@ public class PersonalProfileEditorPage extends BasePage implements Constants {
         actions.clickElement("personalProfilePage.industryUpdateButton");
     }
 
-
-    public void updateServices() {
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.list.services", TIMEOUT_SECONDS);
-        actions.clickElement("personalProfilePage.list.services");
-        actions.waitForElementVisibleUntilTimeout("personalProfilePage.skill1Field", TIMEOUT_SECONDS);
-        actions.typeValueInField(SKILL_FIRST,"personalProfilePage.skill1Field");
-        actions.typeValueInField(SKILL_SECOND,"personalProfilePage.skill2Field");
-        actions.typeValueInField(SKILL_THIRD,"personalProfilePage.skill3Field");
-        actions.typeValueInField(SKILL_FOURTH,"personalProfilePage.skill4Field");
-        actions.typeValueInField(SKILL_FIFTH,"personalProfilePage.skill5Field");
-        actions.clearField("personalProfilePage.weeklyAvailability");
-        actions.typeValueInField(WEEKLY_AVAILABILITY,"personalProfilePage.weeklyAvailability");
-        actions.clickElement("personalProfilePage.updateServicesButton");
-    }
 
     public void updatePersonalInfoAndSafety() {
         actions.waitForElementVisibleUntilTimeout("personalProfilePage.list.settings",TIMEOUT_SECONDS);

@@ -1,17 +1,15 @@
-2021-07-28 14:49:18,111 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:25,396 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:25,396 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:25,396 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:25,399 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:25,401 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:25,412 INFO  [main] Initializing WebDriver
-2021-07-28 14:49:26,589 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-28 14:49:27,892 INFO  [main] Clicking on element loginPage.loginButton
-2021-07-28 14:49:29,674 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
-2021-07-28 14:49:30,489 INFO  [main] Clicking on element personalProfilePage.editButton
-2021-07-28 14:49:31,566 INFO  [main] Clicking on element personalProfilePage.list.settings
-2021-07-28 14:49:31,744 INFO  [main] Uploading image
-2021-07-28 14:49:31,863 INFO  [main] Selecting public from dropdown personalProfilePage.privacy
-2021-07-28 14:49:32,164 INFO  [main] Clicking on element personalProfilePage.settingsUpdateButton
-2021-07-28 14:49:33,074 INFO  [main] Clicking on element homePage.navigationBar.logOutButton
-2021-07-28 14:49:33,775 INFO  [main] Quitting WebDriver
+2021-07-28 15:03:45,607 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:52,509 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:52,510 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:52,512 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:52,512 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:52,513 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:52,518 INFO  [main] Initializing WebDriver
+2021-07-28 15:03:53,549 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-28 15:03:55,152 INFO  [main] Clicking on element loginPage.loginButton
+2021-07-28 15:03:57,106 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
+2021-07-28 15:03:58,226 INFO  [main] Clicking on element personalProfilePage.editButton
+2021-07-28 15:03:59,109 INFO  [main] Clicking on element personalProfilePage.list.services
+2021-07-28 15:04:00,973 INFO  [main] Clicking on element personalProfilePage.updateServicesButton
+2021-07-28 15:04:04,938 INFO  [main] Clicking on element homePage.navigationBar.logOutButton
+2021-07-28 15:04:05,840 INFO  [main] Quitting WebDriver
