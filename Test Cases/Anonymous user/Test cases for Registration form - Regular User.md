@@ -48,6 +48,7 @@
    * 7. Choose one of the categories from "What is your professional category?*" dropdown menu;
    * 8. Click on the "Register" button
 * **Expected result:** Successful registration.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 04
 

@@ -54,9 +54,9 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.assertElementPresent(locator); }
 
 
-    @Given("I upload a $image in $field")
-    @When("I upload a $image in $field")
-    @Then("I upload a $image in $field")
+    @Given("I upload $image in $field")
+    @When("I upload $image in $field")
+    @Then("I upload $image in $field")
     public void uploadImageТоТhePost(String image,String element) {
         actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
         actions.uploadImage(image, element);

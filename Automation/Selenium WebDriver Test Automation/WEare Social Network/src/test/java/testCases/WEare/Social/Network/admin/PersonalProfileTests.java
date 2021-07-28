@@ -1,10 +1,12 @@
 package testCases.WEare.Social.Network.admin;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import testCases.WEare.Social.Network.BaseTest;
 
 public class PersonalProfileTests extends BaseTest {
+
 
     @Before
     public void NavigateToPersonalProfilePage_When_AdminAuthenticate() {
@@ -51,6 +53,12 @@ public class PersonalProfileTests extends BaseTest {
         personalProfileEditorPage.updatePersonalInfoAndSafety();
 
         personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();
+    }
+
+    @After
+    public void logOut() {
+        logOutPage.clickOnLogOutButton();
+        logOutPage.assertUserIsLoggedOut();
     }
 
 

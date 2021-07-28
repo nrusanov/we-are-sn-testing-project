@@ -29,6 +29,7 @@
    * 4. Fill in the "Password" field with a valid password;
    * 5. Click on "Login" button
 * **Expected result:** The user is logged in.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 03
 

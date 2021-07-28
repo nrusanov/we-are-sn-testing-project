@@ -1,18 +1,17 @@
 package pages.weAreSocialNetwork;
-
-import com.telerikacademy.testframework.Utils;
 import constants.Constants;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
-
+import java.nio.file.Paths;
 
 public class PersonalProfileEditorPage extends BasePage implements Constants {
 
     public PersonalProfileEditorPage(WebDriver driver) {
         super(driver, "baseUrl");
     }
+
+     String userDirectory = Paths.get("")
+            .toAbsolutePath()
+            .toString();
 
     public void navigateToPersonalProfileEditorPage() {
         actions.waitForElementVisibleUntilTimeout("homePage.navigationBar.PersonalProfile", TIMEOUT_SECONDS);

@@ -56,6 +56,7 @@
    * 9. Click on "Email" field and type a valid new one ( <256 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol);
    * 10. Click on "Update My Profile" button
 * **Expected result:** The profile to be updated with the entered data.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 16
 
@@ -145,6 +146,7 @@
    * 13. Choose a country;
    * 14. Click on "Update My Profile" button
 * **Expected result:** The profile to be updated with the entered data.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 20
 
@@ -165,6 +167,7 @@
    * 7. Choose an option from the "What is your professional category?" dropdown menu;
    * 8. Click on "Update" button;
 * **Expected result:** The profile to be updated with the entered data.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 21
 
@@ -531,6 +534,7 @@
    * 8. Choose visibility of the picture from the dropdown menu;
    * 9. Click on "Update" button
 * **Expected result:** To be displayed a profile picture in the user profile.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 40
 

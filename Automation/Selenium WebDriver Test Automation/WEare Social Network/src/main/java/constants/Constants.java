@@ -2,10 +2,11 @@ package constants;
 
 import org.openqa.selenium.devtools.v84.indexeddb.model.Key;
 
+import java.nio.file.Paths;
+
 public interface Constants {
 
-    final int TIMEOUT_SECONDS = 5;
-    final int USERNAME_LENGTH = 6;
+    final int TIMEOUT_SECONDS = 10;
     final String FIRST_USER_USERNAME = "randomUsername";
     final String SECOND_USER_USERNAME = "randomSecondUsername";
     final String EMAIL_FIRST_USER = "Neptunus.qa21@gmail.com";
@@ -31,7 +32,13 @@ public interface Constants {
     final String SKILL_FIFTH = "skill5";
     final String WEEKLY_AVAILABILITY = "15.0";
     final String PROFILE_PRIVACY = "public";
-    final String USER_PROFILE_PICTURE=  "\\src\\main\\resources\\images\\Neptunus.jpg";
+    final String USER_PICTURE = "\\src\\test\\resources\\images\\Neptunus.jpg";
+    final String POST_PICTURE = "\\src\\test\\resources\\images\\QA.png";
+    final String USER_DIRECTORY = Paths.get("")
+            .toAbsolutePath()
+            .toString();
+    final String USER_PROFILE_PICTURE = USER_PICTURE + USER_DIRECTORY;
+    final String POST_PROFILE_PICTURE = POST_PICTURE + USER_DIRECTORY;
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";

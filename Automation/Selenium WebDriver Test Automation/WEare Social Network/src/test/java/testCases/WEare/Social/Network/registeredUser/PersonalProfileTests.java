@@ -1,6 +1,6 @@
 package testCases.WEare.Social.Network.registeredUser;
 
-import constants.Constants;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import testCases.WEare.Social.Network.BaseTest;
@@ -54,6 +54,11 @@ public class PersonalProfileTests extends BaseTest {
         personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();
     }
 
+    @After
+    public void logOut() {
+        logOutPage.clickOnLogOutButton();
+        logOutPage.assertUserIsLoggedOut();
+    }
 
 
 }

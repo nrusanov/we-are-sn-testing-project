@@ -56,7 +56,6 @@ public class UserActions {
         element.selectByVisibleText(value);
     }
 
-
     public void clearField(String field, Object... fieldArguments){
         String locator = Utils.getUIMappingByKey(field);
         WebElement element = driver.findElement(By.xpath(locator));
@@ -70,10 +69,11 @@ public class UserActions {
         element.sendKeys(fileLocation);
     }
 
-    public void scrollUp(String locator){
-        JavascriptExecutor jsExecuter = (JavascriptExecutor) driver;
+    public void scrollDown(String locator){
+        waitForElementVisibleUntilTimeout(locator,10);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement webElement = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
-        jsExecuter.executeScript("scroll(0, -250);", webElement);
+        js.executeScript("arguments[0].scrollIntoView();", webElement);
     }
 
 
@@ -162,17 +162,7 @@ public class UserActions {
         Assert.assertEquals(expectedValue, actualResult);
     }
 
-    public void assertValueFromDropDownMenu(String locator, String value) {
-        String valueDropDownMenu = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
-        Assert.assertEquals(value, valueDropDownMenu);
-    }
-
-    public void assertTextEquals(String locator, String expectedText) {
-        String actualText = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getText();
-        Assert.assertEquals(expectedText, actualText);
-    }
-
-
+    
     public void assertNavigatedUrl(String urlKey) {
         String currentUrl = driver.getCurrentUrl();
         String expectedUrl = Utils.getConfigPropertyByKey(urlKey);

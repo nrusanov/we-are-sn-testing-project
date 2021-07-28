@@ -75,6 +75,7 @@
    * 2. In the first search box fill in: 'painter';
    * 3. Click on button 'Search'
 * **Expected result:** A result with the following user details should appear: profile picture, location, names, member since and a button 'See profile' / or a list of users, each of them having the above properties.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 111
 
@@ -105,6 +106,7 @@
    * 2. In the second search box fill in: 'Test User';
    * 3. Click on button 'Search'
 * **Expected result:** A result with the following user details should appear: profile picture, location, names, member since and a button 'See profile'.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 113
 

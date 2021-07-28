@@ -17,6 +17,7 @@
    * 4. Click on "Personal profile" link, which is located in the header menu;
    * 5. Click on the "edit Profile" button, which is located to the right of the profile picture;
 * **Expected result:** To load an edit page with user data in it.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 13
 
@@ -56,6 +57,7 @@
    * 9. Click on "Email" field and type a valid new one ( <256 characters, 1 lower case letter, 1 upper case letter, 1 numeric character and a special symbol);
    * 10. Click on "Update My Profile" button
 * **Expected result:** The profile to be updated with the entered data.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 15
 
@@ -145,6 +147,7 @@
    * 13. Choose a country;
    * 14. Click on "Update My Profile" button
 * **Expected result:** The profile to be updated with the entered data.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 19
 
@@ -165,6 +168,7 @@
    * 7. Choose an option from the "What is your professional category?" dropdown menu;
    * 8. Click on "Update" button;
 * **Expected result:** The profile to be updated with the entered data.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 ## Test case 20
 
@@ -367,6 +371,7 @@
    * 8. Set a valid weekly availability using the up arrows (between 1-168 hours);
    * 9. Click on "Update" button
 * **Expected result:** The profile to be updated with the entered data about the services and the weekly availability that the user can offer.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 
 
 ## Test case 31
@@ -549,4 +554,5 @@
    * 5. Click on the "edit Profile" button, which is located to the right of the profile picture;
    * 6. Scroll down to the "Personal info & Safety" section;
 * **Expected result:** To have a button to delete the profile picture.
+* **Executed by automation tool:** Postman, Selenium WebDriver
 

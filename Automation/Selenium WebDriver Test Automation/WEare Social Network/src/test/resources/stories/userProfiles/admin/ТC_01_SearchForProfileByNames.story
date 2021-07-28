@@ -15,8 +15,8 @@ Before:
 Scope: STORY
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
-When I type adminRandom in loginPage.usernameField field
-And I type Neptunus_21 in loginPage.passwordField field
+When I type adminRandom in usernameField field
+And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
 
