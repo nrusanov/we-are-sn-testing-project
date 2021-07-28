@@ -1,8 +1,8 @@
 Meta:
 @admin
 @search
-@adminSearchFunctionality
-@ADMINSEARCH
+@adminSearchByNames
+
 
 Narrative:
 As an admin

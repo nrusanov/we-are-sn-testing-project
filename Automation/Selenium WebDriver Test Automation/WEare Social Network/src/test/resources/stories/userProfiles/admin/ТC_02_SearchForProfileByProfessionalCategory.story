@@ -1,7 +1,7 @@
 Meta:
 @admin
 @search
-@adminSearchFunctionality
+@adminSearchByProfessionalCategory
 
 Narrative:
 As an admin

@@ -1,11 +1,17 @@
-2021-07-28 11:58:17,528 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:24,068 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:24,068 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:24,068 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:24,068 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:24,068 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:24,084 INFO  [main] Initializing WebDriver
-2021-07-28 11:58:27,129 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-28 11:58:29,210 INFO  [main] Clicking on element loginPage.loginButton
-2021-07-28 11:58:31,621 INFO  [main] Clicking on element homePage.navigationBar.logOutButton
-2021-07-28 11:58:32,485 INFO  [main] Quitting WebDriver
+2021-07-28 14:49:18,111 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:25,396 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:25,396 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:25,396 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:25,399 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:25,401 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:25,412 INFO  [main] Initializing WebDriver
+2021-07-28 14:49:26,589 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-28 14:49:27,892 INFO  [main] Clicking on element loginPage.loginButton
+2021-07-28 14:49:29,674 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
+2021-07-28 14:49:30,489 INFO  [main] Clicking on element personalProfilePage.editButton
+2021-07-28 14:49:31,566 INFO  [main] Clicking on element personalProfilePage.list.settings
+2021-07-28 14:49:31,744 INFO  [main] Uploading image
+2021-07-28 14:49:31,863 INFO  [main] Selecting public from dropdown personalProfilePage.privacy
+2021-07-28 14:49:32,164 INFO  [main] Clicking on element personalProfilePage.settingsUpdateButton
+2021-07-28 14:49:33,074 INFO  [main] Clicking on element homePage.navigationBar.logOutButton
+2021-07-28 14:49:33,775 INFO  [main] Quitting WebDriver

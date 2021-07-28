@@ -8,7 +8,7 @@ public interface Constants {
 
     final int TIMEOUT_SECONDS = 10;
     final String FIRST_USER_USERNAME = "randomUsername";
-    final String SECOND_USER_USERNAME = "randomSecondUsername";
+    final String SECOND_USER_USERNAME = "randomUsernameSecond";
     final String EMAIL_FIRST_USER = "Neptunus.qa21@gmail.com";
     final String EMAIL_SECOND_USER = "Neptunus.qa21@gmail.com";
     final String PASSWORD_FIRST_USER = "Neptunus_21";
@@ -17,7 +17,7 @@ public interface Constants {
     final String CONFIRM_PASSWORD_SECOND_USER = "Neptunus_21";
     final String FIRST_NAME = "Team";
     final String LAST_NAME_FIRST_USER = "NeptunusOne";
-    final String LAST_NAME_SECOND_USER = "NeptunusTwo";
+    final String LAST_NAME_SECOND_USER = "NeptunusSecond";
     final String BIRTHDAY_DATE = "02022020";
     final String BIRTHDAY_DATE_ASSERT = "2020-02-02";
     final String DROP_FEW_WORDS_FIELD = "We are future QA masters";
@@ -38,8 +38,8 @@ public interface Constants {
     final String USER_DIRECTORY = Paths.get("")
             .toAbsolutePath()
             .toString();
-    final String USER_PROFILE_PICTURE = USER_PICTURE + USER_DIRECTORY;
-    final String POST_PROFILE_PICTURE = POST_PICTURE + USER_DIRECTORY;
+    final String USER_PROFILE_PICTURE = USER_DIRECTORY + USER_PICTURE ;
+    final String POST_PROFILE_PICTURE = USER_DIRECTORY + POST_PICTURE;
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";

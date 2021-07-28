@@ -1,7 +1,7 @@
 Meta:
 @regularUser
 @search
-@userSearchFunctionality
+@userSearchByProfessionalCategory
 
 Narrative:
 As a regular user

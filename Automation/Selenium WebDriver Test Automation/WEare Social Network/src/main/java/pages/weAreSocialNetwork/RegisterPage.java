@@ -22,7 +22,7 @@ public class RegisterPage extends BasePage implements Constants {
         actions.typeValueInField(FIRST_USER_USERNAME, "usernameField");
         actions.typeValueInField(EMAIL_FIRST_USER, "registerPage.emailField");
         actions.typeValueInField(PASSWORD_FIRST_USER, "passwordField");
-        actions.typeValueInField(CONFIRM_PASSWORD_FIRST_USER,"registerPage.confirmPasswordField");
+        actions.typeValueInField(PASSWORD_SECOND_USER,"registerPage.confirmPasswordField");
         actions.clickElement("registerPage.registerButton");
     }
 
