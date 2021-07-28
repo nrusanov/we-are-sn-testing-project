@@ -16,7 +16,7 @@ And homePage.navigationBar.logOutButton element is present
 When I click homePage.navigationBar.createPost element
 And I select Public post from visibilityDropDownMenu dropdown
 And I type Hello Selenium WebDriver! in textArea field
-!-- And I upload a C:\Users\Lenovo\Desktop\Neptunus Final Project\neptunus-final-project\Automation\Selenium WebDriver Test Automation\WEare Social Network\src\test\resources\images\QA.png in createPostPage.chooseFileButton
+And I upload a POST_PROFILE_PICTURE in createPostPage.chooseFileButton
 And I click createPostPage.savePostButton element
 Then createPostPage.createdPost element is present
 And I click homePage.weAreButton element
