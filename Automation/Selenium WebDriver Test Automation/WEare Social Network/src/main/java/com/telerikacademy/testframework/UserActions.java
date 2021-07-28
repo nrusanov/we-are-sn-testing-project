@@ -28,7 +28,7 @@ public class UserActions {
     }
 
     public void clickElement(String key, Object... arguments) {
-        String locator = getLocatorValueByKey(key, arguments);
+        String locator = getLocatorValueByKey (key, arguments);
         Utils.LOG.info("Clicking on element " + key);
         WebElement element = driver.findElement(By.xpath(locator));
         element.click();
@@ -159,12 +159,6 @@ public class UserActions {
 
     public void assertAttributeValue(String locator, String expectedValue, String attribute) {
         String actualResult = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator))).getAttribute(attribute);
-<<<<<<< HEAD
-        Assert.assertEquals(expectedValue, actualResult);
-    }
-
-    
-=======
         Assert.assertEquals("The actual value is not equal to expected", expectedValue, actualResult);
     }
 
@@ -174,7 +168,6 @@ public class UserActions {
         Assert.assertTrue ("The actual text is not equal to expected", actualResult.equals (expectedValue));
     }
 
->>>>>>> b8b1ec8dc7af684c33cbb14cf7ce70b3150b308c
     public void assertNavigatedUrl(String urlKey) {
         String currentUrl = driver.getCurrentUrl();
         String expectedUrl = Utils.getConfigPropertyByKey(urlKey);
