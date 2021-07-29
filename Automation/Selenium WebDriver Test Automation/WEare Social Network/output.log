@@ -1,49 +1,11 @@
-2021-07-28 23:02:57,451 INFO  [main] Initializing WebDriver
-2021-07-28 23:03:04,782 INFO  [main] Initializing WebDriver
-2021-07-28 23:03:04,822 INFO  [main] Initializing WebDriver
-2021-07-28 23:03:06,559 INFO  [main] 
--------------------------------------------------------
-Executing story : BeforeStories
--------------------------------------------------------
-
-2021-07-28 23:03:06,563 INFO  [main] Initializing WebDriver
-2021-07-28 23:03:08,791 INFO  [main] Clicking on element homePage.navigationBar.signInButton
-2021-07-28 23:03:10,842 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-Executing story : ТC_03_DisableUserProfile.story
--------------------------------------------------------
-
-2021-07-28 23:03:10,880 INFO  [pool-2-thread-1] Executing step : Given I click homePage.navigationBar.signInButton element
-2021-07-28 23:03:11,024 INFO  [pool-2-thread-1] Clicking on element homePage.navigationBar.signInButton
-2021-07-28 23:03:11,780 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given I click ｟homePage.navigationBar.signInButton｠ element
-2021-07-28 23:03:11,781 INFO  [pool-2-thread-1] Executing step : And homePage.navigationBar.signInButton element is present
-2021-07-28 23:03:11,916 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And ｟homePage.navigationBar.signInButton｠ element is present
-2021-07-28 23:03:11,918 INFO  [pool-2-thread-1] Executing step : When I type adminRandom in usernameField field
-2021-07-28 23:03:12,357 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I type ｟adminRandom｠ in ｟usernameField｠ field
-2021-07-28 23:03:12,357 INFO  [pool-2-thread-1] Executing step : And I type Neptunus_21 in passwordField field
-2021-07-28 23:03:12,625 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I type ｟Neptunus_21｠ in ｟passwordField｠ field
-2021-07-28 23:03:12,626 INFO  [pool-2-thread-1] Executing step : And I click loginPage.loginButton element
-2021-07-28 23:03:12,690 INFO  [pool-2-thread-1] Clicking on element loginPage.loginButton
-2021-07-28 23:03:14,210 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟loginPage.loginButton｠ element
-2021-07-28 23:03:14,211 INFO  [pool-2-thread-1] Executing step : Then homePage.navigationBar.logOutButton element is present
-2021-07-28 23:03:14,573 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Then ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-28 23:03:14,580 INFO  [pool-2-thread-1] Executing step : Given homePage.navigationBar.logOutButton element is present
-2021-07-28 23:03:14,656 INFO  [pool-2-thread-1] SUCCESSFUL STEP : Given ｟homePage.navigationBar.logOutButton｠ element is present
-2021-07-28 23:03:14,656 INFO  [pool-2-thread-1] Executing step : When I type Team NeptunusTwo in homePage.namesField field
-2021-07-28 23:03:15,370 INFO  [pool-2-thread-1] SUCCESSFUL STEP : When I type ｟Team NeptunusTwo｠ in ｟homePage.namesField｠ field
-2021-07-28 23:03:15,371 INFO  [pool-2-thread-1] Executing step : And I click homePage.searchButton element
-2021-07-28 23:03:15,432 INFO  [pool-2-thread-1] Clicking on element homePage.searchButton
-2021-07-28 23:03:16,432 INFO  [pool-2-thread-1] SUCCESSFUL STEP : And I click ｟homePage.searchButton｠ element
-2021-07-28 23:03:16,433 INFO  [pool-2-thread-1] Executing step : And homePage.assertSecondUserName element contains the value Team NeptunusTwo
-2021-07-28 23:03:30,803 INFO  [pool-2-thread-1] 
--------------------------------------------------------
-FAILED STEP : And ｟homePage.assertSecondUserName｠ element contains the value ｟Team NeptunusTwo｠
--------------------------------------------------------
-
-2021-07-28 23:03:30,804 INFO  [pool-2-thread-1] REASON: Element with locator: '//h2[contains(text(), "Team NeptunusSecond")]' was not found.
-2021-07-28 23:03:31,033 INFO  [main] 
--------------------------------------------------------
-Executing story : AfterStories
--------------------------------------------------------
-
-2021-07-28 23:03:31,034 INFO  [main] Quitting WebDriver
+2021-07-29 11:57:48,560 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:55,827 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:55,827 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:55,827 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:55,827 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:55,827 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:55,838 INFO  [main] Initializing WebDriver
+2021-07-29 11:57:56,871 INFO  [main] Clicking on element homePage.navigationBar.signInButton
+2021-07-29 11:57:58,357 INFO  [main] Clicking on element loginPage.loginButton
+2021-07-29 11:57:59,993 INFO  [main] Clicking on element homePage.navigationBar.PersonalProfile
+2021-07-29 11:58:41,817 INFO  [main] Quitting WebDriver

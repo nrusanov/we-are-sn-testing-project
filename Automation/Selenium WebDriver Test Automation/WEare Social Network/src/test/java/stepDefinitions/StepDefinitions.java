@@ -23,9 +23,9 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.typeValueInField(value, field);
     }
 
-    @Given("I clear $field and type $value in the field")
-    @When("I clear $field and type $value in the field")
-    @Then("I clear $field and type $value in the field")
+    @Given("I clear $field and type $value in the $field")
+    @When("I clear $field and type $value in the $field")
+    @Then("I clear $field and type $value in the $field")
     public void clearAndTypeInField(String field, String value) {
         actions.clearField(field);
         actions.typeValueInField(field, value);
@@ -58,7 +58,7 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
     @Given("I upload $image in $field")
     @When("I upload $image in $field")
     @Then("I upload $image in $field")
-    public void uploadImageТоТhePost(String image,String element) {
+    public void uploadImage(String image,String element) {
         actions.waitForElementVisibleUntilTimeout(element, TIMEOUT_SECONDS);
         actions.uploadImage(image, element);
     }
