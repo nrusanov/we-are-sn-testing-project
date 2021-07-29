@@ -22,7 +22,7 @@ And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present
 When I type Dentist in homePage.professionalCategoryField field
 And I click homePage.searchButton element
-And homePage.assertSecondUserName element contains the value Team NeptunusTwo
+And homePage.assertSecondUserName element contains the value Team NeptunusSecond
 And I click searchPage.seeProfileButton element
 And personalProfilePage.connectButton element is present
 And I click personalProfilePage.connectButton element
@@ -31,7 +31,7 @@ And I click homePage.navigationBar.logOutButton element
 And homePage.navigationBar.signInButton element is present
 
 Scenario: The second regular user accepts the friend request from the first regular user
-Given I type randomSecondUsername in usernameField field
+Given I type randomUsernameSecond in usernameField field
 And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present
@@ -51,7 +51,7 @@ And I click loginPage.loginButton element
 And homePage.navigationBar.logOutButton element is present
 When I type Dentist in homePage.professionalCategoryField field
 And I click homePage.searchButton element
-And homePage.assertSecondUserName element contains the value Team NeptunusTwo
+And homePage.assertSecondUserName element contains the value Team NeptunusSecond
 And I click searchPage.seeProfileButton element
 And personalProfilePage.disconnectButton element is present
 And I click personalProfilePage.disconnectButton element

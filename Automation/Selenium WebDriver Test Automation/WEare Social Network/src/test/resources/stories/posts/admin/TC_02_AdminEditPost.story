@@ -1,10 +1,10 @@
 Meta:
-@regularUser
+@admin
 @posts
-@userEditPublicPost
+@adminEditPublicPost
 
 Narrative:
-As a regular user
+As an admin
 I want to edit my own public post
 So that a public post is edited
 
@@ -12,12 +12,14 @@ So that a public post is edited
 Lifecycle:
 Before:
 Scope: STORY
-Given I type randomUsername in usernameField field
-When I type Neptunus_21 in passwordField field
+Given I click homePage.navigationBar.signInButton element
+And homePage.navigationBar.signInButton element is present
+When I type adminRandom in usernameField field
+And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
 
-Scenario: Edit my own public post as a regular user
+Scenario: Edit my own public post as an admin
 Given homePage.navigationBar.LatestPosts element is present
 When I click homePage.navigationBar.LatestPosts element
 And browsedPosts.exploreThisPostButton element is present
@@ -30,7 +32,7 @@ And textArea element is present
 And I type This is an edited public post in textArea field
 And editPostPage.savePostButton element is present
 And I click editPostPage.savePostButton element
-Then editPostPage.postAuthor element contains the value randomUsername
+Then editPostPage.postAuthorAdmin element contains the value adminRandom
 And editPostPage.postContent element contains the value This is an edited public post
 And I click homePage.weAreButton element
 And I click homePage.navigationBar.logOutButton element

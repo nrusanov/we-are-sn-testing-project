@@ -21,9 +21,9 @@ Then homePage.navigationBar.logOutButton element is present
 
 Scenario: The admin enables a regular user profile
 Given homePage.navigationBar.logOutButton element is present
-When I type Team NeptunusTwo in homePage.namesField field
+When I type Team NeptunusSecond in homePage.namesField field
 And I click homePage.searchButton element
-And homePage.assertSecondUserName element contains the value Team NeptunusTwo
+And homePage.assertSecondUserName element contains the value Team NeptunusSecond
 And I click searchPage.seeProfileButton element
 And adminZonePage.enableButton element is present
 And I click adminZonePage.enableButton element

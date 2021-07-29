@@ -1,10 +1,10 @@
 Meta:
-@regularUser
+@admin
 @posts
-@userDeletePublicPost
+@adminDeletePublicPost
 
 Narrative:
-As a regular user
+As an admin
 I want to delete my own public post
 So that a public post is deleted
 
@@ -12,8 +12,10 @@ So that a public post is deleted
 Lifecycle:
 Before:
 Scope: STORY
-Given I type randomUsername in usernameField field
-When I type Neptunus_21 in passwordField field
+Given I click homePage.navigationBar.signInButton element
+And homePage.navigationBar.signInButton element is present
+When I type adminRandom in usernameField field
+And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
 

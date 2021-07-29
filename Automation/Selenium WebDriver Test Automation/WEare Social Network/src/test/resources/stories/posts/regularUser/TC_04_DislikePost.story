@@ -1,22 +1,23 @@
 Meta:
 @regularUser
 @posts
-@userPostFunctionality
+@userDislikePublicPost
+
+Narrative:
+As a regular user
+I want to dislike my own already liked public post
+So that a public post is disliked
+
 
 Lifecycle:
 Before:
 Scope: STORY
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
-When I type adminRandom in usernameField field
+When I type randomUsername in usernameField field
 And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
-
-Narrative:
-As a regular user
-I want to dislike my own already liked public post
-So that a public post is disliked
 
 Scenario: Like my own public post as a regular user
 Given homePage.navigationBar.logOutButton element is present

@@ -76,6 +76,16 @@ public class UserActions {
         js.executeScript("arguments[0].scrollIntoView();", webElement);
     }
 
+    public void scrollDownPage() {
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("window.scrollBy(0,500)");
+    }
+
+    public void scrollUp (String locator) {
+        waitForElementPresentUntilTimeout (locator, 10);
+        WebElement webElement = driver.findElement(By.xpath(Utils.getUIMappingByKey(locator)));
+        webElement.sendKeys (Keys.PAGE_UP);
+    }
 
     //############# WAITS #########
 
