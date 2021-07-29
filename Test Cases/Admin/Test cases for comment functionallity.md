@@ -18,6 +18,7 @@
    * 7. Fill in the "Message" field with a valid text (between 1-1000 characters, 1 lower case letter, 1 upper case letter, 1 numeric character, 1 special symbol, 1 Latin and 1 Cyrillic letter);
    * 8. Click on "Post Comment" button
 * **Expected result:** A new comment containing a description is posted below the users post.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 68
 
@@ -95,6 +96,7 @@
    * 7. Fill in the "Message" field with a valid text (between 1-1000 characters, 1 lower case letter, 1 upper case letter, 1 numeric character, 1 special symbol, 1 Latin and 1 Cyrillic letter);
    * 8. Click on "Edit Comment" button
 * **Expected result:** Тhe comment is edited containing a new description.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 72
 
@@ -115,6 +117,7 @@
    * 8. Choose "Delete comment" from the dropdown menu;
    * 9. Click on "Submit" button
 * **Expected result:** The comment is successfully deleted.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 73
 
@@ -133,6 +136,7 @@
    * 6. Click on "Show Comments" button, whis is located under "Leave a comment" section;
    * 7. Click on "Like" button
 * **Expected result:** The comment is liked.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 74
 
@@ -151,6 +155,7 @@
    * 6. Click on "Show Comments" button, whis is located under "Leave a comment" section;
    * 7. Click on "Dislike" button
 * **Expected result:** The comment is disliked.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 75
 

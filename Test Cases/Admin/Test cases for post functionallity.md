@@ -19,7 +19,8 @@
    * 7. Fill in the "Message" field with a valid text (between 1-1000 characters, 1 lower case letter, 1 upper case letter, 1 numeric character, 1 special symbol, 1 Latin and 1 Cyrillic letter);
    * 8. Click on  "Choose file" button and upload a file;
    * 9. Click on "Save post" button
-* **Expected result:** A new post is created, containing a description and a file;
+* **Expected result:** A new post is created, containing a description and a file.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 52
 
@@ -122,6 +123,7 @@
    * 7. Fill in the "Message" field with a valid text (between 1-1000 characters, 1 lower case letter, 1 upper case letter, 1 numeric character, 1 special symbol, 1 Latin and 1 Cyrillic letter);
    * 8. Click on "Save post" button
 * **Expected result:** Тhe post is edited containing a new description.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 57
 
@@ -142,6 +144,7 @@
    * 7. Choose "Delete post" from the dropdown menu;
    * 8. Click on "Submit" button
 * **Expected result:** The post is successfully deleted.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 58
 
@@ -161,6 +164,7 @@
    * 6. Click on "All posts of this user", whis is located to the right of the post;
    * 7. Find the post and click on the "Like" button;
 * **Expected result:** The post is liked.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 59
 
@@ -180,6 +184,7 @@
    * 6. Click on "All posts of this user", whis is located to the right of the post;
    * 7. Find the liked post and click on the "Dislike" button;
 * **Expected result:** The post is disliked.
+* **Executed by automation tool:** Selenium WebDriver
 
 ## Test case 60
 
