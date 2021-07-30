@@ -34,12 +34,10 @@ public interface Constants {
     final String WEEKLY_AVAILABILITY_FULL_TEXT = WEEKLY_AVAILABILITY + " hours/weekly";
     final String PROFILE_PRIVACY = "public";
     final String USER_PICTURE = "\\src\\test\\resources\\images\\Neptunus.jpg";
-    final String POST_PICTURE = "\\src\\test\\resources\\images\\QA.png";
     final String USER_DIRECTORY = Paths.get("")
             .toAbsolutePath()
             .toString();
     final String USER_PROFILE_PICTURE = USER_DIRECTORY + USER_PICTURE ;
-    final String POST_PROFILE_PICTURE = USER_DIRECTORY + POST_PICTURE;
 
     final String ADMIN_USERNAME = "adminRandom";
     final String ADMIN_EMAIL = "Neptunus.qa21@gmail.com";
