@@ -9,13 +9,63 @@
 			"name": "Users",
 			"item": [
 				{
+					"name": "Register User As A Precondition",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": {\r\n    \"id\": \"{{categoryID}}\",\r\n    \"name\": \"{{category}}\"\r\n  },\r\n  \"confirmPassword\": \"{{firstConfirmPassword}}\",\r\n  \"email\": \"{{firstEmail}}\",\r\n  \"password\": \"{{firstPassword}}\",\r\n  \"username\": \"{{$randomWord}}{{$randomAbbreviation}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/users/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get All Users",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
-									"var jsonData = JSON.parse(responseBody);\r",
+									"var jsonData = pm.response.json();\r",
 									"pm.collectionVariables.set(\"tempLastUserIdBeforeReg\", jsonData[0].userId);\r",
 									"\r",
 									"pm.test(\"Status code is 200\", function () {\r",
