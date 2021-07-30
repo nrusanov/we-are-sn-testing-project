@@ -19,16 +19,16 @@
 
 #### Page Object Model Tests
 
-For Windows users, navigate to the **Selenium WebDriver Test Automation** folder and double-click on **....**, or alternatively, navigate to the folder using CMD or PowerShell, then type:
+For Windows users, navigate to the **Selenium WebDriver Test Automation** folder and double-click on **run_RegisterFunctionalityTests, run_LoginFunctionalityTests, run_PersonalProfileFunctionalityTests**, or alternatively, navigate to the folder using CMD or PowerShell, then type:
 ```
-.\.....bat 
+.\run_RegisterFunctionalityTests.bat,  .\run_LoginFunctionalityTests.bat, .\run_PersonalProfileFunctionalityTests.bat
 ```
 
 #### BDD Tests
 
-For Windows users, navigate to the **Selenium WebDriver Test Automation** folder and double-click on **....**, or alternatively, navigate to the folder using CMD or PowerShell, then type:
+For Windows users, navigate to the **Selenium WebDriver Test Automation** folder and double-click on **BDD_runAllTests**, or alternatively, navigate to the folder using CMD or PowerShell, then type:
 ```
-.\.....bat 
+.\BDD_runAllTests.bat 
 ```
 
-You'll find the report after the run in **Selenium WebDriver Test Automation/reports** folder as an .html file that you can preview using the browser.
+You'll find the report after the run in **Selenium WebDriver Test Automation** folder as an .html file that you can preview using the browser.
