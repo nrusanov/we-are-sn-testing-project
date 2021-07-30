@@ -46,6 +46,7 @@ public class AdminPersonalProfileTests extends BaseTest {
     }
 
     @Test
+    @Disabled
     public void TC_04_AdminSuccessfulUpdateServices_When_FieldsAreFilled() {
         personalProfileEditorPage.updateServices();
 

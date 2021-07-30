@@ -40,3 +40,9 @@
 
 ### 9. Selenium WebDriver WEare Social Network final project
  - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Automation/Selenium%20WebDriver%20Test%20Automation/WEare%20Social%20Network)
+
+### 9. Postman API WEare Social Network Test Report
+ - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Automation/Postman%20Test%20Automation/newman)
+
+ ### 9. Testing Summary Report
+ - [Access here](https://gitlab.com/DayanaDocheva/neptunus-final-project/-/tree/master/Test%20Reports)

@@ -1,1 +1,1 @@
-mvn -Dtest=UserPersonalProfileTestsSecondUser, AdminPersonalProfileTests test surefire-report:report
+mvn -Dtest=UserPersonalProfileTests,UserPersonalProfileTestsSecondUser,AdminPersonalProfileTests test surefire-report:report

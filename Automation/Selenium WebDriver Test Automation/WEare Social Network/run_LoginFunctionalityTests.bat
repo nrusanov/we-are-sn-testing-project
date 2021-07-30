@@ -1,1 +1,1 @@
-mvn -Dtest=UserLoginPageTests, АdminLoginPageTests test surefire-report:report
+mvn -Dtest=UserLoginPageTests,AdminLoginPageTests test surefire-report:report

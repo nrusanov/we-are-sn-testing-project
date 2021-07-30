@@ -188,7 +188,7 @@
 * **Title:** Registered and logged in user should not be able to create new private posts with empty message
 * **Description:** Verify that a registered and logged in user is not able to create new private posts with empty message.
 * **Narrative:** As a Registered user I want to use post and comment functionalities.
-* **Priority:** High
+* **Priority:** Medium
 * **Pre-condition:** Application is running. The user must be registered and logged in, site is running on localhost via Docker Desktop
 * **Test data:** Username: TeamNeptunus, Password: Neptunus_21, Email: Neptunus.qa21@gmail.com
 * **Environment:** Windows 10, Google Chrome 91.0.4472.124, Microdoft Edge 91.0.864.64, Mozilla Firefox 89.0.2
