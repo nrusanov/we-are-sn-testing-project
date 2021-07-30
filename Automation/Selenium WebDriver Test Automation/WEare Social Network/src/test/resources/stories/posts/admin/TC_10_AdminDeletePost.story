@@ -19,10 +19,11 @@ And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
 
-Scenario: Delete my own public post as a regular user
+Scenario: Delete my own public post as an admin
 Given homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present
 When I click homePage.navigationBar.LatestPosts element
+And I scroll down in bodyOfSite
 And browsedPosts.exploreThisPostButton element is present
 And I click browsedPosts.exploreThisPostButton element
 And exploreThisPostPage.deletePostButton element is present

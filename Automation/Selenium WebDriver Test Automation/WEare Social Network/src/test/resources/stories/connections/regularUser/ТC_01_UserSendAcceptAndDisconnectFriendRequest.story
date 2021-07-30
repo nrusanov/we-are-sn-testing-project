@@ -13,13 +13,13 @@ Before:
 Scope: STORY
 Given I click homePage.navigationBar.signInButton element
 And homePage.navigationBar.signInButton element is present
-
-
-Scenario: A first regular user sends friend request to a second regular user
-Given I type randomUsername in usernameField field
+When I type randomUsername in usernameField field
 And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
-And homePage.navigationBar.logOutButton element is present
+Then homePage.navigationBar.logOutButton element is present
+
+Scenario: A first regular user sends friend request to a second regular user
+Given homePage.navigationBar.logOutButton element is present
 When I type Dentist in homePage.professionalCategoryField field
 And I click homePage.searchButton element
 And homePage.assertSecondUserName element contains the value Team NeptunusSecond

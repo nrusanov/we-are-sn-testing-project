@@ -22,6 +22,7 @@ Scenario: Like my own public post as an admin
 Given homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present
 When I click homePage.navigationBar.LatestPosts element
+And I scroll down in bodyOfSite
 And browsedPosts.exploreThisPostButton element is present
 And explore.postAuthorAdmin element contains the value adminRandom
 And exploreThisPostPage.postContent element contains the value This is an edited public post

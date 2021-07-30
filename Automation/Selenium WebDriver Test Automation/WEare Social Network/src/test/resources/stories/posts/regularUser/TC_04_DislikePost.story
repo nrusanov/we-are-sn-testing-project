@@ -19,10 +19,11 @@ And I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
 Then homePage.navigationBar.logOutButton element is present
 
-Scenario: Like my own public post as a regular user
+Scenario: Dislike my own public post as a regular user
 Given homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present
 When I click homePage.navigationBar.LatestPosts element
+And I scroll down in bodyOfSite
 And browsedPosts.exploreThisPostButton element is present
 And exploreThisPostPage.postAuthor element is present
 And exploreThisPostPage.postAuthor element contains the value randomUsername

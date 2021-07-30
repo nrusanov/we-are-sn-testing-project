@@ -2,9 +2,12 @@ package testCases.WEare.Social.Network.registeredUser;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import testCases.WEare.Social.Network.BaseTest;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class LoginPageTests extends BaseTest {
 
 

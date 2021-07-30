@@ -20,6 +20,7 @@ Scenario: Comment my own public post as a regular user
 Given homePage.navigationBar.logOutButton element is present
 And homePage.navigationBar.LatestPosts element is present
 When I click homePage.navigationBar.LatestPosts element
+And I scroll down in bodyOfSite
 And browsedPosts.exploreThisPostButton element is present
 And I click browsedPosts.exploreThisPostButton element
 And textArea element is present

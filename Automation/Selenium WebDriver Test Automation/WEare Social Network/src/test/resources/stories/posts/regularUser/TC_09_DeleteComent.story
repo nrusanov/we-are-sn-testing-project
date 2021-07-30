@@ -14,13 +14,16 @@ Scope: STORY
 Given I type randomUsername in usernameField field
 When I type Neptunus_21 in passwordField field
 And I click loginPage.loginButton element
-And homePage.navigationBar.logOutButton element is present
+Then homePage.navigationBar.logOutButton element is present
 
-Scenario: Edit my own comment my own public post as a regular user
+Scenario: Delete my own comment my own public post as a regular user
 Given homePage.navigationBar.logOutButton element is present
-And I click homePage.navigationBar.LatestPosts element
-When browsedPosts.exploreThisPostButton element is present
+When I click homePage.navigationBar.LatestPosts element
+And I scroll down in bodyOfSite
+And browsedPosts.exploreThisPostButton element is present
 And I click browsedPosts.exploreThisPostButton element
+And I click textArea element
+And I scroll up in textArea
 And exploreThisPostPage.showCommentsButton element is present
 And I click exploreThisPostPage.showCommentsButton element
 And exploreThisPostPage.deleteCommentButton element is present
