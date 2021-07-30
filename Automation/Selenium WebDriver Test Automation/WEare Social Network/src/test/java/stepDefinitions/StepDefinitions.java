@@ -23,14 +23,6 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.typeValueInField(value, field);
     }
 
-    @Given("I clear $field and type $value in the $field")
-    @When("I clear $field and type $value in the $field")
-    @Then("I clear $field and type $value in the $field")
-    public void clearAndTypeInField(String field, String value) {
-        actions.clearField(field);
-        actions.typeValueInField(field, value);
-    }
-
     @Given("I select $value from $dropdown dropdown")
     @When("I select $value from $dropdown dropdown")
     @Then("I select $value from $dropdown dropdown")
@@ -55,13 +47,13 @@ public class StepDefinitions extends BaseStepDefinitions implements Constants {
         actions.assertElementPresent (locator);
     }
 
-    @Given("I upload image in $field")
-    @When("I upload image in $field")
-    @Then("I upload image in $field")
-    public void uploadImageТоТhePost(String element) {
-        actions.waitForElementVisibleUntilTimeout (element, TIMEOUT_SECONDS);
-        actions.uploadImage (POST_PROFILE_PICTURE, element);
-    }
+//    @Given("I upload image in $field")
+//    @When("I upload image in $field")
+//    @Then("I upload image in $field")
+//    public void uploadImageТоТhePost(String element) {
+//        actions.waitForElementVisibleUntilTimeout (element, TIMEOUT_SECONDS);
+//        actions.uploadImage(POST_PROFILE_PICTURE, element);
+//    }
 
     @Given("I scroll up in $element")
     @When("I scroll up in $element")

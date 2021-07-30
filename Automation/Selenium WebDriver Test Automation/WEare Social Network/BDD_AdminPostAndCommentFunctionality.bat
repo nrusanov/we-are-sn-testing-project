@@ -1,0 +1,1 @@
+mvn test -Dtest=JUnitRunner -DmetaFilters="+adminCreatesPublicPost, +adminEditPublicPost, +adminLikePublicPost, +adminDislikePublicPost, +adminCreatesNewComment, +adminEditComment, +adminLikesComment, +adminDislikesComment, +adminDeletesComment, +adminDeletePublicPost -skip"

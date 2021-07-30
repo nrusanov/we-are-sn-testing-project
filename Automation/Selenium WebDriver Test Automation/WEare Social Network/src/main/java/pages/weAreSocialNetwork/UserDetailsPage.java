@@ -10,7 +10,6 @@ public class UserDetailsPage extends BasePage implements Constants {
     }
 
     public void assertUpdatedServices() {
-        actions.assertAttributeText ("userDetailsPage.updatedSkillOne", SKILL_FIRST);
         actions.assertAttributeText("userDetailsPage.updatedSkillOne", SKILL_FIRST);
         actions.assertAttributeText("userDetailsPage.updatedSkillTwo",SKILL_SECOND);
         actions.assertAttributeText("userDetailsPage.updatedSkillThree",SKILL_THIRD);
