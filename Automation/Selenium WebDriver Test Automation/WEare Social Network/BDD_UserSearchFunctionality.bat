@@ -1,1 +1,0 @@
-mvn test -Dtest=JUnitRunner -DmetaFilters="+userSearchByNames, +userSearchByProfessionalCategory, -skip"

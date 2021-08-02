@@ -12,8 +12,6 @@ public class BaseStepDefinitions {
     @BeforeStories
     public void setUp() {
         UserActions.loadBrowser("baseUrl");
-        loginPage.navigateToLoginPage();
-        loginPage.assertLoginPageNavigated();
     }
 
     @AfterStories
