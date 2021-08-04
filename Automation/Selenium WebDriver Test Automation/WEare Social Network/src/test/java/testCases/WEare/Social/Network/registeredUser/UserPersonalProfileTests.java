@@ -12,35 +12,35 @@ public class UserPersonalProfileTests extends BaseTest {
 
     @Before
     public void NavigateToPersonalProfilePage_When_RegularUserAuthenticate() {
-        loginPage.navigateToLoginPage ();
-        loginPage.assertLoginPageNavigated ();
+        loginPage.navigateToLoginPage();
+        loginPage.assertLoginPageNavigated();
 
-        loginPage.loginRegularUser ();
-        loginPage.assertSuccessfulLogin ();
+        loginPage.loginRegularUser();
+        loginPage.assertSuccessfulLogin();
 
-        personalProfileEditorPage.navigateToPersonalProfileEditorPage ();
-        personalProfileEditorPage.assertPersonalProfileEditorPageNavigated ();
+        personalProfileEditorPage.navigateToPersonalProfileEditorPage();
+        personalProfileEditorPage.assertPersonalProfileEditorPageNavigated();
     }
 
     @Test
     public void TC_01_UserSuccessfulUpdatePersonalInformation_When_RequiredFieldsAreFilled() {
-        personalProfileEditorPage.userUpdatePersonalInformationWithAllRequiredFields ();
+        personalProfileEditorPage.userUpdatePersonalInformationWithAllRequiredFields();
 
-        personalProfileEditorPage.assertUserUpdatedPersonalInformationWithAllRequiredFields ();
+        personalProfileEditorPage.assertUserUpdatedPersonalInformationWithAllRequiredFields();
     }
 
     @Test
     public void TC_02_UserSuccessfulUpdatePersonalInformation_When_RequiredAndNotRequiredFieldsAreFilled() {
-        personalProfileEditorPage.userUpdatePersonalInformationWithAllRequiredFieldsAndAllNotRequiredFields ();
+        personalProfileEditorPage.userUpdatePersonalInformationWithAllRequiredFieldsAndAllNotRequiredFields();
 
-        personalProfileEditorPage.assertUserUpdatedPersonalInformationWithAllRequiredFieldsAndAllNotRequired ();
+        personalProfileEditorPage.assertUserUpdatedPersonalInformationWithAllRequiredFieldsAndAllNotRequired();
     }
 
     @Test
     public void TC_03_UserSuccessfulUpdateProfessionalCategory_When_CategoryIsSelected() {
-        personalProfileEditorPage.updateProfessionalCategory ();
+        personalProfileEditorPage.updateProfessionalCategory();
 
-        userDetailsPage.assertUpdatedProfessionalCategory ();
+        userDetailsPage.assertUpdatedProfessionalCategory();
     }
 
     @Test
@@ -52,15 +52,15 @@ public class UserPersonalProfileTests extends BaseTest {
 
     @Test
     public void TC_05_UserSuccessfulUpdatePersonalInfoAndSafety_When_UploadProfilePictureAndChooseVisibility() {
-        personalProfileEditorPage.updatePersonalInfoAndSafety ();
+        personalProfileEditorPage.updatePersonalInfoAndSafety();
 
-        personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety ();
+        personalProfileEditorPage.assertUpdatedPersonalInfoAndSafety();
     }
 
     @After
     public void logOut() {
-        logOutPage.clickOnLogOutButton ();
-        logOutPage.assertUserIsLoggedOut ();
+        logOutPage.clickOnLogOutButton();
+        logOutPage.assertUserIsLoggedOut();
     }
 
 

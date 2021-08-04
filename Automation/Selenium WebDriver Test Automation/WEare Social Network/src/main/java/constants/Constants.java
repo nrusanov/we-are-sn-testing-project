@@ -45,6 +45,4 @@ public interface Constants {
     final String ADMIN_CONFIRM_PASSWORD = "Neptunus_21";
     final String ADMIN_LAST_NAME = "NeptunusAdmin";
 
-//    final String HOME_KEY = sendKeys (key.Home);
-
 }
