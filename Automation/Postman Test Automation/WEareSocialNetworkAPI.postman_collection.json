@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "42a78bc0-d57f-4d91-9b61-fa87276053a0",
+		"_postman_id": "befe067c-3959-4c23-98ac-d3bef82ef3e5",
 		"name": "WEare Social Network API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1403,6 +1403,46 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get All Posts After Deletion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Post is successfully deleted\", function () {\r",
+									"    var id = pm.collectionVariables.get(\"postId\");\r",
+									"     var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].postId).to.not.eql(id);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -2105,6 +2145,65 @@
 					"response": []
 				},
 				{
+					"name": "Get The Comment After Deletion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/comment/single?commentId={{commentId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"comment",
+								"single"
+							],
+							"query": [
+								{
+									"key": "commentId",
+									"value": "{{commentId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Post",
 					"event": [
 						{
@@ -2142,6 +2241,46 @@
 									"key": "postId",
 									"value": "{{postId}}"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts After Deletion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Post is successfully deleted\", function () {\r",
+									"    var id = pm.collectionVariables.get(\"postId\");\r",
+									"     var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].postId).to.not.eql(id);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/post/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"post",
+								""
 							]
 						}
 					},
@@ -2581,6 +2720,65 @@
 								"{{api}}",
 								"skill",
 								"delete"
+							],
+							"query": [
+								{
+									"key": "skillId",
+									"value": "{{skillId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Skill After Deletion",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{api}}/skill/getOne?skillId={{skillId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{api}}",
+								"skill",
+								"getOne"
 							],
 							"query": [
 								{
