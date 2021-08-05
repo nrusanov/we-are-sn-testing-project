@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "befe067c-3959-4c23-98ac-d3bef82ef3e5",
+		"_postman_id": "b0597911-967a-456f-9eaa-d80b2b7523de",
 		"name": "WEare Social Network API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -307,7 +307,7 @@
 					"response": []
 				},
 				{
-					"name": "Get All Users After Second User Registration Copy",
+					"name": "Get All Users After Second User Registration",
 					"event": [
 						{
 							"listen": "test",
@@ -1415,12 +1415,9 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Post is successfully deleted\", function () {\r",
-									"    var id = pm.collectionVariables.get(\"postId\");\r",
-									"     var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData[0].postId).to.not.eql(id);\r",
+									"pm.test(\"Array is empty\", function () {\r",
+									"    pm.expect.responseBody==0;\r",
 									"});\r",
-									"\r",
 									""
 								],
 								"type": "text/javascript"
@@ -2257,10 +2254,8 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"\r",
-									"pm.test(\"Post is successfully deleted\", function () {\r",
-									"    var id = pm.collectionVariables.get(\"postId\");\r",
-									"     var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData[0].postId).to.not.eql(id);\r",
+									"pm.test(\"Array is empty\", function () {\r",
+									"    pm.expect.responseBody==0;\r",
 									"});\r",
 									"\r",
 									""
